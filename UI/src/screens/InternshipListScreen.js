@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Route } from 'react-router-dom';
 import { createInternship, deleteInternship, listInternships } from '../actions/internshipActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { INTERNSHIP_CREATE_RESET, INTERNSHIP_DELETE_RESET } from '../constants/internshipConstants';
+import SearchBox from '../components/SearchBoxInternship.js';
 
 export default function InternshipListScreen(props){
 
@@ -66,7 +67,6 @@ export default function InternshipListScreen(props){
         dispatch(createInternship());
     };
 
-
     return(
         <div>
             <div className="row">
@@ -78,6 +78,13 @@ export default function InternshipListScreen(props){
                 >
                     Create Internship
                 </button>
+                <div className="row123">
+                    <Route
+                        render={({ history }) => (
+                            <SearchBox history={history}></SearchBox>
+                        )}
+                    ></Route>
+                </div>
             </div>
             {loadingDelete && <LoadingBox></LoadingBox>}
             {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
@@ -90,48 +97,50 @@ export default function InternshipListScreen(props){
                 <MessageBox variant="danger">{error}</MessageBox>
             ) : (
                 <>
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>NAME</th>
-                                <th>CATEGORY</th>
-                                <th>COMPANY</th>
-                                <th>LOCATION</th>
-                                <th>TYPE</th>
-                                <th>ACTIONS</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {internships.map((internship) => (
-                                <tr key = {internship._id}>
-                                    <td>{internship._id}</td>
-                                    <td>{internship.name}</td>
-                                    <td>{internship.category}</td>
-                                    <td>{internship.company}</td>
-                                    <td>{internship.location}</td>
-                                    <td>{internship.type}</td>
-                                    <td>
-                                        <button 
-                                            type="button" 
-                                            className="small" 
-                                            onClick={() => 
-                                                props.history.push(`/internship/${internship._id}/edit`)}
-                                        >
-                                            Edit
-                                        </button>
-                                        <button 
-                                            type="button" 
-                                            className="small" 
-                                            onClick = {() => deleteHandler(internship)}
-                                        >
-                                            Delete
-                                        </button>
-                                    </td>
+                    <div className="table100" center="true">
+                        <table responsive="true">
+                            <thead>
+                                <tr className="table100-head">
+                                    <th>ID</th>
+                                    <th>NAME</th>
+                                    <th>CATEGORY</th>
+                                    <th>COMPANY</th>
+                                    <th>LOCATION</th>
+                                    <th>TYPE</th>
+                                    <th>ACTIONS</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {internships.map((internship) => (
+                                    <tr key = {internship._id}>
+                                        <td>{internship._id}</td>
+                                        <td>{internship.name}</td>
+                                        <td>{internship.category}</td>
+                                        <td>{internship.company}</td>
+                                        <td>{internship.location}</td>
+                                        <td>{internship.type}</td>
+                                        <td>
+                                            <button 
+                                                type="button" 
+                                                className="small" 
+                                                onClick={() => 
+                                                    props.history.push(`/internship/${internship._id}/edit`)}
+                                            >
+                                                Edit
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                className="small" 
+                                                onClick = {() => deleteHandler(internship)}
+                                            >
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                     <div className="row center pagination">
                         {
                         [...Array(pages).keys()].map(x => (

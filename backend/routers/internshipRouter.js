@@ -86,6 +86,7 @@ internshipRouter.post(
     const internship = new Internship({
       name: 'sample name ' + Date.now(),
       institution: req.user._id,
+      url: 'https://www.google.com/',
       image: 'https://internwebapp.s3.eu-central-1.amazonaws.com/IST.png',
       category: 'Tech',
       company: 'sample name',
@@ -110,6 +111,7 @@ internshipRouter.put(
     const internship = await Internship.findById(internshipId);
     if (internship) {
         internship.name = req.body.name;
+        internship.url = req.body.url;
         internship.image = req.body.image;
         internship.category = req.body.category;
         internship.company = req.body.company;

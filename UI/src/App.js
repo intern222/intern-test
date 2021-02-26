@@ -18,6 +18,8 @@ import InstitutionScreen from './screens/InstitutionScreen.js';
 import SearchScreen from './screens/SearchScreen.js';
 import { useDispatch } from 'react-redux';
 import { listInternshipCategories } from './actions/internshipActions.js';
+import SearchScreenInternships from './screens/SearchScreenInternships.js';
+import SearchScreenUsers from './screens/SearchScreenUsers.js';
 
 function App(){
 
@@ -36,6 +38,26 @@ function App(){
                     <Route path="/saved/:id?" component={SavedInternshipsScreen}></Route>
                     <Route path="/internship/:id" component={InternshipScreen} exact></Route>
                     <Route path="/internship/:id/edit" component={InternshipEditScreen} exact></Route>
+                    <Route 
+                        path="/searchuser/name/:name?" 
+                        component={SearchScreenUsers} npm
+                        exact
+                    ></Route>
+                    <Route 
+                        path="/searchuser/name/:name/pageNumber/:pageNumber" 
+                        component={SearchScreenUsers} 
+                        exact
+                    ></Route>
+                    <Route 
+                        path="/searchinternship/name/:name?" 
+                        component={SearchScreenInternships} 
+                        exact
+                    ></Route>
+                    <Route 
+                        path="/searchinternship/name/:name/pageNumber/:pageNumber" 
+                        component={SearchScreenInternships} 
+                        exact
+                    ></Route>
                     <Route 
                         path="/search/name/:name?" 
                         component={SearchScreen} 
@@ -90,7 +112,7 @@ function App(){
                     ></InstitutionRoute>
                     <Route path="/" component={HomeScreen} exact></Route>
                 </main>
-                <footer className="row center">© 2020 Intern</footer>
+                <footer className="row center">© 2021 Intern</footer>
             </div>
         </BrowserRouter>
     );

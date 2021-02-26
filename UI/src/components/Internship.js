@@ -1,18 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+
 export default function Internship(props) {
     const {internship} = props;
+    var creationDate = new Date(internship.createdAt);
     return (
         <div key={internship._id} className="card">
-            <Link to={`/internship/${internship._id}`}>
-                <img className="medium" 
-                src={internship.image}
-                alt={internship.name}
-                />
-            </Link>
+            <div>
+                <Link to={`/internship/${internship._id}`}>
+                    <img className="medium" 
+                    src={internship.image}
+                    alt={internship.name}
+                    />
+                </Link>
+            </div>
             <div className="card-text">
-                <span className="date">{internship.date}</span>
+                <span className="date" style={{fontSize:"15px"}}>{creationDate.toDateString()}</span>
                 <h2>{internship.name}</h2>
             </div>
             <div className="card-stats">

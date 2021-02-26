@@ -4,6 +4,7 @@ const internshipSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     institution: { type: mongoose.Schema.Types.ObjectID, ref: 'User' },
+    url: { type: String, required: true },
     image: { type: String, required: true },
     category: { type: String, required: true },
     company: { type: String, required: true },

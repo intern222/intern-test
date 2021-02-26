@@ -124,6 +124,12 @@ button.small {
   color: white;
   margin: 10px;
 }
+button.small2 {
+  font-size: 15px;
+  background-color:#f0c040;
+  color: white;
+  margin: 0px;
+}
 button.iscreen{
   background-color:#f0c040;
   color: white;
@@ -335,7 +341,7 @@ img.large{
   display: block; 
 }
 
-/* Search */
+/* Search Internships Search Screen*/
 .search button {
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-right: none;
@@ -343,6 +349,7 @@ img.large{
   width: 80px;
   height: 42px;
   background-color: #0075B5;
+  outline: none;
 }
 .search input {
   border-radius: 0.5rem 0 0 0.5rem;
@@ -350,6 +357,29 @@ img.large{
   margin-left: 50px;
   width: 80px;
   height: 36px;
+}
+/*Search Internships List Institution/Admin*/
+.search1 button {
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-right: none;
+  margin: 0px;
+  width: 80px;
+  height: 42px;
+  background-color: #696969;
+  outline: none;
+}
+.search1 input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: none;
+  margin-left: 50px;
+  width: 150px;
+  height: 42px;
+  outline: none;
+}
+
+.row123{
+  margin-left: 1170px;
+  margin-bottom: 25px; 
 }
 
 /*-----------------------------------Pagination---------------------------------*/
@@ -371,6 +401,199 @@ img.large{
   font-weight: bold;
 }
 
+/*******************************************TABLE************************/
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #696969;
+}
+table tbody tr {
+  height: 50px;
+}
+table tbody tr:last-child {
+  border: 0px;
+}
+table td, table th {
+  text-align: left;
+}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
+}
+
+
+.table100-head th{
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tbody tr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  color: #555555;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 37px 0;
+  }
+  table tbody tr td {
+    padding-left: 20% !important;
+    margin-bottom: 24px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+    left: 30px;
+  }
+}
+
+/********************************NEW CARD**************************************/
+.courses-container {
+
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
 
 
 

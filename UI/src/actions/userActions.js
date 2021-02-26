@@ -112,13 +112,14 @@ export const updateUser = (user) => async (dispatch, getState) => {
 
 export const listUsers = ({
     pageNumber = '',
+    name = ''
 }) => async (dispatch, getState) =>{
     dispatch({type: USER_LIST_REQUEST});
     try{
         const {
             userSignin : {userInfo},
         } = getState();
-        const {data} = await Axios.get(`/api/users?pageNumber=${pageNumber}`, {
+        const {data} = await Axios.get(`/api/users?pageNumber=${pageNumber}&name=${name}`, {
             headers: {
                 Authorization: `Bearer ${userInfo.token}`,
             },

@@ -25,6 +25,7 @@ const data = {
     internships:[
         {
             name:'Support Engineer Intern',
+            url: 'https://www.google.com/',
             image: '../images/micrologo1.jpg',
             category: 'category',
             company: 'Microsoft',
@@ -37,6 +38,7 @@ const data = {
         },
         {
             name:'Data Analyst Intern',
+            url: 'https://www.google.com/',
             image: '../images/amazon.png',
             category: 'category',
             company: 'Amazon',
@@ -49,6 +51,7 @@ const data = {
         },
         {
             name:'Bussiness Analyst Intern',
+            url: 'https://www.google.com/',
             image: '../images/cisco.jpeg',
             category: 'category',
             company: 'Cisco',
@@ -61,6 +64,7 @@ const data = {
         },
         {
             name:'Strategic Sales Intern',
+            url: 'https://www.google.com/',
             image: '../images/google.png',
             category: 'category',
             company: 'Google',
@@ -73,6 +77,7 @@ const data = {
         },
         {
             name:'Project Manager Intern',
+            url: 'https://www.google.com/',
             image: '../images/sonae.png',
             category: 'category',
             company: 'Sonae',
@@ -85,6 +90,7 @@ const data = {
         },
         {
             name:'RH Intern',
+            url: 'https://www.google.com/',
             image: '../images/NOS.png',
             category: 'category',
             company: 'NOS',

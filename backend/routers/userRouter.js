@@ -104,9 +104,12 @@ userRouter.get(
   expressAsyncHandler(async(req, res) => {
     const pageSize =6;
     const page = Number(req.query.pageNumber) || 1;
+    const name = req.query.name || '';
+    const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
 
     const count = await User.count({});
     const users = await User.find({
+      ...nameFilter,
     })
     .skip(pageSize*(page - 1))
     .limit(pageSize)

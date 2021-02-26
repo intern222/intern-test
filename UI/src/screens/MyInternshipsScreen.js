@@ -18,9 +18,7 @@ export default function SavedInternshipsScreen(props) {
         }
     }, [dispatch, internshipId]);
 
-    const applyHandler = () => {
-        props.history.push('/signin?redirect=apply')
-    }
+
 
     const removeFromSavedHandler = (id) => {
         dispatch(removeFromSaved(id));
@@ -57,7 +55,7 @@ export default function SavedInternshipsScreen(props) {
                                                 <Link to={`/internship/${item.internship}`}>{item.name}</Link>
                                             </div>
                                             <div>
-                                                <button className="small" onClick={applyHandler} disabled={savedItems.length === 0}> Apply </button>
+                                                <button className="small" onClick={() => window.location.href = `${item.url}`} disabled={savedItems.length === 0}> Apply </button>
                                             </div>
                                             <div>
                                                 <button className="small" onClick={() => removeFromSavedHandler(item.internship)}> Delete </button>

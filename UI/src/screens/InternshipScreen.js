@@ -18,12 +18,6 @@ export default function InternshipScreen(props) {
         dispatch(detailsInternship(internshipId));
     }, [dispatch, internshipId]);
 
-    const applyHandler = () => {
-        if (userInfo){
-            props.history.push('/signin?redirect=apply')
-        }
-    }
-
     const addToCartHandler = () => {
         if (userInfo){
             props.history.push(`/saved/${internshipId}`)
@@ -90,7 +84,7 @@ export default function InternshipScreen(props) {
                                             {
                                                 internship.status === 'Open' &&  (
                                                     <li>
-                                                        <button className="iscreen" onClick={applyHandler}> Apply </button>
+                                                        <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
                                                     </li>
                                                 )
                                             }
