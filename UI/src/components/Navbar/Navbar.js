@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import './Navbar.css';
 import { useSelector } from 'react-redux';
 import SearchBox from '../SearchBox.js';
+import { Button } from './Button';
 
 function Navbar() {
 
@@ -41,15 +42,6 @@ function Navbar() {
                             onClick={closeMobileMenu}
                         >
                             Home
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link
-                            to='/aboutus'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                        >
-                            About Us
                         </Link>
                     </li>
                     {

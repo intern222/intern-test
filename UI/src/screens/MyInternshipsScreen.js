@@ -18,56 +18,54 @@ export default function SavedInternshipsScreen(props) {
         }
     }, [dispatch, internshipId]);
 
-
-
     const removeFromSavedHandler = (id) => {
         dispatch(removeFromSaved(id));
     }
 
     return (
-        <div className="row top">
-            <div className="col-2">
-                <h1>My internships</h1>
-                {savedItems.length === 0 ?
-                    (
-                        <MessageBox>
-                            0 internships saved.
-                            <Link to="/">
-                                <br></br>Save an internship!
+        <div className="row-top">
+            <h1>My internships</h1>
+            {savedItems.length === 0 ?
+                (<div className="box">
+                    <MessageBox>
+                        0 internships saved.
+                            <Link className="mybox" to="/search/name/">
+                            <br></br>Save an internship!
                             </Link>
-                        </MessageBox>
-                    ) : (
-                        <ul>
-                            {
-                                savedItems.map((item) => (
-                                    <li key={item.internship}>
-                                        <div className="row">
-                                            <div>
-                                                <Link to={`/internship/${item.internship}`}>
-                                                    <img 
-                                                        className="small"
-                                                        src={item.image}
-                                                        alt={item.name}
-                                                    />
-                                                </Link>
-                                            </div>
-                                            <div className="min">
-                                                <Link to={`/internship/${item.internship}`}>{item.name}</Link>
-                                            </div>
-                                            <div>
-                                                <button className="small" onClick={() => window.location.href = `${item.url}`} disabled={savedItems.length === 0}> Apply </button>
-                                            </div>
-                                            <div>
-                                                <button className="small" onClick={() => removeFromSavedHandler(item.internship)}> Delete </button>
-                                            </div>
+                    </MessageBox>
+                </div>
+
+                ) : (
+                    <div>
+                        {
+                            savedItems.map((item) => (
+                                <li key={item.internship}>
+                                    <div className="row-1">
+                                        <div>
+                                            <Link to={`/internship/${item.internship}`}>
+                                                <img
+                                                    className="small"
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                />
+                                            </Link>
                                         </div>
-                                    </li>
-                                ))
-                            }
-                        </ul>
-                    )
-                }
-            </div>
+                                        <div className="min">
+                                            <Link to={`/internship/${item.internship}`}>{item.name}</Link>
+                                        </div>
+                                        <div>
+                                            <button className="small" onClick={() => window.location.href = `${item.url}`} disabled={savedItems.length === 0}> Apply </button>
+                                        </div>
+                                        <div>
+                                            <button className="small" onClick={() => removeFromSavedHandler(item.internship)}> Delete </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            ))
+                        }
+                    </div>
+                )
+            }
         </div>
     );
 

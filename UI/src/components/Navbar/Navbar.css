@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #3ca7e0;
+    background-color: rgb(69,69,69);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -10,7 +10,6 @@
 .navbar-logo {
     color: #fff;
     justify-self: start;
-
     cursor: pointer;
     text-decoration: none;
     font-size: 40px;
@@ -35,11 +34,12 @@
     align-items: center;
     height: 80px;
 }
-  
+
 .nav-links {
     color: #ffff;
     text-decoration: none;
     padding: 10px;
+    opacity: 1;
 }
 
 .nav-links::after {
@@ -66,7 +66,7 @@
     padding: 7px;
     border-radius: 0.5rem;
     width: 100%;
-    background: #0075B5;
+    background: #949494;
     text-decoration: none;
     color: white;
     font-size: 17px;
@@ -86,9 +86,10 @@
     display: none;
 }
   
-@media screen and (max-width: 975px) {
+/*@media screen and (max-width: 1200px) {
     body {
         overflow-x: hidden;
+        display: flex;
     }
     
     .NavbarItems {
@@ -96,7 +97,7 @@
     }
 
     .nav-menu.active {
-        background: #3ca7e0;
+        background: rgb(126, 39, 39);
         right: 0%;
         opacity: 1;
         transition: all .6s ease;
@@ -106,7 +107,7 @@
         display: flex;
         flex-direction: column;
         width: 200px;
-        height: 430px;
+        height: 450px;
         position: absolute;
         top: 60px;
         right: -100%;
@@ -114,6 +115,8 @@
         transition: all .7s ease;
         border-bottom-left-radius: 50px;
         margin-right: 0px;
+        margin-top: 0px;
+        overflow-x: hidden;
     }
 
     .nav-links-mobile {
@@ -123,16 +126,16 @@
         margin-left: -26px;
         border-radius: 50px;
         width: 100%;
-        background: #0075B5;
+        background: black;
         text-decoration: none;
-        color: white;
+        color: black;
         font-size: 17px;
     }
     
     .nav-links-mobile:hover {
         padding: 7px;
         transition: all 0.3s ease-out;
-        background:white;
+        background: black;
         color: black;
         transition: 250ms;
         font-weight: bold;
@@ -144,6 +147,7 @@
         margin-left: -26px;
         width: 100%;
         display: table;
+        color: black;
     }
 
     .nav-links::after {
@@ -151,7 +155,7 @@
         display: block;
         width: 0;
         height: 1.6px;
-        background: #fff;
+        background: black;
         transition: width .3s; 
     }
     
@@ -186,5 +190,209 @@
         display: flex;
         align-items: center;
         height: 80px;
+        color: white;
     }
-}
+}*/
+
+@media screen and (max-width: 1300px) {
+    .navbar {
+        width: 100%;
+    }
+    
+    .NavbarItems {
+      position: relative;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: relative;
+      position: absolute;
+      top: 68px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      margin-left: -45px;
+      border-bottom-right-radius: 50px;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav-menu.active {
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      
+    }
+
+    .nav-links::after {
+        content: '';
+        display: block;
+        width: -1px;
+        height: 1.6px;
+        background: #fff;
+        transition: width .3s; 
+    }
+    
+    .nav-links:hover::after {
+        width:100%;
+        transition: width .2s;
+    }
+  
+  
+    .navbar-logo {
+        position: absolute;
+        left: 15px;
+        text-align: justify;
+    }
+  
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 2.5px;
+        left: 130px;
+        transform: translate(0rem, 120%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+  
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+    }
+  
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        padding: 7px;
+        margin: 50px;
+        border-radius: 50px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+    }
+    
+    .nav-links-mobile:hover {
+        padding: 7px;
+        transition: all 0.3s ease-out;
+        background: rgb(156, 156, 156);
+        color: black;
+        transition: 250ms;
+        font-weight: bold;
+        font-size: 17px;
+    } 
+  }
+
+  @media screen and (max-width: 550px) {
+    .navbar {
+        width: 100%;
+    }
+    
+    .NavbarItems {
+      position: relative;
+    }
+  
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 101%;
+      height: relative;
+      position: absolute;
+      top: 68px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      margin-left: -45px;
+      border-bottom-right-radius: 0px;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .nav-menu.active {
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.01s ease;
+      z-index: 1;
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+
+    .nav-links::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1.6px;
+        background: #fff;
+        transition: width .3s; 
+    }
+    
+    .nav-links:hover::after {
+        width:100%;
+        transition: width .2s;
+    }
+  
+  
+    .navbar-logo {
+        position: absolute;
+        left: 15px;
+        text-align: justify;
+    }
+  
+    .menu-icon{
+        display: block;
+        position: absolute;
+        top: 2.5px;
+        left: 130px;
+        transform: translate(0rem, 120%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+  
+    .fa-times {
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+    }
+  
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        padding: 7px;
+        margin: 50px;
+        border-radius: 50px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+    }
+    
+    /*.nav-links-mobile:hover {
+        padding: 7px;
+        transition: all 0.3s ease-out;
+        background: rgb(156, 156, 156);
+        color: black;
+        transition: 250ms;
+        font-weight: bold;
+        font-size: 17px;
+    }*/
+  }

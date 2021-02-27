@@ -2,7 +2,7 @@
   --primary: #0075B5;
 }
 
-.btn {
+.btn1 {
   padding: 4px 15px;
   border-radius: 4px;
   outline: none;
@@ -16,7 +16,7 @@
   font-weight: bold;
 }
 
-.btn:hover {
+.btn1:hover {
   padding: 4px 15px;
   transition: all 0.3s ease-out;
   background: #ffff;

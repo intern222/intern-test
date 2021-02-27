@@ -112,7 +112,6 @@ function App(){
                     ></InstitutionRoute>
                     <Route path="/" component={HomeScreen} exact></Route>
                 </main>
-                <footer className="row center">© 2021 Intern</footer>
             </div>
         </BrowserRouter>
     );

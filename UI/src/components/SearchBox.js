@@ -10,8 +10,8 @@ export default function SearchBox(props){
     };
 
     return(
-        <form className="row center search" onSubmit={submitHandler}>
-            <div className="row">
+        <form className="center search" onSubmit={submitHandler}>
+            <div className="nav">
                 {/*<div className="row">
                     <input 
                         type="text" 

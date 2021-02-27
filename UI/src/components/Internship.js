@@ -1,42 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-
 export default function Internship(props) {
     const {internship} = props;
-    var creationDate = new Date(internship.createdAt);
     return (
-        <div key={internship._id} className="card">
-            <div>
-                <Link to={`/internship/${internship._id}`}>
-                    <img className="medium" 
-                    src={internship.image}
-                    alt={internship.name}
-                    />
-                </Link>
-            </div>
-            <div className="card-text">
-                <span className="date" style={{fontSize:"15px"}}>{creationDate.toDateString()}</span>
-                <h2>{internship.name}</h2>
-            </div>
-            <div className="card-stats">
-                <div className="stat">
-                    <div className="value">{internship.location}</div>
-                    <div className="type">Location</div>
-                </div>
-                <div className="stat">
 
-                        <Link  className="link" to={`/institution/${internship.institution._id}`}>
-                            {internship.institution.institution.name}                
-                        </Link>
+        <div className="courses-container">
+            <Link className="card-link" to={`/internship/${internship._id}`}>
+                <div className="course">
+                    <div className="avatar-holder">
+                        <img className="small" 
+                        src={internship.image}
+                        alt={internship.name}
+                        />
+                    </div>
 
-                    <div className="type">Company</div>
+                    <div className="course-info">
+                        <div className="course-type">
+                            {internship.type}
+                        </div>
+                            <div className="progress-container">
+                                <h6>{internship.location}</h6>
+                                <h6>{internship.date}</h6>
+                            </div>
+                            <h5>{internship.company}</h5>
+                            {(internship.name).length > 15 ? <h4>{internship.name}</h4> : <h2>{internship.name}</h2>}
+                            <Link 
+                                to={`/saved/${internship._id}`}><i className="far fa-bookmark"></i>
+                            </Link>
+                    </div>
                 </div>
-                <div className="stat">
-                    <div className="value">{internship.type}</div>
-                    <div className="type">Type</div>
-                </div>
-            </div>
+            </Link>
         </div>
+
     )
 }

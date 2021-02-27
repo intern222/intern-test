@@ -23,7 +23,7 @@ export default function InternshipScreen(props) {
             props.history.push(`/saved/${internshipId}`)
         }
     };
-
+    
     return (
         <div>
             {loading ? (
@@ -32,86 +32,84 @@ export default function InternshipScreen(props) {
                 <MessageBox variant="danger" >{error}</MessageBox>
             ) : (
                         <div>
-                            <div className="row top">
-                                <div className="col-2">
-                                    <img className="large" src={internship.image} alt={internship.company}></img>
-                                </div>
-                                <div className="col-1">
-                                    <ul>
-                                        <li>
-                                            <h1>{internship.name}</h1>
-                                        </li>
-                                        <li>
-                                            
-                                            <h1>
-                                               <Link to={`/institution/${internship.institution._id}`}>
-                                                    {internship.institution.institution.name}   
-                                                </Link> 
-                                            </h1>
-                                        </li>
-                                        <p></p>
-                                        <li>
-                                            Location : {internship.location}
-                                        </li>
-                                        <p></p>
-                                        <li>
-                                            Description :
-                                <p>{internship.description}</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-1">
-                                    <div className="card1 card-body">
-                                        <ul>
-                                            <li>
-                                                <div className="row">
-                                                    <div> Position:</div>
-                                                    <div className="candidates">  {internship.candidates} Candidates</div>
-                                                    <p></p>
-                                                </div>
-                                                <div className="row">
-                                                    <div> Status:</div>
-                                                    <div>
-                                                        {internship.status === 'Open' ? (
-                                                            <span className="success">Open</span>
-                                                        ) : (
-                                                                <span className="danger">Closed</span>
-                                                        )}
-                                                    </div>
-                                                    <p></p>
-                                                </div>
-                                            </li>
-                                            {
-                                                internship.status === 'Open' &&  (
-                                                    <li>
-                                                        <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
-                                                    </li>
-                                                )
-                                            }
-                                            <p></p>
-                                            {
-                                                internship.status === 'Open' &&  (
-                                                    <li>
-                                                        <button onClick={addToCartHandler} className="iscreen">Save</button>
-                                                    </li>
-                                                ) 
-                                            }
-                                            <p></p>
-                                            {
-                                                !userInfo && (
-                                                    <li>
-                                                        <MessageBox variant="danger" >
-                                                            Sign in to Apply and Save
-                                                        </MessageBox>
-                                                    </li>
-                                                )
-                                            }            
-                                        </ul>
+                            
+                                
+                                <div className="col_4">
+                                    <div className="avatar-holder-1">
+                                        <img className="large" src={internship.image} alt={internship.company}></img>
                                     </div>
+                                    
+                                        <div className="name">{internship.name}</div>
+                                        <div className="location">{internship.location}</div>
+                                        
+                                        
+                                        <h3>
+                                            <Link className="intern_link" to={`/institution/${internship.institution._id}`}>
+                                            {internship.institution.institution.name}   
+                                            </Link>
+                                        </h3>
+                                        <div className="apply_save">
+                                            {internship.status === 'Open' &&  (
+                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>)
+                                            }
+                                            {internship.status === 'Open' &&  (
+                                                <button onClick={addToCartHandler} className="iscreen">Save</button>)   
+                                                }
+                                        </div>
+                                   
+                                    
+                                    {/*<div className="col-5">
+                                    
+                                    
+                                        <div className="card_body">
+                                            <ul>
+                                                <li>
+                                                
+                                                </li>
+                                                {
+                                                    internship.status === 'Open' &&  (
+                                                        <li>
+                                                            <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
+                                                        </li>
+                                                    )
+                                                }
+                                                
+                                                {
+                                                    internship.status === 'Open' &&  (
+                                                        <li>
+                                                            <button onClick={addToCartHandler} className="iscreen">Save</button>
+                                                        </li>
+                                                    ) 
+                                                }
+                                                <p></p>
+                                                {
+                                                    !userInfo && (
+                                                        <li>
+                                                            <MessageBox variant="danger" >
+                                                                Sign in to Apply and Save
+                                                            </MessageBox>
+                                                        </li>
+                                                    )
+                                                }            
+                                            </ul>
+                                        </div>
+                                            </div>*/}
+                                </div>
+                                  
+                            <div className="intern_containers">
+                                <div className="description">
+                                    <h4>
+                                    {internship.description}
+                                    </h4>
+                                </div>
+
+                                <div className="feactures">
+                                    <div className="work_functions"> Position:</div>
+                                    <div className="candidates">  {internship.candidates} Candidates</div>
                                 </div>
                             </div>
+                                
                         </div>
-                    )}
+                )}
         </div>
-    )
-}
+)}

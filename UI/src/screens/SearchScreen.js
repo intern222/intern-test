@@ -43,112 +43,92 @@ export default function SearchScreen(props) {
     const filterName = filter.name || name;
     return `/search/category/${filterCategory}/name/${filterName}/pageNumber/${filterPage}`;
   };
+  
 
   return (
     <div>
-      <div className="row">
-        {loading ? (
-          <LoadingBox></LoadingBox>
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-              <div>{internships.length} Results</div>
-            )}
-      </div>
       <div className="row top">
-        <div className="col-1">
-          <h1>Internships</h1>
+        <div className="col_1">
+          <h3>Department</h3>
           {loadingCategories ? (
-            <LoadingBox></LoadingBox>
-          ) : errorCategories ? (
-            <MessageBox variant="danger">{errorCategories}</MessageBox>
-          ) : (
-                <ul>
-
-                  {/*<li>
-                    <Link
-                      className={'all' === category ? 'active' : ''}
-                      to={getFilterUrl({ category: 'all' })}
+          <LoadingBox></LoadingBox>
+        ) : errorCategories ? (
+          <MessageBox variant="danger">{errorCategories}</MessageBox>
+        ) : (
+          <ul>
+            <div>
+              <h2>Search Internship</h2>
+              <Route
+                render={({ history }) => (
+                  <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
+                )}
+              ></Route>
+              <h2>Select a Filter</h2>
+              <div className="select">
+                <select
+                  value={category}
+                  onChange={(c) => {
+                    props.history.push(getFilterUrl({ category: c.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === category ? 'active' : ''}>
+                    Any Department
+                  </option>
+                  {categories.map((c) => (
+                    <option
+                      className={c === category ? 'active' : ''}
                     >
-                      Any Department
-                    </Link>
-                  </li>*/}
-
-                  <div>
-                    <h2>Search Internship</h2>
-                    <Route
-                      render={({ history }) => (
-                        <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
-                      )}
-                    ></Route>
-                    <h2>Select a Filter</h2>
-                    <div className="select">
-                      <select
-                        value={category}
-                        onChange={(c) => {
-                          props.history.push(getFilterUrl({ category: c.target.value }));
-                        }}
-                      >
-                        <option value='all' className={'all' === category ? 'active' : ''}>
-                          Any Department
-                        </option>
-                        {categories.map((c) => (
-                          <option
-                            className={c === category ? 'active' : ''}
-                          >
-                            {c}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  {/*{categories.map((c) => (
-                    <li key={c}>
-                      <Link
-                        className={c === category ? 'active' : ''}
-                        to={getFilterUrl({ category: c })}
-                      >
-                        {c}
-                      </Link>
-                    </li>
-                  ))}*/}
-
-                </ul>
-              )}
-        </div>
-        <div className="col-3">
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </ul>
+        )}
+        
+      </div>
+      
+        <div className="col_2">
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
-                <>
-                  {internships.length === 0 && (
-                    <MessageBox>No Internship Found</MessageBox>
-                  )}
-                  <div className="row center">
-                    {internships.map((internship) => (
-                      <Internship key={internship._id} internship={internship}></Internship>
-                    ))}
-                  </div>
-                  <div className="row center pagination">
-                    {
-                      [...Array(pages).keys()].map(x => (
-                        <Link
-                          className={x + 1 === page ? 'active' : ''}
-                          key={x + 1}
-                          to={getFilterUrl({ page: x + 1 })}
-                        >
-                          {x + 1}
-                        </Link>
-                      ))
-                    }
-                  </div>
-                </>
+            <>
+              {internships.length === 0 && (
+                <MessageBox>No Internship Found</MessageBox>
               )}
+              <div className="row center">
+              {loading ? (
+              <LoadingBox></LoadingBox>
+              ) : error ? (
+              <MessageBox variant="danger">{error}</MessageBox>
+              ) : (
+              <h6 className="results">{internships.length} Results</h6>
+              )}
+                {internships.map((internship) => (
+                  <Internship key={internship._id} internship={internship}></Internship>
+                ))}
+              </div>
+              <div className="row center pagination">
+                {
+                  [...Array(pages).keys()].map(x => (
+                    <Link 
+                      className={x + 1 === page ? 'active' : ''}
+                      key={x+1} 
+                      to={getFilterUrl({page: x+1})}
+                    >
+                      {x+1}
+                    </Link>
+                  ))
+                }
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
   );
 }
+
