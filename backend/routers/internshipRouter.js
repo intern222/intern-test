@@ -9,7 +9,7 @@ const internshipRouter = express.Router();
 internshipRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
-    const pageSize =6;
+    const pageSize =10;
     const page = Number(req.query.pageNumber) || 1;
 
     const name = req.query.name || '';
@@ -89,6 +89,7 @@ internshipRouter.post(
       url: 'https://www.google.com/',
       image: 'https://internwebapp.s3.eu-central-1.amazonaws.com/IST.png',
       category: 'Tech',
+      skills: 'Management, Business, Health',
       company: 'sample name',
       location: 'sample location',
       candidates: 0,
@@ -114,6 +115,7 @@ internshipRouter.put(
         internship.url = req.body.url;
         internship.image = req.body.image;
         internship.category = req.body.category;
+        internship.skills = req.body.skills;
         internship.company = req.body.company;
         internship.location = req.body.location;
         internship.candidates = req.body.candidates;

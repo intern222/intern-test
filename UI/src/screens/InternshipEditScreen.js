@@ -12,6 +12,7 @@ export default function InternshipEditScreen(props) {
     const [url, setURL] = useState('');
     const [image, setImage] = useState('');
     const [category, setCategory] = useState('');
+    const [skills, setSkills] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
     const [candidates, setCandidates] = useState('');
@@ -43,6 +44,7 @@ export default function InternshipEditScreen(props) {
             setURL(internship.url);
             setImage(internship.image);
             setCategory(internship.category);
+            setSkills(internship.skills);
             setCompany(internship.company);
             setLocation(internship.location);
             setCandidates(internship.candidates);
@@ -68,6 +70,7 @@ export default function InternshipEditScreen(props) {
                 url,
                 image,
                 category,
+                skills,
                 company,
                 location,
                 candidates,
@@ -168,6 +171,16 @@ export default function InternshipEditScreen(props) {
                                         placeholder="Enter category"
                                         value={category}
                                         onChange={(e) => setCategory(e.target.value)}
+                                    ></input>
+                                </div>
+                                <div>
+                                    <label htmlFor="skills">Skills</label>
+                                    <input
+                                        id="skills"
+                                        type="text"
+                                        placeholder="Enter skills"
+                                        value={skills}
+                                        onChange={(e) => setSkills(e.target.value)}
                                     ></input>
                                 </div>
                                 <div>
