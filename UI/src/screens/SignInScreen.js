@@ -30,7 +30,7 @@ export default function SignInScreen(props) {
     }, [props.history, redirect, userInfo]);
 
     return(
-        <div>
+        <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>Sign In</h1>    
@@ -38,33 +38,32 @@ export default function SignInScreen(props) {
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>}
                 <div>
-                    <label className="label1" htmlFor="email">Email address</label>
                     <input 
+                        className="un" 
                         type="email" 
-                        id="email" 
-                        placeholder="Enter email" 
+                        placeholder="Email" 
+                        align="center"
                         required 
                         onChange={ (e) => setEmail(e.target.value)}
                     ></input>
                 </div>
                 <div>
-                    <label className="label1" htmlFor="password">Password</label>
                     <input 
+                        className="pass" 
                         type="password" 
-                        id="password" 
-                        placeholder="Enter password" 
+                        align="center" 
+                        placeholder="Password"
                         required 
                         onChange={ (e) => setPassword(e.target.value)}
                     ></input>
                 </div>
                 <div>
                     <label/>
-                    <button className="primary" type="submit">Sign In</button>
-                </div>
+                    <button className="signinButton" type="submit">Sign In</button>                    </div>
                 <div>
                     <label/>
                     <div>
-                        New customer? <Link to={`/register?redirect=${redirect}`}>Create your account</Link>
+                        New customer? <Link className="linkCreateAccount" to={`/register?redirect=${redirect}`}>Create your account</Link>
                     </div>  
                 </div>
             </form>

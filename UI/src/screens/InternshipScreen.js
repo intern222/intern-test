@@ -98,14 +98,19 @@ export default function InternshipScreen(props) {
                                   
                             <div className="intern_containers">
                                 <div className="description">
+                                    <h3>Description</h3>
                                     <h4>
-                                    {internship.description}
+                                        {internship.description}
                                     </h4>
                                 </div>
 
                                 <div className="feactures">
-                                    <div className="work_functions"> Position:</div>
-                                    <div className="candidates">  {internship.candidates} Candidates</div>
+                                    <h3 className="work_functions">
+                                        Skills
+                                    </h3>
+                                    <h4 className="candidates">  
+                                        {internship.skills} 
+                                    </h4>
                                 </div>
                             </div>
                                 

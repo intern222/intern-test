@@ -68,7 +68,7 @@ export default function ProfileScreen() {
     }
 
     return(
-        <div>
+        <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>User Profile</h1>
@@ -88,86 +88,94 @@ export default function ProfileScreen() {
                         <MessageBox variant="success">Profile Updated Successfully</MessageBox>
                     )}
                         <div>
-                            <label htmlFor="name">Name</label>
-                                <input
-                                    id="name"
-                                    type="text"
-                                    placeholder="Enter name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                ></input> 
+                            <input
+                                className="un" 
+                                type="text" 
+                                placeholder="Name" 
+                                align="center"
+                                required
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            ></input> 
                         </div>
                         <div>
-                            <label htmlFor="email">Email</label>
-                                <input
-                                    id="email"
-                                    type="email"
-                                    placeholder="Enter email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                ></input> 
+                            <input
+                                className="un" 
+                                type="email" 
+                                placeholder="Email" 
+                                align="center"
+                                required 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            ></input> 
                         </div>
                         <div>
-                            <label htmlFor="password">Password</label>
-                                <input
-                                    id="password"
-                                    type="password"
-                                    placeholder="Enter password"
-                                    onChange={(e) => setPassword(e.target.value)}
-                                ></input> 
+                            <input
+                                className="pass" 
+                                type="password" 
+                                placeholder="Password"
+                                align="center" 
+                                required 
+                                onChange={(e) => setPassword(e.target.value)}
+                            ></input> 
                         </div>
                         <div>
-                            <label htmlFor="confirmPassword">Confirm Password</label>
-                                <input
-                                    id="confirmPassword"
-                                    type="password"
-                                    placeholder="Enter confirm password"
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                ></input> 
+                            <input
+                                className="pass" 
+                                type="password" 
+                                placeholder="Confirm Password"
+                                align="center" 
+                                required 
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                            ></input> 
                         </div>
                             {user.isInstitution && (
                                 <>
-                                    <h2>Institution</h2>
+                                    <h2 className="institutionTitle">Institution</h2>
                                     <div>
-                                    <label htmlFor="institutionName">Institution Name</label>
-                                    <input
-                                        id="institutionName"
-                                        type="text"
-                                        placeholder="Enter Institution Name"
-                                        value={institutionName}
-                                        onChange={(e) => setInstitutionName(e.target.value)}
-                                    ></input>
+                                        <input
+                                            className="un" 
+                                            type="text"
+                                            placeholder="Institution Name"
+                                            align="center"
+                                            required 
+                                            value={institutionName}
+                                            onChange={(e) => setInstitutionName(e.target.value)}
+                                        ></input>
                                     </div>
                                     <div>
-                                    <label htmlFor="institutionLogo">Institution Logo</label>
-                                    <input
-                                        id="institutionLogo"
-                                        type="text"
-                                        placeholder="Enter Institution Logo"
-                                        value={institutionLogo}
-                                        onChange={(e) => setInstitutionLogo(e.target.value)}
-                                    ></input>
+                                        <input
+                                            className="un" 
+                                            type="text"
+                                            placeholder="Institution Logo"
+                                            align="center"
+                                            required 
+                                            value={institutionLogo}
+                                            onChange={(e) => setInstitutionLogo(e.target.value)}
+                                        ></input>
                                     </div>
                                     <div>
-                                    <label htmlFor="institutionDescription">Institution Description</label>
-                                    <input
-                                        id="institutionDescription"
-                                        type="text"
-                                        placeholder="Enter Institution Description"
-                                        value={institutionDescription}
-                                        onChange={(e) => setInstitutionDescription(e.target.value)}
-                                    ></input>
+                                        <input
+                                            className="un" 
+                                            rows="3"
+                                            type="textarea"
+                                            placeholder="Institution Description"
+                                            align="center"
+                                            required
+                                            value={institutionDescription}
+                                            onChange={(e) => setInstitutionDescription(e.target.value)}
+                                        ></input>
                                     </div>
                                 </>
                             )}
                         <div>
                             <label/>
-                            <button className="primary" type="submit">
+                            <button className="signinButton" type="submit">
                                 Update
                             </button>
                         </div>
                         <div>
-                            <button className="primary" to="/" onClick={signoutHandler}>
+                            <button className="signinButton" to="/" onClick={signoutHandler}>
                                 Sign Out
                             </button>
                         </div>

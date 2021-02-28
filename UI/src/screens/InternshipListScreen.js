@@ -101,7 +101,6 @@ export default function InternshipListScreen(props){
                         <table responsive="true">
                             <thead>
                                 <tr className="table100-head">
-                                    <th>ID</th>
                                     <th>NAME</th>
                                     <th>CATEGORY</th>
                                     <th>COMPANY</th>
@@ -113,7 +112,6 @@ export default function InternshipListScreen(props){
                             <tbody>
                                 {internships.map((internship) => (
                                     <tr key = {internship._id}>
-                                        <td>{internship._id}</td>
                                         <td>{internship.name}</td>
                                         <td>{internship.category}</td>
                                         <td>{internship.company}</td>

@@ -62,7 +62,6 @@ export default function UserListScreen(props) {
                             <table responsive="true">
                                 <thead>
                                     <tr className="table100-head">
-                                        <th>ID</th>
                                         <th>NAME</th>
                                         <th>EMAIL</th>
                                         <th>IS INSTITUTION</th>
@@ -74,7 +73,6 @@ export default function UserListScreen(props) {
                                     {
                                         users.map((user) => (
                                             <tr key={user._id}>
-                                                <td>{user._id}</td>
                                                 <td>{user.name}</td>
                                                 <td>{user.email}</td>
                                                 <td>{user.isInstitution ? 'YES':'NO'}</td>

@@ -1,0 +1,21 @@
+.info_container_1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .info_img_1{
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 1%;
+  
+  }
+  
+  .info_text_1{
+    width: 50%;
+    margin-top: 0px;
+    padding: 1%;
+  }

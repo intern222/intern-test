@@ -36,7 +36,7 @@ export default function RegisterScreen(props) {
     }, [props.history, redirect, userInfo]);
 
     return(
-        <div>
+        <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>Create Account</h1>    
@@ -44,53 +44,53 @@ export default function RegisterScreen(props) {
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>}
                 <div>
-                    <label className="label1" htmlFor="email">Name</label>
                     <input 
+                        className="un" 
                         type="text" 
-                        id="name" 
-                        placeholder="Enter name" 
+                        placeholder="Name" 
+                        align="center"
                         required 
                         onChange={ (e) => setName(e.target.value)}
                     ></input>
                 </div>
                 <div>
-                    <label className="label1" htmlFor="email">Email Address</label>
                     <input 
+                        className="un" 
                         type="email" 
-                        id="email" 
-                        placeholder="Enter name" 
+                        placeholder="Email" 
+                        align="center"
                         required 
                         onChange={ (e) => setEmail(e.target.value)}
                     ></input>
                 </div>
                 <div>
-                    <label className="label1" htmlFor="password">Password</label>
                     <input 
+                        className="pass" 
                         type="password" 
-                        id="password" 
-                        placeholder="Enter password" 
+                        placeholder="Password"
+                        align="center" 
                         required 
                         onChange={ (e) => setPassword(e.target.value)}
                     ></input>
                 </div>
                 <div>
-                    <label className="label1" htmlFor="confirmPassword">Confirm Password</label>
                     <input 
+                        className="pass" 
                         type="password" 
-                        id="confirmPassword" 
-                        placeholder="Enter password" 
+                        placeholder="Confirm Password"
+                        align="center" 
                         required 
                         onChange={ (e) => setConfirmPassword(e.target.value)}
                     ></input>
                 </div>
                 <div>
                     <label/>
-                    <button className="primary" type="submit">Register</button>
+                    <button className="signinButton" type="submit">Register</button>
                 </div>
                 <div>
                     <label/>
                     <div>
-                        Already have an account? <Link to={`/signin?redirect=${redirect}`}>Sign In</Link>
+                        Already have an account? <Link className="linkCreateAccount" to={`/signin?redirect=${redirect}`}>Sign In</Link>
                     </div>  
                 </div>
             </form>

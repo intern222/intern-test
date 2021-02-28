@@ -19,15 +19,15 @@ export default function Internship(props) {
                         <div className="course-type">
                             {internship.type}
                         </div>
-                            <div className="progress-container">
-                                <h6>{internship.location}</h6>
-                                <h6>{internship.date}</h6>
-                            </div>
-                            <h5>{internship.company}</h5>
-                            {(internship.name).length > 15 ? <h4>{internship.name}</h4> : <h2>{internship.name}</h2>}
-                            <Link 
-                                to={`/saved/${internship._id}`}><i className="far fa-bookmark"></i>
-                            </Link>
+                        <div className="progress-container">
+                            <h6>{internship.location}</h6>
+                            <h6>{internship.date}</h6>
+                        </div>
+                        <h5>{internship.company}</h5>
+                        {(internship.name).length > 15 ? <h4>{internship.name}</h4> : <h2>{internship.name}</h2>}
+                        <Link 
+                            to={`/saved/${internship._id}`} title="Save"><i className="far fa-bookmark"></i>
+                        </Link>
                     </div>
                 </div>
             </Link>
