@@ -16,7 +16,7 @@ function CardItem_1(props) {
             <div className='cards__item__info'>
             <h2> Diogo Martins</h2>
             <h4>Programação</h4>
-            <h6>Estudanate de Engenharia Eletrotécnica e de Computadores no Instituto Superior Técnico</h6>
+            <h6>Estudante de Engenharia Eletrotécnica e de Computadores no Instituto Superior Técnico</h6>
             <div className="card_icons">
                 <ul className="fab fa-instagram"></ul>
                 <ul className="fab fa-linkedin"></ul>

@@ -25,7 +25,9 @@ export default function InternshipScreen(props) {
     };
     
     return (
+        
         <div>
+            {console.log('HEreeeeeee', userInfo)}
             {loading ? (
                 <LoadingBox></LoadingBox>
             ) : error ? (
@@ -50,11 +52,16 @@ export default function InternshipScreen(props) {
                                         </h3>
                                         <div className="apply_save">
                                             {internship.status === 'Open' &&  (
-                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>)
+                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
+                                                )
                                             }
-                                            {internship.status === 'Open' &&  (
-                                                <button onClick={addToCartHandler} className="iscreen">Save</button>)   
-                                                }
+                                            {
+                                                (internship.status === 'Open' && userInfo !== null) 
+                                                ? 
+                                                    <button onClick={addToCartHandler} className="iscreen">Save</button> 
+                                                :   
+                                                    <button onClick={() => window.alert("Sign In to save!")} className="iscreen">Save</button>
+                                            }
                                         </div>
                                    
                                     
