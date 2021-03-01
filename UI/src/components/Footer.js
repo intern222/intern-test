@@ -48,7 +48,7 @@ function Footer() {
       </div>
       <section className='social-media'>
         <div className='social-media-wrap'>
-          <big className='website-rights'>Intern © 2020</big>
+          <big className='website-rights'>Intern © 2021</big>
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
