@@ -9,10 +9,9 @@ function HeroSection () {
         <div className='hero-container'>
             <img src='/images/fundo_intern.png'></img>
             <h1>YOUR FUTURE STARTS HERE</h1>
-            <p>Start to look and Follow your dreams!</p>
+            <p>Start looking and Follow your dreams!</p>
         </div>
     )
 }
-
 
 export default HeroSection;

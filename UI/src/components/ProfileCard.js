@@ -7,8 +7,8 @@ import CardItem_3 from './CardItem_3.js';
 function ProfileCard() {
   return (
     <div className='info_container'>
-      <div className='cardscontainer'>
-        <div className='cardswrapper'>
+      <div className='cards__container'>
+        <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem_1
               src='/images/diogo_1.jpeg'

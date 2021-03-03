@@ -49,21 +49,18 @@ export default function SearchScreen(props) {
     <div>
       <div className="row top">
         <div className="col_1">
-          <h3>Department</h3>
           {loadingCategories ? (
           <LoadingBox></LoadingBox>
         ) : errorCategories ? (
           <MessageBox variant="danger">{errorCategories}</MessageBox>
         ) : (
-          <ul>
-            <div>
-              <h2>Search Internship</h2>
-              <Route
+          <ol>
+            <div className="filter_information">
+              <Route 
                 render={({ history }) => (
                   <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
                 )}
               ></Route>
-              <h2>Select a Filter</h2>
               <div className="select">
                 <select
                   value={category}
@@ -82,12 +79,13 @@ export default function SearchScreen(props) {
                     </option>
                   ))}
                 </select>
+                
               </div>
             </div>
-          </ul>
+          </ol>
         )}
         
-      </div>
+        </div>
       
         <div className="col_2">
           {loading ? (

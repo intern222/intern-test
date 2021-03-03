@@ -87,8 +87,8 @@ header
 
 main{
   grid-area: main;
-  padding: 3rem;
-  
+  padding: 0rem;
+  max-width: 100%;
 }
 footer{
   grid-area: footer;
@@ -321,6 +321,25 @@ img.large{
   width: 80px;
   height: 36px;
 }
+
+@media screen and (max-width: 600px) {
+  .search button {
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-right: none;
+    margin-left: 100%;
+    margin-top: 10px;
+    width: 80px;
+    height: 42px;
+    background-color: grey;
+    outline: none;
+  }
+
+  .center.search{
+    width: 80%;
+    height: 60px;
+  }
+}
+ 
 /*Search Internships/Users List Institution/Admin*/
 .search1 button {
   border-radius: 0 0.5rem 0.5rem 0;
@@ -342,32 +361,78 @@ img.large{
 
 .row123{
   margin-left: 1170px;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }
 
 /*Search Internships Search Screen*/
 .search2 button {
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0px;
   border-right: none;
-  width: 40px;
+  width: 70px;
   height: 40px;
-  background-color: #696969;
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
   outline: none;
-  padding: 0px 0px 2.5px 0px;
+  border-bottom:3px solid #333;
 }
+
+.search2 button:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+
 .search2 input {
-  border-radius: 0.5rem 0 0 0.5rem;
-  border-right: none;
-  width: 100px;
-  height: 40px;
-  outline: none;
+  border:none;
+  border-bottom:3px solid #333;
+  height:40px;
+  margin-right:auto;
+  font-size:12px;
+  display:inline-block;
+  padding:0px;
+  -webkit-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
+  -moz-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
+  transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
+  font-weight: lighter;
+  padding-left:5px;
+  color:rgb(0, 0, 0);
+  background:transparent;
+}
+
+.fa-search{
+  color: #333;
 }
 
 .row1234{
   margin-bottom: 25px; 
   margin-top: 25px; 
+  margin-left: -70px;
+  width: 100%;
+  display: flex;
 }
 
+.search2{
+  width:160px;
+  margin-top:0px;
+  margin-left:0%;
+  margin-right:0%;
+}
+
+
+input:focus{
+  outline:none;
+  background: rgba(0,0,0,0.2);
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .row1234{
+      margin-bottom: 25px; 
+      margin-top: 25px; 
+      margin-left: -20px;
+      width: 100%;
+      display: flex;
+    }
+  }
+  
 /*_Numeros em baixo das páginas"Pagination__*/
 
 .pagination a {
@@ -397,8 +462,10 @@ img.large{
 }
 
 .row.center.pagination{
-  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
   margin-top: 100px; 
+  width: 95%;
+  margin-left: 10px;
 }
 
 /*******************************************TABLE************************/
@@ -528,11 +595,12 @@ select::-ms-expand {
   background: #ffffff;
   overflow: hidden;
   border-radius: .25em;
+  margin-left: 5%;
 }
 select {
   flex: 1;
   padding: 0 .5em;
-  color: black;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 /* Arrow */
@@ -554,6 +622,22 @@ select {
   color: grey;
 }
 
+@media screen and (max-width: 600px) {
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: grid;
+    width: 160px;
+    height: 40px;
+    line-height: 3;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: .25em;
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+}
+
 
 /*Página de Procura"SearchScreen"*/
 .row{
@@ -561,7 +645,7 @@ select {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+
 }
 
 .results {
@@ -572,28 +656,70 @@ select {
 
 .row.top{
   align-items: flex-start;
-  background-color: rgb(255, 255, 255);
   margin-top: 20px;
   border-radius: 10px;
+  width: 100%;
+  margin-left: 0%;
+  
 }
 
 .row.center{
   display: flex;
   justify-content:  center;
-  background-color: rgb(255, 255, 255);
+  width:100%;
   border-radius: 10px;
+  margin-left: -20px;
 
+}
+
+.filter_information{
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-left: 0px;
+  padding-bottom: 40px;
+  margin-right: 45px;
 }
 
 .col_1 {
-  flex: 1 1 25rem;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 0px;
+  justify-content:  center;
+  padding-left: 0%;
+  margin-top: -40px;
 }
 
 .col_2 {
-  flex: 32 1 75rem;
+  width: 100%;
 }
+
 .min{
   min-width: 10rem; 
+}
+
+@media screen and (max-width: 600px) {
+  .filter_information{
+    display: grid;
+    border-radius: 10px;
+  }
+
+  .col_1{
+    background-color: rgb(231, 231, 231);
+  }
+
+  .col_2 {
+    width: 100%;
+  }
+
+  .row.center{
+    display: flex;
+    justify-content:  center;
+    width:100%;
+    border-radius: 10px;
+    margin-left: -20px;
+  }
 }
 
 /*_Página de cada estágio_"InternshipScreen"____________________*/
@@ -603,11 +729,14 @@ select {
 }
 
 button.iscreen{
-  background-color: rgb(2,2,2);
+  background-color: black;
   color: white;
   width: 100px;
   border-radius: 50px;
   outline: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 15px;
 }
 
 .intern_containers {
@@ -615,7 +744,7 @@ button.iscreen{
 }
 
 .description{
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin-top: 30px;
   margin-left: 8%;
   width: 55%;
@@ -624,6 +753,17 @@ button.iscreen{
   padding-left: 70px;
   padding-right: 70px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.description h3{
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.description h4{
+  
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 .feactures {
@@ -636,6 +776,17 @@ button.iscreen{
   margin-left: 1%;
   padding-left: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.feactures h3{
+  font-weight: lighter;
+  font-size: 17px;
+}
+
+.feactures h4{
+  
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 .avatar-holder-1 {
@@ -652,7 +803,7 @@ button.iscreen{
 
 .col_4{
  background-color: rgb(255, 255, 255);
- margin-top: 50px;
+ margin-top: 20px;
  margin-left: 8%;
  margin-right: 8%;
  max-width: 100%;
@@ -681,12 +832,149 @@ button.iscreen{
 
 .apply_save{
   display: flex;
-  margin-left: 75%;
-  margin-right: 100px;
+  margin-left: 600px;
+  margin-right: 0px;
   margin-top: -50px;
   background-color: rgb(255, 255, 255);
-  justify-content: space-between; 
+  justify-content: center; 
+  font-size: 15px;
 }
+
+@media screen and (max-width: 1000px) {
+  .avatar-holder-1 {
+    position: absolute;
+    margin-top: 30px;
+    width: 75px;
+    height: 75px;
+    border-radius: 0%;
+    box-shadow: 0 0 0 2.5px rgb(233, 233, 233);
+    background: white;
+    overflow: hidden;
+    margin-left: 35px;
+  }
+
+  .name{
+    margin-left: 150px;
+    padding-top: 30px;
+    font-size: 15px;
+  }
+  
+  .location{
+    margin-left: 150px;
+    font-size: 17px;
+    padding-top: 0px;
+  }
+  
+  .col_4 h3 {
+    margin-left: 150px;
+    padding-top: 0px;
+    font-size: 15px;
+  }
+
+  .apply_save{
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 40px;
+    justify-content: center; 
+  }
+
+  button.iscreen{
+    color: white;
+    width: 100px;
+    border-radius: 50px;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .intern_containers {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+  .description{
+    background-color: rgb(255, 255, 255);
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 8%;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: none;
+  }
+  
+  .feactures {
+    margin-top: -5px;
+    margin-left: 5px;
+    margin-right: 8%;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: none;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .apply_save{
+    margin-top: 20px;
+  }
+
+  .description h3{
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  .description h4{
+    font-weight: lighter;
+    font-size: 11px;
+  }
+
+  .feactures h3{
+    font-weight: lighter;
+    font-size: 15px;
+  }
+  
+  .feactures h4{
+    font-weight: lighter;
+    font-size: 11px;
+  }
+
+  .col_4{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .intern_containers {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+}
+
+
 
 /*_Cartões de internships_"Internship"______________*/
 
@@ -696,9 +984,10 @@ button.iscreen{
 }
 
 .courses-container {
-  margin-left: 10px;
-  margin-top: 0px;
-  
+  margin-left: 50px;
+  margin-top: -10px;
+  height: 200px;
+  padding-bottom: 0px;
 }
 
 .course {
@@ -758,6 +1047,13 @@ button.iscreen{
 	margin: 10px 0;
   margin-right: 97px;
   font-size: 13px;
+}
+
+.course h3 {
+  letter-spacing: 1px;
+	margin: 10px 0;
+  margin-right: 50px;
+  font-size: 9px;
 }
 
 .course h2:hover{
@@ -843,6 +1139,10 @@ button.iscreen{
     color: black;
   }
 
+  .courses-container{
+    margin-top: 30px;
+  }
+
   .course {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
@@ -853,7 +1153,7 @@ button.iscreen{
     width: 230px;
     height: 150px;
     border-end-end-radius: 200%;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   
   .course-info {
@@ -1072,9 +1372,9 @@ font-family: 'Ubuntu', sans-serif;
 
 .info_section{
   display: flex;
-  width: 104%;
-  margin-left: -28px;
-  margin-top: -7.5%;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: -160px;
   margin-bottom: 110px;
   background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  
   background: linear-gradient(to right, #E4E5E6, #00416A); 
@@ -1085,8 +1385,8 @@ font-family: 'Ubuntu', sans-serif;
 
 .info_section_2{
   display: flex;
-  width: 104%;
-  margin-left: -28px;
+  width: 100%;
+  margin-left: 0px;
   margin-top: -110px;
   margin-bottom: 110px;
   background: #8e9eab;  
@@ -1100,8 +1400,8 @@ font-family: 'Ubuntu', sans-serif;
 
 .profile_section{
   display: flex;
-  width: 104%;
-  margin-left: -28px;
+  width: 100%;
+  margin-left: 0px;
   margin-top: -110px;
   margin-bottom: 110px;
   background: -webkit-linear-gradient(to left, #E4E5E6, #00416A);  
@@ -1122,187 +1422,5 @@ img.info{
   border-radius: 100px;
 }
 
-/*INTERNSHIP SCREEN*/
-.intern_link{
-  text-decoration: none;
-  color: black;
-}
 
-button.iscreen{
-  background-color: rgb(2,2,2);
-  color: white;
-  width: 100px;
-  border-radius: 50px;
-  outline: none;
-  margin-left: 20px;
-  margin-right: 20px;
-}
 
-.intern_containers {
-  display: flex;
-}
-
-.description{
-  margin-top: 30px;
-  margin-left: 8%;
-  width: 55%;
-  height: 100%;
-  border-radius: 10px;
-  padding-left: 70px;
-  padding-right: 70px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.feactures {
-  margin-top: 30px;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  width: 35%;
-  border-radius: 10px;
-  margin-right: 8%;
-  margin-left: 1%;
-  padding-left: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.avatar-holder-1 {
-  position: absolute;
-  margin-top: 30px;
-  width: 150px;
-  height: 150px;
-  border-radius: 0%;
-  box-shadow: 0 0 0 2.5px rgb(233, 233, 233);
-  background: white;
-  overflow: hidden;
-  margin-left: 75px;
-}
-
-.col_4{
- background-color: rgb(255, 255, 255);
- margin-top: 50px;
- margin-left: 8%;
- margin-right: 8%;
- max-width: 100%;
- height: 210px;
- border-radius: 10px;
- box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.name{
-  margin-left: 300px;
-  padding-top: 30px;
-  font-size: 30px;
-}
-
-.location{
-  margin-left: 300px;
-  font-size: 17px;
-  padding-top: 0px;
-}
-
-.col_4 h3 {
-  margin-left: 300px;
-  padding-top: 0px;
-  font-size: 25px;
-}
-
-.apply_save{
-  display: flex;
-  margin-left: 600px;
-  margin-right: 0px;
-  margin-top: -50px;
-  background-color: rgb(255, 255, 255);
-  justify-content: center; 
-}
-
-@media screen and (max-width: 1000px) {
-  .avatar-holder-1 {
-    position: absolute;
-    margin-top: 30px;
-    width: 75px;
-    height: 75px;
-    border-radius: 0%;
-    box-shadow: 0 0 0 2.5px rgb(233, 233, 233);
-    background: white;
-    overflow: hidden;
-    margin-left: 35px;
-  }
-
-  .name{
-    margin-left: 150px;
-    padding-top: 30px;
-    font-size: 15px;
-  }
-  
-  .location{
-    margin-left: 150px;
-    font-size: 17px;
-    padding-top: 0px;
-  }
-  
-  .col_4 h3 {
-    margin-left: 150px;
-    padding-top: 0px;
-    font-size: 15px;
-  }
-
-  .apply_save{
-    display: flex;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 40px;
-    justify-content: center; 
-  }
-
-  button.iscreen{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    width: 100px;
-    border-radius: 50px;
-    outline: none;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .intern_containers {
-    display: grid;
-    background-color: rgb(255, 255, 255);
-    margin-top: 50px;
-    margin-left: 8%;
-    margin-right: 8%;
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
-
-  .description{
-    background-color: rgb(255, 255, 255);
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 8%;
-    width: 80%;
-    height: 100%;
-    border-radius: 10px;
-    padding-left: 50px;
-    padding-right: 0px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    box-shadow: none;
-  }
-  
-  .feactures {
-    margin-top: -5px;
-    margin-left: 5px;
-    margin-right: 8%;
-    width: 80%;
-    height: 100%;
-    border-radius: 10px;
-    padding-left: 50px;
-    padding-right: 0px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    box-shadow: none;
-    background-color: rgb(255, 255, 255);
-  }
-}

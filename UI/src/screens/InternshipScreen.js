@@ -27,7 +27,7 @@ export default function InternshipScreen(props) {
     return (
         
         <div>
-            {console.log('HEreeeeeee', userInfo)}
+            
             {loading ? (
                 <LoadingBox></LoadingBox>
             ) : error ? (

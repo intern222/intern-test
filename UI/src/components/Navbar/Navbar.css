@@ -1,6 +1,6 @@
 .navbar {
     background-color: rgb(69,69,69);
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 40px;
-    font-weight: bold;
-    font-family: 'nunito';
+    font-family: 'Nunito';
+    font-weight: lighter;
 }
   
   
@@ -40,6 +40,8 @@
     text-decoration: none;
     padding: 10px;
     opacity: 1;
+    font-family: 'Nunito';
+    font-weight: lighter;
 }
 
 .nav-links::after {
@@ -209,7 +211,7 @@
       width: 300px;
       height: relative;
       position: absolute;
-      top: 68px;
+      top: 48px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -259,7 +261,7 @@
     .menu-icon{
         display: block;
         position: absolute;
-        top: 2.5px;
+        top: -7px;
         left: 130px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
@@ -311,7 +313,7 @@
       width: 101%;
       height: relative;
       position: absolute;
-      top: 68px;
+      top: 48px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -360,8 +362,8 @@
     .menu-icon{
         display: block;
         position: absolute;
-        top: 2.5px;
-        left: 130px;
+        top: -7px;
+        left: 150px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
         cursor: pointer;
