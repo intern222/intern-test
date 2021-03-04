@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function HeroSection () {
     return (
         <div className='hero-container'>
-            <img src='/images/fundo_intern.png'></img>
+            
             <h1>YOUR FUTURE STARTS HERE</h1>
             <p>Start looking and Follow your dreams!</p>
         </div>
