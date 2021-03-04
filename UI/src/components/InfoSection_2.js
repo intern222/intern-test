@@ -13,9 +13,9 @@ function InfoSection_2() {
             <h2>Factos</h2>
             <p></p>
             <h3>
-            -Em 2017 60% dos estudantes dos EUA realizaram estágios extracurriculares enquanto que no IST realizam 2-4%.
+            -Em 2017, 60% dos estudantes dos EUA realizaram estágios extracurriculares enquanto que no IST realizam 2-4%.
             <p></p>
-            -No IST sabemos que de 11 000 alunos apenas 617 se candidatam para estágios, o que representa 5.6% da população da faculdade.
+            -No IST sabemos que de 10 987 alunos apenas 617 se candidatam para estágios, o que representa 5.6% da população da faculdade.
             </h3>
           </div> 
     </div>
