@@ -388,8 +388,7 @@ img.large{
   font-size:12px;
   display:inline-block;
   padding:0px;
-  -webkit-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
-  -moz-transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
+  -webkit-appearance: none;
   transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
   font-weight: lighter;
   padding-left:5px;
