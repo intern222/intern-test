@@ -18,7 +18,7 @@ import {
     INTERNSHIP_UPDATE_FAIL, 
     INTERNSHIP_UPDATE_REQUEST, 
     INTERNSHIP_UPDATE_RESET, 
-    INTERNSHIP_UPDATE_SUCCESS 
+    INTERNSHIP_UPDATE_SUCCESS,
 } from "../constants/internshipConstants";
 
 export const internshipListReducer = (state = { loading: true, internships: [] }, action) => {
@@ -44,7 +44,13 @@ export const internshipCategoryListReducer = (state = { loading: true, internshi
         case INTERNSHIP_CATEGORY_LIST_REQUEST:
             return {loading: true};
         case INTERNSHIP_CATEGORY_LIST_SUCCESS:
-            return {loading: false, categories: action.payload};
+            return {
+                loading: false, 
+                categories: action.payload.categories,
+                types: action.payload.types,
+                locations: action.payload.locations,
+                payments: action.payload.payments,
+            };
         case INTERNSHIP_CATEGORY_LIST_FAIL:
             return {loading: false, error: action.payload};
         default :

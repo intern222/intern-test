@@ -57,6 +57,10 @@
     width:100%;
     transition: width .5s;
 }
+
+.bookmark123{
+    font-size: 5px;
+}
   
 .fa-bars {
     color: #fff;

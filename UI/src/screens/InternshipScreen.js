@@ -52,7 +52,9 @@ export default function InternshipScreen(props) {
                                         </h3>
                                         <div className="apply_save">
                                             {internship.status === 'Open' &&  (
-                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
+                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply <i style={{marginLeft:"5px"}} class="fas fa-share-square"></i>
+                                    
+                                                </button>
                                                 )
                                             }
                                             {
@@ -117,6 +119,13 @@ export default function InternshipScreen(props) {
                                     </h3>
                                     <h4 className="candidates">  
                                         {internship.skills} 
+                                    </h4>
+
+                                    <h3 className="work_functions">
+                                        Salary
+                                    </h3>
+                                    <h4 className="candidates">  
+                                        {internship.payment} 
                                     </h4>
                                 </div>
                             </div>

@@ -69,7 +69,7 @@ function App(){
                         exact
                     ></Route>
                     <Route 
-                        path="/search/category/:category/name/:name/pageNumber/:pageNumber" 
+                        path="/search/category/:category/name/:name/type/:type/location/:location/payment/:payment/pageNumber/:pageNumber" 
                         component={SearchScreen} 
                         exact
                     ></Route>

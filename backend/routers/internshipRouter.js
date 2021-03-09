@@ -14,21 +14,33 @@ internshipRouter.get(
 
     const name = req.query.name || '';
     const category = req.query.category || '';
+    const type = req.query.type || '';
+    const location = req.query.location || '';
+    const payment = req.query.payment || '';
     const institution = req.query.institution || '';
 
     const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
     const institutionFilter = institution ? { institution}: {};
     const categoryFilter = category ? { category}: {};
+    const typeFilter = type ? { type}: {};
+    const locationFilter = location ? { location}: {};
+    const paymentFilter = payment ? { payment}: {};
 
     const count = await Internship.count({
       ...institutionFilter, 
       ...nameFilter,
       ...categoryFilter,
+      ...typeFilter,
+      ...locationFilter,
+      ...paymentFilter,
     });
     const internships = await Internship.find({
       ...institutionFilter, 
       ...nameFilter,
       ...categoryFilter,
+      ...typeFilter,
+      ...locationFilter,
+      ...paymentFilter,
     })
       .populate('institution', 'institution.name institution.logo')
       .skip(pageSize*(page - 1))
@@ -42,7 +54,10 @@ internshipRouter.get(
   '/categories', 
   expressAsyncHandler(async(req, res) => {
     const categories = await Internship.find().distinct('category');
-    res.send(categories);
+    const types = await Internship.find().distinct('type');
+    const locations = await Internship.find().distinct('location');
+    const payments = await Internship.find().distinct('payment');
+    res.send({categories, types, locations, payments});
   })
 );
 
@@ -90,10 +105,11 @@ internshipRouter.post(
       image: 'https://internwebapp.s3.eu-central-1.amazonaws.com/IST.png',
       category: 'Tech',
       skills: 'Management, Business, Health',
+      payment: 'Paid',
       company: 'sample name',
       location: 'sample location',
       candidates: 0,
-      status: 'Open or Closed',
+      status: 'Open',
       type: 'Part-time',
       date: 'sample date',
       description: 'sample description',
@@ -116,6 +132,7 @@ internshipRouter.put(
         internship.image = req.body.image;
         internship.category = req.body.category;
         internship.skills = req.body.skills;
+        internship.payment = req.body.payment;
         internship.company = req.body.company;
         internship.location = req.body.location;
         internship.candidates = req.body.candidates;

@@ -6,6 +6,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { INTERNSHIP_CREATE_RESET, INTERNSHIP_DELETE_RESET } from '../constants/internshipConstants';
 import SearchBox from '../components/SearchBoxInternship.js';
+import Moment from 'moment';
 
 export default function InternshipListScreen(props){
 
@@ -62,6 +63,9 @@ export default function InternshipListScreen(props){
         if(window.confirm('Are you sure you want to delete?')){
             dispatch(deleteInternship(internship._id));
         }
+    };
+    const deleteHandlerDate = (internship) =>{
+        dispatch(deleteInternship(internship._id));
     };
     const createHandler = () => {
         dispatch(createInternship());

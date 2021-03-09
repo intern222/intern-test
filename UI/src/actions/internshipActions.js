@@ -17,7 +17,7 @@ import {
     INTERNSHIP_DELETE_SUCCESS,
     INTERNSHIP_CATEGORY_LIST_REQUEST,
     INTERNSHIP_CATEGORY_LIST_SUCCESS,
-    INTERNSHIP_CATEGORY_LIST_FAIL, 
+    INTERNSHIP_CATEGORY_LIST_FAIL,  
 } from "../constants/internshipConstants";
 
 export const listInternships = ({
@@ -25,19 +25,23 @@ export const listInternships = ({
     institution='',
     name='', 
     category='',
+    type='',
+    location='',
+    payment='',
 }) => async (dispatch) => {
     dispatch({
         type: INTERNSHIP_LIST_REQUEST
     });
     try{
         const { data } = await Axios.get(
-            `/api/internships?pageNumber=${pageNumber}&institution=${institution}&name=${name}&category=${category}`
+            `/api/internships?pageNumber=${pageNumber}&institution=${institution}&name=${name}&category=${category}&type=${type}&location=${location}&payment=${payment}`
         );
         dispatch({ type: INTERNSHIP_LIST_SUCCESS, payload: data});
     } catch(error){
         dispatch({ type: INTERNSHIP_LIST_FAIL, payload : error.message});
     }
 };
+
 
 export const listInternshipCategories = () => async (dispatch) => {
     dispatch({

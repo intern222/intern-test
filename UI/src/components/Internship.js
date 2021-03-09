@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
-
+import Moment from 'moment';
 
 export default function Internship(props) {
 
@@ -28,7 +27,7 @@ export default function Internship(props) {
                         </div>
                         <div className="progress-container">
                             <h6>{internship.location}</h6>
-                            <h6>{internship.date}</h6>
+                            <h6>{Moment(internship.createdAt).format('DD/MM/YYYY')}</h6>
                         </div>
                         <h5>{internship.company}</h5>
                         {

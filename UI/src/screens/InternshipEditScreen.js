@@ -13,6 +13,7 @@ export default function InternshipEditScreen(props) {
     const [image, setImage] = useState('');
     const [category, setCategory] = useState('');
     const [skills, setSkills] = useState('');
+    const [payment, setPayment] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
     const [candidates, setCandidates] = useState('');
@@ -45,6 +46,7 @@ export default function InternshipEditScreen(props) {
             setImage(internship.image);
             setCategory(internship.category);
             setSkills(internship.skills);
+            setPayment(internship.payment);
             setCompany(internship.company);
             setLocation(internship.location);
             setCandidates(internship.candidates);
@@ -71,6 +73,7 @@ export default function InternshipEditScreen(props) {
                 image,
                 category,
                 skills,
+                payment,
                 company,
                 location,
                 candidates,
@@ -231,6 +234,16 @@ export default function InternshipEditScreen(props) {
                                     >
                                         <option value="Part-time">Part-time</option>
                                         <option value="Full-time">Full-time</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label htmlFor="type">Salary</label>
+                                    <select
+                                        value={payment}
+                                        onChange={(e) => setPayment(e.target.value)}
+                                    >
+                                        <option value="Paid">Paid</option>
+                                        <option value="Unpaid">Unpaid</option>
                                     </select>
                                 </div>
                                 <div>
