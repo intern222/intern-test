@@ -112,10 +112,10 @@ export default function InternshipEditScreen(props) {
     };
 
     return (
-        <div>
+        <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Edit Internship {internshipId}</h1>
+                    <h1>Edit Internship</h1>
                 </div>
                 {loadingUpdate && <LoadingBox></LoadingBox>}
                 {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -125,29 +125,35 @@ export default function InternshipEditScreen(props) {
                     <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
                             <>
-                                <div>
-                                    <label htmlFor="name">Name</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="name">Nome do estágio</h3>
                                     <input
+                                        style={{ margin:"0"}}
                                         id="name"
                                         type="text"
                                         placeholder="Enter name"
+                                        className="un"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                     ></input>
-                                </div>
-                                <div>
-                                    <label htmlFor="url">Website URL</label>
+                                </div >
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="name">Website URL</h3>
                                     <input
+                                    style={{ margin:"0"}}
                                         id="url"
                                         type="text"
                                         placeholder="Enter internship url"
+                                        className="un"
                                         value={url}
                                         onChange={(e) => setURL(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="image">Image</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="image">Imagem URL</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="image"
                                         type="text"
                                         placeholder="Enter image"
@@ -155,7 +161,7 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setImage(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
+                                {/*<div>
                                     <label htmlFor="imageFile">Image File</label>
                                     <input
                                         type="file"
@@ -165,10 +171,12 @@ export default function InternshipEditScreen(props) {
                                     ></input>
                                     {loadingUpload && <LoadingBox></LoadingBox>}
                                     {errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
-                                </div>
-                                <div>
-                                    <label htmlFor="category">Category</label>
+                                </div>*/}
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="categoria">Categoria</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="category"
                                         type="text"
                                         placeholder="Enter category"
@@ -176,9 +184,11 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setCategory(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="skills">Skills</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="skills">Skills</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="skills"
                                         type="text"
                                         placeholder="Enter skills"
@@ -186,9 +196,11 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setSkills(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="company">Company</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="empresa">Empresa</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="company"
                                         type="text"
                                         placeholder="Enter company"
@@ -196,9 +208,11 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setCompany(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="location">Location</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="localização">Localização</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="location"
                                         type="text"
                                         placeholder="Enter location"
@@ -206,9 +220,11 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setLocation(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="candidates">Candidates</label>
+                                {/*<div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="candidatos">Candidatos</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="candidates"
                                         type="text"
                                         placeholder="Enter candidates"
@@ -216,19 +232,23 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setCandidates(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="status">Status</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="status">Status</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="status"
                                         type="text"
                                         placeholder="Enter status"
                                         value={status}
                                         onChange={(e) => setStatus(e.target.value)}
                                     ></input>
-                                </div>
-                                <div>
-                                    <label htmlFor="type">Type</label>
+                            </div>*/}
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="tipo">Tipo</h3>
                                     <select
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         value={type}
                                         onChange={(e) => setType(e.target.value)}
                                     >
@@ -236,9 +256,11 @@ export default function InternshipEditScreen(props) {
                                         <option value="Full-time">Full-time</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label htmlFor="type">Salary</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="pagamento">Pagamento</h3>
                                     <select
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         value={payment}
                                         onChange={(e) => setPayment(e.target.value)}
                                     >
@@ -246,9 +268,11 @@ export default function InternshipEditScreen(props) {
                                         <option value="Unpaid">Unpaid</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label htmlFor="date">Date</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="data">Candidatar até:</h3>
                                     <input
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="date"
                                         type="date"
                                         placeholder="Enter date"
@@ -256,9 +280,11 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setDate(e.target.value)}
                                     ></input>
                                 </div>
-                                <div>
-                                    <label htmlFor="description">Description</label>
+                                <div style={{width:"125%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="descrição">Descrição</h3>
                                     <textarea
+                                        style={{ margin:"0"}}
+                                        className="un"
                                         id="description"
                                         rows="3"
                                         type="textarea"
@@ -269,9 +295,9 @@ export default function InternshipEditScreen(props) {
                                 </div>
                                 <div>
                                     <label>
-                                        <button className="primary" type="submit">
+                                        <button className="signinButton" type="submit">
                                             Update
-                            </button>
+                                        </button>
                                     </label>
                                 </div>
                             </>

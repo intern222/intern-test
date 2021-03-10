@@ -9,7 +9,7 @@ const internshipRouter = express.Router();
 internshipRouter.get(
   '/',
   expressAsyncHandler(async (req, res) => {
-    const pageSize =12;
+    const pageSize =20;
     const page = Number(req.query.pageNumber) || 1;
 
     const name = req.query.name || '';
@@ -99,20 +99,20 @@ internshipRouter.post(
   isInstitutionOrAdmin,
   expressAsyncHandler(async (req, res) => {
     const internship = new Internship({
-      name: 'sample name ' + Date.now(),
+      name: 'Exemplo de nome ',
       institution: req.user._id,
-      url: 'https://www.google.com/',
-      image: 'https://internwebapp.s3.eu-central-1.amazonaws.com/IST.png',
-      category: 'Tech',
-      skills: 'Management, Business, Health',
+      url: 'Insira o url da posição',
+      image: 'Insira o link de uma imagem',
+      category: 'Exemplo de Categoria',
+      skills: 'Exemplo de skills',
       payment: 'Paid',
-      company: 'sample name',
-      location: 'sample location',
+      company: 'Exemplo de empresa',
+      location: 'Exemplo de Localização',
       candidates: 0,
       status: 'Open',
       type: 'Part-time',
-      date: 'sample date',
-      description: 'sample description',
+      date: 'Exemplo de data',
+      description: 'Exemplo de descrição',
     });
     const createdInternship = await internship.save();
     res.send({ message: 'Internship Created', internship: createdInternship });

@@ -46,7 +46,7 @@ export default function UserEditScreen(props) {
     dispatch(updateUser({ _id: userId, name, email, isInstitution, isAdmin }));
   };
   return (
-    <div>
+    <div className="signinContainer">
       <form className="form" onSubmit={submitHandler}>
         <div>
           <h1>Edit User {name}</h1>
@@ -61,9 +61,11 @@ export default function UserEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-            <div>
-              <label htmlFor="name">Name</label>
-              <input
+        <div style={{width:"125%"}}>
+            <h3 style={{margin:"5px"}} htmlFor="name">Nome</h3>
+            <input
+                style={{ margin:"0"}}
+                className="un"
                 id="name"
                 type="text"
                 placeholder="Enter name"
@@ -71,9 +73,11 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
+            <div style={{width:"125%"}}>
+            <h3 style={{margin:"5px"}} htmlFor="email">Email</h3>
+            <input
+                style={{ margin:"0"}}
+                className="un"
                 id="email"
                 type="email"
                 placeholder="Enter email"
@@ -81,18 +85,22 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
-            <div>
-              <label htmlFor="isInstitution">Is Institution</label>
-              <input
+            <div style={{width:"125%"}}>
+            <h3 style={{margin:"5px"}} htmlFor="empresa">É Empresa ?</h3>
+            <input
+                style={{ margin:"0"}}
+                className="un"
                 id="isInstitution"
                 type="checkbox"
                 checked={isInstitution}
                 onChange={(e) => setIsInstitution(e.target.checked)}
               ></input>
             </div>
-            <div>
-              <label htmlFor="isAdmin">Is Admin</label>
-              <input
+            <div style={{width:"125%"}}>
+            <h3 style={{margin:"5px"}} htmlFor="admin">É Adminstrador ?</h3>
+            <input
+                style={{ margin:"0"}}
+                className="un"
                 id="isAdmin"
                 type="checkbox"
                 checked={isAdmin}
@@ -100,7 +108,8 @@ export default function UserEditScreen(props) {
               ></input>
             </div>
             <div>
-              <button type="submit" className="primary">
+              <p></p>
+              <button type="submit" className="signinButton">
                 Update
               </button>
             </div>
