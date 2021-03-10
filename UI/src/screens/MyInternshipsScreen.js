@@ -23,50 +23,68 @@ export default function SavedInternshipsScreen(props) {
     }
 
     return (
-        <div className="row-top">
-            <h1>My internships</h1>
+        <div>
+            <div div className="row-top">
+            <h1>Favoritos</h1>
+            </div>
             {savedItems.length === 0 ?
                 (<div className="box">
                     <MessageBox>
-                        0 internships saved.
+                        Não tem Favoritos
                             <Link className="mybox" to="/search/name/">
-                            <br></br>Save an internship!
+                            <br></br>Procure Estágios aqui!
                             </Link>
                     </MessageBox>
-                </div>
+            </div>
 
-                ) : (
-                    <div>
-                        {
-                            savedItems.map((item) => (
-                                <li key={item.internship}>
-                                    <div className="row-1">
-                                        <div>
-                                            <Link to={`/internship/${item.internship}`}>
-                                                <img
-                                                    className="small"
-                                                    src={item.image}
-                                                    alt={item.name}
-                                                />
+                ) : ( 
+                        
+                            <div>
+                                <div className ="container_basic">
+                                    {savedItems.map((item) => (
+                                    <div key={item.internship}>
+                                  
+                                        <div className="courses-container">
+                                            <Link className="card-link" to={`/internship/${item.internship}`}>
+                                                <div className="course">
+                                                    <div className="avatar-holder">
+                                                        <img className="small" 
+                                                            src={item.image}
+                                                            alt={item.name}
+                                                        />
+                                                    </div>
+
+                                                    <div className="course-info">
+                                                            <div className="course-type">
+                                                                {item.type}
+                                                            </div>
+                                                        <div className="progress-container">
+                                                            <h6>{item.location}</h6>
+                                                            <h6>{item.date}</h6>
+                                                        </div>
+                                                        <h5>{item.company}</h5>
+                                                        {
+                                                            (item.name).length > 30 
+                                                                ? <h4>{item.name}</h4>  
+                                                                    : <h2>{item.name}</h2>
+                                                        }
+                                                        <Link 
+                                                            onClick={() => removeFromSavedHandler(item.internship)}><i className="far fa-trash-alt"></i>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </Link>
                                         </div>
-                                        <div className="min">
-                                            <Link to={`/internship/${item.internship}`}>{item.name}</Link>
-                                        </div>
-                                        <div>
-                                            <button className="small" onClick={() => window.location.href = `${item.url}`} disabled={savedItems.length === 0}> Apply </button>
-                                        </div>
-                                        <div>
-                                            <button className="small" onClick={() => removeFromSavedHandler(item.internship)}> Delete </button>
-                                        </div>
                                     </div>
-                                </li>
+                                
                             ))
                         }
-                    </div>
+                        </div>
+                        </div>
+                    
                 )
             }
         </div>
     );
 
-}
+}                                    

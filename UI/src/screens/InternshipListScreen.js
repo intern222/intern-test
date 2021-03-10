@@ -64,30 +64,27 @@ export default function InternshipListScreen(props){
             dispatch(deleteInternship(internship._id));
         }
     };
-    const deleteHandlerDate = (internship) =>{
-        dispatch(deleteInternship(internship._id));
-    };
     const createHandler = () => {
         dispatch(createInternship());
     };
 
     return(
         <div>
-            <div className="row">
-                <h1>Internships</h1>
+            <div className="col_12">
+                <h1>Estágios</h1>
+                <div className="row123">
+                <Route
+                    render={({ history }) => (
+                        <SearchBox history={history}></SearchBox>
+                    )}
+                ></Route>
                 <button 
                     type="button" 
-                    className="small" 
+                    className="small10" 
                     onClick={createHandler}
                 >
-                    Create Internship
+                    Criar Estágio
                 </button>
-                <div className="row123">
-                    <Route
-                        render={({ history }) => (
-                            <SearchBox history={history}></SearchBox>
-                        )}
-                    ></Route>
                 </div>
             </div>
             {loadingDelete && <LoadingBox></LoadingBox>}
@@ -105,12 +102,12 @@ export default function InternshipListScreen(props){
                         <table responsive="true">
                             <thead>
                                 <tr className="table100-head">
-                                    <th>NAME</th>
-                                    <th>CATEGORY</th>
-                                    <th>COMPANY</th>
-                                    <th>LOCATION</th>
-                                    <th>TYPE</th>
-                                    <th>ACTIONS</th>
+                                    <th>NOME</th>
+                                    <th>ÁREA</th>
+                                    <th>EMPRESA</th>
+                                    <th>LOCALIZAÇÃO</th>
+                                    <th>TIPO</th>
+                                    <th>OPÇÕES</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -128,14 +125,14 @@ export default function InternshipListScreen(props){
                                                 onClick={() => 
                                                     props.history.push(`/internship/${internship._id}/edit`)}
                                             >
-                                                Edit
+                                                Editar
                                             </button>
                                             <button 
                                                 type="button" 
                                                 className="small" 
                                                 onClick = {() => deleteHandler(internship)}
                                             >
-                                                Delete
+                                                Apagar
                                             </button>
                                         </td>
                                     </tr>

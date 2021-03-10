@@ -10,21 +10,22 @@ export default function SearchBox(props){
         props.history.push(`/searchinternship/name/${name}`);
     };
 
-    return(
-        <form className="row center search1" onSubmit={submitHandler}>
-            <Row>
-                <div className="row">
-                    <input 
-                        type="search" 
-                        name="q" 
-                        id="q" 
-                        onChange={(e) => setName(e.target.value)}
-                    ></input>
-                </div>
-                <button className="primary" type="submit">
-                    <i className="fa fa-search" color="black"></i>
-                </button>
-            </Row>
+    return (
+        <form className="search3" onSubmit={submitHandler}>
+
+          <div className="row12345">
+            <input
+              type="search"
+              name="q"
+              id="q"
+              onChange={(e) => setName(e.target.value)}
+            ></input>
+
+            <button className="primary" type="submit">
+              <i className="fa fa-search"></i>
+            </button>
+          </div>
+
         </form>
-    );
-}
+      );
+    }

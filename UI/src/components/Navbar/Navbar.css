@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(69,69,69);
+    background-color: rgb(54,69,79);
     height: 60px;
     display: flex;
     justify-content: center;
@@ -8,11 +8,11 @@
   }
   
 .navbar-logo {
-    color: #fff;
+    color: rgb(255, 255, 255);
     justify-self: start;
     cursor: pointer;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Nunito';
     font-weight: lighter;
 }
@@ -36,12 +36,13 @@
 }
 
 .nav-links {
-    color: #ffff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px;
     opacity: 1;
     font-family: 'Nunito';
     font-weight: lighter;
+    outline: none;
 }
 
 .nav-links::after {
@@ -49,17 +50,13 @@
     display: block;
     width: 0;
     height: 1.6px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     transition: width .3s; 
 }
 
 .nav-links:hover::after {
     width:100%;
     transition: width .5s;
-}
-
-.bookmark123{
-    font-size: 5px;
 }
   
 .fa-bars {
@@ -226,7 +223,7 @@
     }
   
     .nav-menu.active {
-      background: #242222;
+      background: rgb(54,69,79);
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
@@ -265,7 +262,7 @@
     .menu-icon{
         display: block;
         position: absolute;
-        top: -7px;
+        top: -11px;
         left: 130px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
@@ -310,11 +307,11 @@
     .NavbarItems {
       position: relative;
     }
-  
+
     .nav-menu {
       display: flex;
       flex-direction: column;
-      width: 101%;
+      width: 102%;
       height: relative;
       position: absolute;
       top: 48px;
@@ -328,7 +325,7 @@
     }
   
     .nav-menu.active {
-      background: #242222;
+      background: rgb(54,69,79);
       left: 0;
       opacity: 1;
       transition: all 0.01s ease;
@@ -359,15 +356,15 @@
   
     .navbar-logo {
         position: absolute;
-        left: 15px;
         text-align: justify;
+        margin-left: 37%;
     }
   
     .menu-icon{
         display: block;
         position: absolute;
-        top: -7px;
-        left: 150px;
+        top: -11px;
+        left: 55px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
         cursor: pointer;

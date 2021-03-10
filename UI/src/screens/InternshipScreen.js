@@ -52,57 +52,17 @@ export default function InternshipScreen(props) {
                                         </h3>
                                         <div className="apply_save">
                                             {internship.status === 'Open' &&  (
-                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply <i style={{marginLeft:"5px"}} class="fas fa-share-square"></i>
-                                    
-                                                </button>
+                                                <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Candidatar<i style={{marginLeft:"5px"}} class="fas fa-share-square"></i></button>
                                                 )
                                             }
                                             {
                                                 (internship.status === 'Open' && userInfo !== null) 
                                                 ? 
-                                                    <button onClick={addToCartHandler} className="iscreen">Save</button> 
+                                                    <button onClick={addToCartHandler} className="iscreen">Salvar</button> 
                                                 :   
-                                                    <button onClick={() => window.alert("Sign In to save!")} className="iscreen">Save</button>
+                                                    <button onClick={() => window.alert("Sign In to save!")} className="iscreen">Salvar</button>
                                             }
                                         </div>
-                                   
-                                    
-                                    {/*<div className="col-5">
-                                    
-                                    
-                                        <div className="card_body">
-                                            <ul>
-                                                <li>
-                                                
-                                                </li>
-                                                {
-                                                    internship.status === 'Open' &&  (
-                                                        <li>
-                                                            <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Apply </button>
-                                                        </li>
-                                                    )
-                                                }
-                                                
-                                                {
-                                                    internship.status === 'Open' &&  (
-                                                        <li>
-                                                            <button onClick={addToCartHandler} className="iscreen">Save</button>
-                                                        </li>
-                                                    ) 
-                                                }
-                                                <p></p>
-                                                {
-                                                    !userInfo && (
-                                                        <li>
-                                                            <MessageBox variant="danger" >
-                                                                Sign in to Apply and Save
-                                                            </MessageBox>
-                                                        </li>
-                                                    )
-                                                }            
-                                            </ul>
-                                        </div>
-                                            </div>*/}
                                 </div>
                                   
                             <div className="intern_containers">

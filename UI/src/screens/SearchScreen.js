@@ -64,48 +64,41 @@ export default function SearchScreen(props) {
 
 
   return (
-    
     <div>
       <div className="row top">
         <div className="col_1">
+          <h1>Search</h1>
           {loadingCategories ? (
-            <LoadingBox></LoadingBox>
-          ) : errorCategories ? (
-            <MessageBox variant="danger">{errorCategories}</MessageBox>
-          ) : (
-            <ol>
-              <div className="filter_information">
-
-                <Route
-                  render={({ history }) => (
-                    <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
-                  )}
-                ></Route>
-
-
-
-                {console.log(new Date().toLocaleDateString())}
-
-                <div className="select">
-                  <select
-                    value={category}
-                    onChange={(c) => {
-                      props.history.push(getFilterUrl({ category: c.target.value }));
-                    }}
-                  >
-                    <option value='all' className={'all' === category ? 'active' : ''}>
-                      Any Category
+          <LoadingBox></LoadingBox>
+        ) : errorCategories ? (
+          <MessageBox variant="danger">{errorCategories}</MessageBox>
+        ) : (
+          <ol>
+            <div className="filter_information">
+              <Route 
+                render={({ history }) => (
+                  <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
+                )}
+              ></Route>
+              <div className="select">
+                <select
+                  value={category}
+                  onChange={(c) => {
+                    props.history.push(getFilterUrl({ category: c.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === category ? 'active' : ''}>
+                    Any Department
+                  </option>
+                  {categories.map((c) => (
+                    <option
+                      className={c === category ? 'active' : ''}
+                    >
+                      {c}
                     </option>
-                    {categories.map((c) => (
-                      <option
-                        className={c === category ? 'active' : ''}
-                      >
-                        {c}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
+                  ))}
+                </select>
+              </div>
                 <div className="select">
                   <select
                     value={type}
@@ -165,13 +158,12 @@ export default function SearchScreen(props) {
                     ))}
                   </select>
                 </div>
-
-              </div>
-            </ol>
-          )}
-
+            </div>
+          </ol>
+        )}
+        
         </div>
-
+      
         <div className="col_2">
           {loading ? (
             <LoadingBox></LoadingBox>
@@ -183,29 +175,30 @@ export default function SearchScreen(props) {
                 <MessageBox>No Internship Found</MessageBox>
               )}
               <div className="row center">
-                {loading ? (
-                  <LoadingBox></LoadingBox>
-                ) : error ? (
-                  <MessageBox variant="danger">{error}</MessageBox>
-                ) : (
-                  <h6 className="results">{internships.length} Results</h6>
-                )}
+              {loading ? (
+              <LoadingBox></LoadingBox>
+              ) : error ? (
+              <MessageBox variant="danger">{error}</MessageBox>
+              ) : (
+              <h6 className="results">{internships.length} Results</h6>
+              )}
                 {internships.map((internship) => (
                   <Internship key={internship._id} internship={internship}></Internship>
                 ))}
-              </div>
+              
               <div className="row center pagination">
                 {
                   [...Array(pages).keys()].map(x => (
                     <Link
                       className={x + 1 === page ? 'active' : ''}
-                      key={x + 1}
-                      to={getFilterUrl({ page: x + 1 })}
+                      key={x+1} 
+                      to={getFilterUrl({page: x+1})}
                     >
-                      {x + 1}
+                      {x+1}
                     </Link>
                   ))
                 }
+              </div>
               </div>
             </>
           )}

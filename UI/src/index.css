@@ -7,7 +7,7 @@ body{
   height: 100vh;
   font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(250, 250 250);
 }
 
 #root{
@@ -117,12 +117,6 @@ button.primary{
   width: 100%;
   margin-right: 30%;
   
-}
-button.small {
-  font-size: 15px;
-  background-color:#f0c040;
-  color: white;
-  margin: 10px;
 }
 button.small2 {
   font-size: 15px;
@@ -306,12 +300,13 @@ img.large{
 
 /* Search Internships Search Screen*/
 .search button {
-  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
   border-right: none;
   margin: 50px;
-  width: 80px;
-  height: 42px;
-  background-color: grey;
+  padding-top: 9px;
+  width: 52px;
+  height: 34px;
+  background-color: rgb(255, 255, 255);
   outline: none;
 }
 .search input {
@@ -359,9 +354,32 @@ img.large{
   outline: none;
 }
 
+.col_12 h1{
+  padding-top: 10px;
+}
+
+.col_12 {
+  width: 85%;
+  border-radius: 0px;
+  justify-content:  center;
+  padding-left: 0%;
+  margin-top: -4px;
+  margin-left: 7.5%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 .row123{
-  margin-left: 1170px;
-  margin-bottom: 25px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 35px;
+  border-radius: 10px;
 }
 
 /*Search Internships Search Screen*/
@@ -394,6 +412,117 @@ img.large{
   padding-left:5px;
   color:rgb(0, 0, 0);
   background:transparent;
+}
+
+/*Search Box 3 User*/
+button.small10 {
+  font-size: 15px;
+  background-color:rgb(54,69,79);
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 70%;
+}
+
+.col_12 h1{
+  padding-top: 10px;
+}
+
+.search3 button {
+  border-radius: 0px;
+  border-right: none;
+  width: 70px;
+  height: 40px;
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border-bottom:3px solid #333;
+}
+
+.search3 button:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+
+.search3 input {
+  border:none;
+  border-bottom:3px solid #333;
+  height:40px;
+  margin-right:auto;
+  font-size:12px;
+  display:inline-block;
+  padding:0px;
+  -webkit-appearance: none;
+  transition:cubic-bezier(.34,.43,0,1.02) 0.5s;
+  font-weight: lighter;
+  padding-left:5px;
+  color:rgb(0, 0, 0);
+  background:transparent;
+}
+
+.fa-search{
+  color: #333;
+}
+
+.row12345{
+  margin-bottom: 25px; 
+  margin-top: 25px; 
+  margin-left: 0px;
+  width: 100%;
+  display: flex;
+}
+
+.search3{
+  width:160px;
+  margin-top:0px;
+  margin-left:0%;
+  margin-right:0%;
+}
+
+
+input:focus{
+  outline:none;
+  background: rgba(0,0,0,0.2);
+  }
+
+
+@media screen and (max-width: 1300px) {
+  button.small10 {
+    margin-left: 60%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  button.small10 {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  button.small10 {
+    margin-left: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row123{
+    display: grid;
+  }
+
+  button.small10 {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .search3 button {
+    width: 70px;
+    height: 40px;
+    margin-left: 0px;
+  }
+
+  .search3 input {
+    width: 120px;
+  }
 }
 
 .fa-search{
@@ -461,10 +590,12 @@ input:focus{
 }
 
 .row.center.pagination{
-  margin-bottom: 20px;
+  margin-bottom: -40px;
+  padding-bottom: 0;
   margin-top: 100px; 
-  width: 95%;
-  margin-left: 10px;
+  width: 100%;
+  margin-left: 0%;
+  box-shadow: none;
 }
 
 /*******************************************TABLE************************/
@@ -473,17 +604,27 @@ input:focus{
   margin: 0 auto;
 }
 
+button.small {
+  font-size: 15px;
+  background-color:rgb(54,69,79);
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 0%;
+  margin-right: 5%;
+}
+
 table {
   border-spacing: 1;
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
+  width: 85%;
   margin: 0 auto;
   position: relative;
   align-items: center;
   justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 table * {
   position: relative;
@@ -493,7 +634,7 @@ table td, table th {
 }
 table thead tr {
   height: 60px;
-  background: #696969;
+  background: rgb(54,69,79);
 }
 table tbody tr {
   height: 50px;
@@ -524,7 +665,7 @@ table td.r, table th.r {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
 tbody tr {
@@ -564,14 +705,13 @@ tbody tr:hover {
     left: 30px;
   }
 }
-
 /********************************Search Screen Select Filter**************************************/
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  outline: 0;
+  outline: none;
   box-shadow: none;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-color: black;
@@ -655,24 +795,27 @@ select {
 
 .row.top{
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 60px;
   border-radius: 10px;
   width: 100%;
   margin-left: 0%;
-  
 }
 
 .row.center{
   display: flex;
   justify-content:  center;
-  width:100%;
+  width:85%;
   border-radius: 10px;
-  margin-left: -20px;
-
+  margin-left: 7.5%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 40px;
+  margin-bottom: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding-bottom: 50px;
+  padding-top: 0px;
 }
 
 .filter_information{
-  background-color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -683,11 +826,14 @@ select {
 
 .col_1 {
   background-color: rgb(255, 255, 255);
-  width: 100%;
+  width: 85%;
   border-radius: 0px;
   justify-content:  center;
   padding-left: 0%;
   margin-top: -40px;
+  margin-left: 7.5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
 }
 
 .col_2 {
@@ -705,7 +851,9 @@ select {
   }
 
   .col_1{
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    margin-left: 7.5%;
   }
 
   .col_2 {
@@ -715,23 +863,23 @@ select {
   .row.center{
     display: flex;
     justify-content:  center;
-    width:100%;
+    width:85%;
     border-radius: 10px;
-    margin-left: -20px;
+    margin-left: 7.5%;
   }
 }
-
 /*_Página de cada estágio_"InternshipScreen"____________________*/
 .intern_link{
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
+  font-weight: lighter;
 }
 
 button.iscreen{
-  background-color: black;
+  background-color: rgb(54,69,79);
   color: white;
-  width: 100px;
-  border-radius: 50px;
+  width: 120px;
+  border-radius: 10px;
   outline: none;
   margin-left: 20px;
   margin-right: 20px;
@@ -740,13 +888,16 @@ button.iscreen{
 
 .intern_containers {
   display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-left: 7.5%;
 }
 
 .description{
   background-color: white;
   margin-top: 30px;
-  margin-left: 8%;
-  width: 55%;
+  margin-left: 0%;
+  width: 75%;
   height: 100%;
   border-radius: 10px;
   padding-left: 70px;
@@ -771,7 +922,7 @@ button.iscreen{
   background-color: rgb(255, 255, 255);
   width: 35%;
   border-radius: 10px;
-  margin-right: 8%;
+  margin-right: 0%;
   margin-left: 1%;
   padding-left: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -803,9 +954,9 @@ button.iscreen{
 .col_4{
  background-color: rgb(255, 255, 255);
  margin-top: 20px;
- margin-left: 8%;
- margin-right: 8%;
- max-width: 100%;
+ margin-left: 7.5%;
+ /*margin-right: 8%;*/
+ width: 85%;
  height: 210px;
  border-radius: 10px;
  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -855,13 +1006,15 @@ button.iscreen{
   .name{
     margin-left: 150px;
     padding-top: 30px;
-    font-size: 15px;
+    font-size: 19px;
+    font-weight: bolder;
   }
   
   .location{
     margin-left: 150px;
-    font-size: 17px;
+    font-size: 13px;
     padding-top: 0px;
+    font-weight: bolder;
   }
   
   .col_4 h3 {
@@ -880,8 +1033,8 @@ button.iscreen{
 
   button.iscreen{
     color: white;
-    width: 100px;
-    border-radius: 50px;
+    width: 120px;
+    border-radius: 10px;
     outline: none;
     margin-left: 10px;
     margin-right: 10px;
@@ -955,11 +1108,6 @@ button.iscreen{
     font-size: 11px;
   }
 
-  .col_4{
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
   .intern_containers {
     display: grid;
     background-color: rgb(255, 255, 255);
@@ -983,7 +1131,8 @@ button.iscreen{
 }
 
 .courses-container {
-  margin-left: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: -10px;
   height: 200px;
   padding-bottom: 0px;
@@ -1025,7 +1174,7 @@ button.iscreen{
 	letter-spacing: 1px;
 	margin: 10px 0;
   margin-right: -50px;
-  font-size: 13px; 
+  font-size: 11px; 
   text-transform: none;
 }
 
@@ -1043,8 +1192,9 @@ button.iscreen{
 .course h2 {
 	letter-spacing: 1px;
 	margin: 10px 0;
-  margin-right: 97px;
-  font-size: 13px;
+  margin-right: -50px;
+  font-size: 13px; 
+  text-transform: none;
 }
 
 .course h3 {
@@ -1088,7 +1238,7 @@ button.iscreen{
 }
 
 .fa-bookmark {
-  color: rgb(87, 87, 87);
+  color: rgb(255, 255, 255);
   font-size: 16px;
   border-radius: 50px;
   padding: 12px 25px;
@@ -1096,7 +1246,7 @@ button.iscreen{
   right: -35px;
   bottom: 10px;
   outline: none;
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(54,69,79);
   background-position: center;
   padding: 7px 8.5px 7px 9px;
   text-transform: none;
@@ -1139,6 +1289,8 @@ button.iscreen{
 
   .courses-container{
     margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .course {
@@ -1373,8 +1525,8 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 0px;
   margin-top: -160px;
   margin-bottom: 110px;
-  background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  
-  background: linear-gradient(to right, #E4E5E6, #00416A); 
+  background: -webkit-linear-gradient(to top, #ffffff,#9cb2c7, #004974);
+  background: linear-gradient(to bottom, #ffffff,#9cb2c7, #004974); 
   padding-top: 100px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -1386,10 +1538,9 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 0px;
   margin-top: -110px;
   margin-bottom: 110px;
-  background: #8e9eab;  
-  background: -webkit-linear-gradient(to left, #eef2f3, #b2c0cc);  
-  background: linear-gradient(to left, #eef2f3, #b2c0cc); 
-  
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to bottom, #ffffff,#9cb2c7, #004974);
+  background: linear-gradient(to top, #ffffff,#9cb2c7, #004974);
   padding-top: 100px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -1401,8 +1552,8 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 0px;
   margin-top: -110px;
   margin-bottom: 110px;
-  background: -webkit-linear-gradient(to left, #E4E5E6, #00416A);  
-  background: linear-gradient(to left, #E4E5E6, #00416A); 
+  background: -webkit-linear-gradient(to top, #ffffff,#9cb2c7, #004974);
+  background: linear-gradient(to bottom, #ffffff,#9cb2c7, #004974);
   padding-top: 100px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -1418,6 +1569,154 @@ img.info{
   height: 100%;
   border-radius: 100px;
 }
+
+/*Institution Screen*/
+.name1{
+  margin-left: 300px;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.descricao{
+  margin-top: 10px;
+  margin-left: 300px;
+  margin-right: 30px;
+}
+
+.col-3{
+  margin-top: 50px;
+}
+
+.mail{
+  margin-left: 300px;
+  font-size: 17px;
+  padding-top: 0px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.fa-envelope:hover{
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  .name1{
+    margin-left: 150px;
+    padding-top: 30px;
+    font-size: 19px;
+    font-weight: bolder;
+  }
+
+  .descricao{
+    margin-left: 150px;
+    font-size: 14px;
+  }
+
+  .mail{
+    margin-left: 150px;
+    font-size: 13px;
+    font-weight: bolder;
+  }
+}
+
+/*My Internship Screen*/
+.fa-trash-alt {
+  color: rgb(87, 87, 87);
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 12px 25px;
+  position: absolute;
+  right: -35px;
+  bottom: 10px;
+  outline: none;
+  background-color: rgb(228, 228, 228);
+  background-position: center;
+  padding: 7px 8.5px 7px 9px;
+  text-transform: none;
+}
+
+.fa-trash-alt:hover{
+  color: rgb(87, 87, 87);
+  background-color: rgb(209, 209, 209);
+  background-position: center;
+  padding: 7px 8.5px 7px 9px;
+  text-transform: none;
+  transform: scale(1.05);
+}
+
+.row-top {
+  background-color: rgb(255, 255, 255);
+  width: 85%;
+  margin-left: 7.5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+}
+
+.container_basic{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 85%;
+  margin-left: 7.5%;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+}
+
+.courses-container_1{
+  margin-top: 10px;
+  height: 200px;
+  padding-top: 1px;
+}
+
+@media screen and (max-width: 620px){
+
+  .fa-trash-alt {
+    color: rgb(87, 87, 87);
+    font-size: 16px;
+    border-radius: 50px;
+    padding: 12px 25px;
+    position: absolute;
+    right: -15px;
+    bottom: 10px;
+    outline: none;
+    background-color: rgb(228, 228, 228);
+    background-position: center;
+    padding: 7px 8.5px 7px 9px;
+
+  }
+
+  .fa-trash-alt:hover{
+    color: rgb(87, 87, 87);
+    background-color: rgb(209, 209, 209);
+    background-position: center;
+    padding: 7px 8.5px 7px 9px;
+    transform: scale(1.05);
+  }
+
+  .courses-container_1{
+    margin-top: 60px;
+  }
+}
+
+
+.box {
+  width: 85%;
+  margin-left: 7.5%;
+  margin-top: 40px;
+}
+
+
+
+
 
 
 

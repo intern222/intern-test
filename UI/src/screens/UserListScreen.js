@@ -38,8 +38,8 @@ export default function UserListScreen(props) {
 
     return (
         <div>
-            <div className="row">
-                <h1>Users</h1>
+            <div className="col_12">
+                <h1>Utilizadores</h1>
                 <div className="row123">
                     <Route
                         render={({ history }) => (
@@ -83,14 +83,14 @@ export default function UserListScreen(props) {
                                                         className="small" 
                                                         onClick={() => props.history.push(`/user/${user._id}/edit`)}
                                                     >
-                                                        Edit
+                                                        Editar
                                                     </button>
                                                     <button 
                                                         type="button" 
                                                         className="small" 
                                                         onClick={() => deleteHandler(user)}
                                                     >
-                                                        Delete
+                                                        Apagar
                                                     </button>
                                                 </td>
                                             </tr>

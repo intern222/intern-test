@@ -24,7 +24,7 @@ function Navbar() {
                 <Link to='/' className='navbar-logo'>
                     Intern
                 </Link>
-                <div>
+                <div className="center search">
                     <Route
                         render={({ history }) => (
                             <SearchBox history={history}></SearchBox>
@@ -55,12 +55,8 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Favorites
-                                    {
-                                        savedItems.length > 0 && (
-                                            <span className="badge">{savedItems.length}</span>
-                                        )
-                                    }
+                                    Favoritos {savedItems.length > 0 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i>}
+                                    
                                 </Link>
                             </li>
                         )
@@ -76,7 +72,7 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    {userInfo.name} 
+                                    {userInfo.name} <i class="fas fa-user-circle"></i>
                                 </Link>
                             </li>
                         ) :
@@ -149,4 +145,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
