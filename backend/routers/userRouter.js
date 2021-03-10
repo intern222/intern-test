@@ -102,7 +102,7 @@ userRouter.get(
   isAuth, 
   isAdmin, 
   expressAsyncHandler(async(req, res) => {
-    const pageSize =6;
+    const pageSize=20;
     const page = Number(req.query.pageNumber) || 1;
     const name = req.query.name || '';
     const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};

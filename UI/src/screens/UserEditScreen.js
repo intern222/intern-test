@@ -61,10 +61,10 @@ export default function UserEditScreen(props) {
           <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <>
-        <div style={{width:"125%"}}>
+        <div style={{width:"100%"}}>
             <h3 style={{margin:"5px"}} htmlFor="name">Nome</h3>
             <input
-                style={{ margin:"0"}}
+                style={{ margin:"0", width:"95%"}}
                 className="un"
                 id="name"
                 type="text"
@@ -73,10 +73,10 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
-            <div style={{width:"125%"}}>
+            <div style={{width:"100%"}}>
             <h3 style={{margin:"5px"}} htmlFor="email">Email</h3>
             <input
-                style={{ margin:"0"}}
+                style={{ margin:"0", width:"95%"}}
                 className="un"
                 id="email"
                 type="email"
@@ -85,10 +85,10 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
-            <div style={{width:"125%"}}>
+            <div style={{width:"100%"}}>
             <h3 style={{margin:"5px"}} htmlFor="empresa">É Empresa ?</h3>
             <input
-                style={{ margin:"0"}}
+                style={{ margin:"0", width:"95%"}}
                 className="un"
                 id="isInstitution"
                 type="checkbox"
@@ -96,10 +96,10 @@ export default function UserEditScreen(props) {
                 onChange={(e) => setIsInstitution(e.target.checked)}
               ></input>
             </div>
-            <div style={{width:"125%"}}>
+            <div style={{width:"100%"}}>
             <h3 style={{margin:"5px"}} htmlFor="admin">É Adminstrador ?</h3>
             <input
-                style={{ margin:"0"}}
+                style={{ margin:"0", width:"95%"}}
                 className="un"
                 id="isAdmin"
                 type="checkbox"
