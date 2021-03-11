@@ -8,8 +8,8 @@ function HeroSection () {
     return (
         <div className='hero-container'>
             
-            <h1>YOUR FUTURE STARTS HERE</h1>
-            <p>Start looking and Follow your dreams!</p>
+            <h1 style={{paddingRight:"10px"}}>YOUR FUTURE STARTS HERE</h1>
+            <p style={{paddingRight:"10px"}}>Start looking and Follow your dreams!</p>
         </div>
     )
 }

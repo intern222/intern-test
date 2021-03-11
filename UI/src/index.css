@@ -974,6 +974,7 @@ button.iscreen{
   margin-left: 300px;
   padding-top: 30px;
   font-size: 30px;
+  padding-right: 50px;
 }
 
 .location{
@@ -1014,8 +1015,9 @@ button.iscreen{
   .name{
     margin-left: 150px;
     padding-top: 30px;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bolder;
+    padding-right: 120px;
   }
   
   .location{
