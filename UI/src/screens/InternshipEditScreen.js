@@ -264,8 +264,9 @@ export default function InternshipEditScreen(props) {
                                         value={payment}
                                         onChange={(e) => setPayment(e.target.value)}
                                     >
-                                        <option value="Paid">Paid</option>
-                                        <option value="Unpaid">Unpaid</option>
+                                        <option value="paid">Pago</option>
+                                        <option value="unpaid">Não pago</option>
+                                        <option value="notspecified">Não especifico</option>
                                     </select>
                                 </div>
                                 <div style={{width:"100%"}}>

@@ -51,16 +51,18 @@ export default function InternshipScreen(props) {
                                             </Link>
                                         </h3>
                                         <div className="apply_save">
-                                            {internship.status === 'Open' &&  (
+                                            {(internship.status === 'Open' && userInfo !== null)
+                                                ? 
                                                 <button className="iscreen" onClick={() => window.location.href = `${internship.url}`}> Candidatar<i style={{marginLeft:"5px"}} class="fas fa-share-square"></i></button>
-                                                )
+                                                :   
+                                                <button onClick={() => window.alert("Sign In para candidatar!")} className="iscreen">Candidatar<i style={{marginLeft:"5px", fontSize:"12px"}} class="fas fa-share-square"></i></button>
                                             }
                                             {
                                                 (internship.status === 'Open' && userInfo !== null) 
                                                 ? 
                                                     <button onClick={addToCartHandler} className="iscreen">Salvar</button> 
                                                 :   
-                                                    <button onClick={() => window.alert("Sign In to save!")} className="iscreen">Salvar</button>
+                                                    <button onClick={() => window.alert("Sign In para guardar!")} className="iscreen">Guardar</button>
                                             }
                                         </div>
                                 </div>

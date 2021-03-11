@@ -7,7 +7,7 @@ body{
   height: 100vh;
   font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
-  background-color: rgb(242.5, 242.5, 242.5);
+  background-color: rgb(247.5, 247.5, 247.5);
 }
 
 #root{
@@ -24,6 +24,8 @@ body{
   grid-template-columns: 1fr;
   grid-template-rows: 8rem 1fr 5rem;
   height: 100%;
+  width: 100%;
+  margin-left: 0px;
 }
 
 .brand{
@@ -272,6 +274,10 @@ img.large{
 .alert-info{
   color: #2020a0;
   background-color: #e0e0ff;
+  margin-left: 25%;
+  width: 50%;
+  margin-top: 20px;
+  justify-content: center;
 }
 .alert-danger{
   color: #a02020;
@@ -322,7 +328,7 @@ img.large{
     border-radius: 5px;
     border-right: none;
     margin-left: 100%;
-    margin-top: 15px;
+    margin-top: 13px;
     padding-top: 9px;
     width: 52px;
     height: 34px;
@@ -798,16 +804,16 @@ select {
   align-items: flex-start;
   margin-top: 60px;
   border-radius: 10px;
-  width: 100%;
-  margin-left: 0%;
+  width: 85%;
+  margin-left: 7.5%;
 }
 
 .row.center{
   display: flex;
   justify-content:  center;
-  width:85%;
+  width:100%;
   border-radius: 10px;
-  margin-left: 7.5%;
+  margin-left: 0%;
   background-color: rgb(255, 255, 255);
   margin-top: 40px;
   margin-bottom: 50px;
@@ -827,18 +833,19 @@ select {
 
 .col_1 {
   background-color: rgb(255, 255, 255);
-  width: 85%;
+  width: 100%;
   border-radius: 0px;
   justify-content:  center;
   padding-left: 0%;
   margin-top: -40px;
-  margin-left: 7.5%;
+  margin-left: 0%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 10px;
 }
 
 .col_2 {
   width: 100%;
+  margin-left: 0%;
 }
 
 .min{
@@ -855,10 +862,6 @@ select {
     background-color: rgb(255, 255, 255);
     width: 85%;
     margin-left: 7.5%;
-  }
-
-  .col_2 {
-    width: 100%;
   }
 
   .row.center{
@@ -907,7 +910,7 @@ button.iscreen{
 }
 
 .description h3{
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 17px;
 }
 
@@ -930,7 +933,7 @@ button.iscreen{
 }
 
 .feactures h3{
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 17px;
 }
 
@@ -961,6 +964,10 @@ button.iscreen{
  height: 210px;
  border-radius: 10px;
  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.boy{
+  background-color: brown;
 }
 
 .name{
@@ -1045,9 +1052,9 @@ button.iscreen{
     display: grid;
     background-color: rgb(255, 255, 255);
     margin-top: 50px;
-    margin-left: 8%;
-    margin-right: 8%;
-    max-width: 100%;
+    margin-left: 7.5%;
+    
+    width: 85%;
     height: 100%;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -1057,8 +1064,8 @@ button.iscreen{
     background-color: rgb(255, 255, 255);
     margin-top: 5px;
     margin-left: 5px;
-    margin-right: 8%;
-    width: 80%;
+    margin-right: 0%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     padding-left: 50px;
@@ -1071,8 +1078,8 @@ button.iscreen{
   .feactures {
     margin-top: -5px;
     margin-left: 5px;
-    margin-right: 8%;
-    width: 80%;
+    margin-right: 0%;
+    width: 100%;
     height: 100%;
     border-radius: 10px;
     padding-left: 50px;
@@ -1113,9 +1120,8 @@ button.iscreen{
     display: grid;
     background-color: rgb(255, 255, 255);
     margin-top: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
-    max-width: 100%;
+    margin-left: 7.5%;
+    width: 85%;
     height: 100%;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -1485,7 +1491,6 @@ font-family: 'Ubuntu', sans-serif;
   width: 77%;
   margin-left: 11%;
   outline: none;
-  margin-bottom: 10px;
 }
 
 .linkCreateAccount{
@@ -1500,7 +1505,7 @@ font-family: 'Ubuntu', sans-serif;
 .signinContainer{
   background-color: #ffffff;
   border-radius: 10px;
-  margin-bottom: 2%;
+  padding-bottom: 15px;
   margin-left: 20%;
   margin-right: 20%;
 }

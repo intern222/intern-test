@@ -20,6 +20,7 @@ import { useDispatch } from 'react-redux';
 import { listInternshipCategories } from './actions/internshipActions.js';
 import SearchScreenInternships from './screens/SearchScreenInternships.js';
 import SearchScreenUsers from './screens/SearchScreenUsers.js';
+import Contacts from './screens/Contacts.js';
 
 function App(){
 
@@ -34,6 +35,7 @@ function App(){
             <div className = "grid-container">
                 <Navbar/>
                 <main>
+                    <Route path="/contacts" component={Contacts}></Route>
                     <Route path="/institution/:id" component={InstitutionScreen}></Route>
                     <Route path="/saved/:id?" component={SavedInternshipsScreen}></Route>
                     <Route path="/internship/:id" component={InternshipScreen} exact></Route>
