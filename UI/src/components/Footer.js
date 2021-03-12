@@ -7,9 +7,11 @@ function Footer() {
   return (
     <div className='footer-container'>
       <div className='footer-links'>
-        <div className='footer-link-items'>
-          <h2>About Us</h2>
-          <Link to='/contacts'>Contactos</Link>
+        <div className="footer-link-wrapper">
+          <div className='footer-link-items'>
+            <h2>About Us</h2>
+            <Link to='/contacts'>Contactos</Link>
+          </div>
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
