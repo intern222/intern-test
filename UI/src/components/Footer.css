@@ -6,20 +6,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
   margin-left: 0px;
-  width: 90%;
+  width: 100%;
   padding-top: 0px;
-}
-
-.footer-subscription-heading {
-  margin-bottom: 24px;
-  font-size: 24px;
-}
-
-.footer-subscription-text {
-  margin-bottom: 24px;
-  font-size: 20px;
 }
 
 .footer-input {
@@ -42,18 +32,20 @@
 
 .footer-link-wrapper {
   display: flex;
+  justify-content: center;
+  margin-top: 0px;
 }
 
 .footer-link-items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 40px;
-  margin-right: 00px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
-  width: 160px;
+  width: 100%;
   box-sizing: border-box;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .footer-link-items h2 {
@@ -126,29 +118,4 @@
 .website-rights {
   color: rgb(0, 0, 0);
   margin-bottom: 16px;
-}
-
-@media screen and (max-width: 820px) {
-  .footer-links {
-    padding-top: 2rem;
-  }
-
-  .footer-input {
-    width: 100%;
-  }
-
-  .btn1 {
-    width: 100%;
-  }
-
-  .footer-link-wrapper {
-    flex-direction: column;
-  }
-
-  .social-media-wrap {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px) {
 }
