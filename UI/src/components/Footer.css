@@ -10,6 +10,7 @@
   margin-left: 0px;
   width: 100%;
   padding-top: 0px;
+  background-color: yellow;
 }
 
 .footer-input {
@@ -28,6 +29,7 @@
   max-width: 100%;
   display: flex;
   justify-content: center;
+  background-color: green;
 }
 
 .footer-link-wrapper {
@@ -46,6 +48,7 @@
   width: 100%;
   box-sizing: border-box;
   margin-top: 0px;
+  background-color: pink;
 }
 
 .footer-link-items h2 {

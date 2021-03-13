@@ -228,6 +228,7 @@
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      
     }
   
     .nav-links {
@@ -235,6 +236,7 @@
       padding: 2rem;
       width: 100%;
       display: table;
+      
       
     }
 
@@ -257,6 +259,7 @@
         position: absolute;
         left: 15px;
         text-align: justify;
+        
     }
   
     .menu-icon{
@@ -267,11 +270,13 @@
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
         cursor: pointer;
+        
     }
   
     .fa-times {
       color: #fff;
       font-size: 2rem;
+      
     }
   
     .nav-links-mobile {
