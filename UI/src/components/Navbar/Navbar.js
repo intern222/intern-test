@@ -3,7 +3,6 @@ import { Link, Route } from 'react-router-dom';
 import './Navbar.css';
 import { useSelector } from 'react-redux';
 import SearchBox from '../SearchBox.js';
-import { Button } from './Button';
 
 function Navbar() {
 

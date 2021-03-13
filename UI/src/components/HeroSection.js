@@ -1,14 +1,20 @@
 import React from 'react';
 import './HeroSection.css';
-import { Button } from './Navbar/Button';
 import '../App.css';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import SearchBox from './SearchBoxHero.js';
 
 function HeroSection () {
     return (
         <div className='hero-container'>
-            <h1>YOUR FUTURE STARTS HERE</h1>
-            <p>Start looking and Follow your dreams!</p>
+            <h1>O TEU FUTURO COMEÇA AGORA</h1>
+            <p>
+                <Route
+                    render={({ history }) => (
+                        <SearchBox history={history}></SearchBox>
+                    )}
+                ></Route>
+            </p>
         </div>
     )
 }
