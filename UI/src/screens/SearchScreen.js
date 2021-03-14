@@ -88,7 +88,7 @@ export default function SearchScreen(props) {
                   }}
                 >
                   <option value='all' className={'all' === category ? 'active' : ''}>
-                   Qualquer Categoria
+                   Qualquer Setor
                   </option>
                   {categories.map((c) => (
                     <option
@@ -99,66 +99,86 @@ export default function SearchScreen(props) {
                   ))}
                 </select>
               </div>
-                <div className="select" style={{width:"170px"}}>
-                  <select
-                    value={type}
-                    onChange={(t) => {
-                      props.history.push(getFilterUrl({ type: t.target.value }));
-                    }}
-                  >
-                    <option value='all' className={'all' === type ? 'active' : ''}>
-                      Qualquer Tipo
+              <div className="select" style={{width:"170px"}}>
+                <select
+                  value={category}
+                  onChange={(c) => {
+                    props.history.push(getFilterUrl({ category: c.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === category ? 'active' : ''}>
+                   Qualquer Setor
+                  </option>
+                  {categories.map((c) => (
+                    <option
+                      className={c === category ? 'active' : ''}
+                    >
+                      {c}
                     </option>
-                    {types.map((t) => (
-                      <option
-                        className={t === type ? 'active' : ''}
-                      >
-                        {t}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
+              </div>
+              <div className="select" style={{width:"170px"}}>
+                <select
+                  value={type}
+                  onChange={(t) => {
+                    props.history.push(getFilterUrl({ type: t.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === type ? 'active' : ''}>
+                    Qualquer Tipo
+                  </option>
+                  {types.map((t) => (
+                    <option
+                      className={t === type ? 'active' : ''}
+                    >
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-                <div className="select" style={{width:"170px"}}>
-                  <select
-                    value={location}
-                    onChange={(l) => {
-                      props.history.push(getFilterUrl({ location: l.target.value }));
-                    }}
-                  >
-                    <option value='all' className={'all' === location ? 'active' : ''}>
-                     Qualquer Localização
+              <div className="select" style={{width:"170px"}}>
+                <select
+                  value={location}
+                  onChange={(l) => {
+                    props.history.push(getFilterUrl({ location: l.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === location ? 'active' : ''}>
+                    Qualquer Localização
+                  </option>
+                  {locations.map((l) => (
+                    <option
+                      className={l === location ? 'active' : ''}
+                    >
+                      {l}
                     </option>
-                    {locations.map((l) => (
-                      <option
-                        className={l === location ? 'active' : ''}
-                      >
-                        {l}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
+              </div>
 
-                <div className="select" style={{width:"170px"}}>
-                  <select
-                    
-                    value={payment}
-                    onChange={(p) => {
-                      props.history.push(getFilterUrl({ payment: p.target.value }));
-                    }}
-                  >
-                    <option value='all' className={'all' === payment ? 'active' : ''}>
-                      Qualquer Salário
+              <div className="select" style={{width:"170px"}}>
+                <select
+                  
+                  value={payment}
+                  onChange={(p) => {
+                    props.history.push(getFilterUrl({ payment: p.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === payment ? 'active' : ''}>
+                    Qualquer Salário
+                  </option>
+                  {payments.map((p) => (
+                    <option
+                      className={p === payment ? 'active' : ''}
+                    >
+                      {p}
                     </option>
-                    {payments.map((p) => (
-                      <option
-                        className={p === payment ? 'active' : ''}
-                      >
-                        {p}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
+              </div>
+
             </div>
           </ol>
         )}

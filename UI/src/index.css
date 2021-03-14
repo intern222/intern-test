@@ -735,13 +735,12 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 160px;
   height: 40px;
   line-height: 3;
   background: #ffffff;
   overflow: hidden;
   border-radius: .25em;
-  margin-left: 3%;
+  margin-left: 1%;
 }
 select {
   flex: 1;
@@ -1628,6 +1627,7 @@ img.info{
   margin-left: 300px;
   padding-top: 30px;
   font-size: 30px;
+  font-weight: bold;
 }
 
 .descricao{
@@ -1645,6 +1645,7 @@ img.info{
   font-size: 17px;
   padding-top: 0px;
   text-decoration: none;
+  font-weight: bold;
   color: #000000;
 }
 
@@ -1652,23 +1653,74 @@ img.info{
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 1000px) {
+.row.intern{
+  display: flex;
+  justify-content:  center;
+  width: 85%;
+  border-radius: 10px;
+  margin-left: 7.5%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 40px;
+  margin-bottom: 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding-bottom: 50px;
+  padding-top: 0px;
+}
+
+.col_5{
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-left: 7.5%;
+  /*margin-right: 8%;*/
+  width: 85%;
+  height: 210px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+ }
+
+ .avatar-holder-2 {
+  position: absolute;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  box-shadow: 0 0 0 2.5px rgb(233, 233, 233);
+  background: white;
+  overflow: hidden;
+  margin-left: 75px;
+}
+
+
+@media screen and (max-width: 620px) {
   .name1{
-    margin-left: 150px;
+    margin-left: 170px;
     padding-top: 30px;
-    font-size: 19px;
+    font-size: 25px;
     font-weight: bolder;
   }
 
   .descricao{
-    margin-left: 150px;
-    font-size: 14px;
+    margin-left: 170px;
+    font-size: 17px;
   }
 
   .mail{
-    margin-left: 150px;
-    font-size: 13px;
+    margin-left: 170px;
+    font-size: 17px;
     font-weight: bolder;
+  }
+
+  .row.intern{
+    padding-top: 40px;
+  }
+
+  .avatar-holder-2 {
+    position: absolute;
+    margin-top: 35px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin-left: 35px;
   }
 }
 

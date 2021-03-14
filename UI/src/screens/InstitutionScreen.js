@@ -37,20 +37,20 @@ export default function InstitutionScreen(props) {
             ) : (
                 <div>
                     <div>
-                        <div className="col_4">
-                            <div className="avatar-holder-1">
+                        <div className="col_5">
+                            <div className="avatar-holder-2">
                                 <img className="large" src={user.institution.logo} alt={user.institution.name}></img>
                             </div>
 
                             <div className="name1">{user.institution.name}</div>
                             <a className="mail" href={`mailto:${user.email}`}>Contactar <i class="far fa-envelope"></i></a>
-                            {/*<div className="descricao">{user.institution.description}</div>*/}
+                            {/*<div className="descricao" style={{fontSize:"12px"}}>{user.institution.description}</div>*/}
                         </div>
                     </div>
 
 
                     <div>
-                        <div className="col-3">
+                        <div className="col_2">
                             {
                                 loadingInternships ? (<LoadingBox></LoadingBox>
                                 )
@@ -61,7 +61,7 @@ export default function InstitutionScreen(props) {
                                         (
                                             <>
                                                 {internships.lenght === 0 && (<MessageBox>No Internship Found</MessageBox>)}
-                                                <div className="row center">
+                                                <div className="row intern">
                                                     {internships.map((internship) => (
                                                         <Internship key={internship._id} internship={internship}></Internship>
                                                     ))}
