@@ -35,8 +35,11 @@ export default function InternshipEditScreen(props) {
 
     const dispatch = useDispatch();
     useEffect(() => {
-        if (successUpdate) {
+        if (successUpdate && userInfo.isAdmin && userInfo.isInstitution) {
             props.history.push('/internshiplist');
+        }
+        else if (successUpdate && userInfo.isInstitution){
+            props.history.push('/internshiplist/institution');
         }
         if (!internship || (internship._id !== internshipId) || successUpdate) {
             dispatch({ type: INTERNSHIP_UPDATE_RESET });
@@ -271,7 +274,7 @@ export default function InternshipEditScreen(props) {
                                         <option value="1 - 3 meses">1 a 3 meses</option>
                                         <option value="3 - 6 meses">3 a 6 meses</option>
                                         <option value="6 - 12 meses">6 a 12 meses</option>
-                                        <option value="indefinido">Indefinido</option>
+                                        <option value="Indefinido">Indefinido</option>
                                     </select>
                                     
                                 </div>

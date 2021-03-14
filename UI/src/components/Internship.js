@@ -50,7 +50,7 @@ export default function Internship(props) {
                                 </Link>
                             : 
                                 <Link 
-                                    onClick={() => window.alert("Sign In to save!")} title="Save"><i className="far fa-bookmark"></i>
+                                    onClick={() => window.alert("Sign In para guardar!")} to={`/signin`} title="Save"><i className="far fa-bookmark"></i>
                                 </Link>
                         }
                     </div>
