@@ -796,7 +796,7 @@ select {
 
 .results {
   font-size: 13px;
-  margin-left: 70%;
+  margin-left: 77%;
   margin-top: 1%;
 }
 
@@ -804,8 +804,9 @@ select {
   align-items: flex-start;
   margin-top: 60px;
   border-radius: 10px;
-  width: 85%;
+  width: 85.4%;
   margin-left: 7.5%;
+  margin-bottom: 60px;
 }
 
 .row.center{
@@ -853,6 +854,7 @@ select {
 }
 
 @media screen and (max-width: 600px) {
+
   .filter_information{
     display: grid;
     border-radius: 10px;
@@ -860,18 +862,19 @@ select {
 
   .col_1{
     background-color: rgb(255, 255, 255);
-    width: 85%;
-    margin-left: 7.5%;
+    width: 100%;
+    margin-left: 0%;
   }
 
   .row.center{
     display: flex;
     justify-content:  center;
-    width:85%;
+    width:100%;
     border-radius: 10px;
-    margin-left: 7.5%;
+    margin-left: 0%;
   }
 }
+
 /*_Página de cada estágio_"InternshipScreen"____________________*/
 .intern_link{
   text-decoration: none;

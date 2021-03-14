@@ -254,6 +254,7 @@ export default function InternshipEditScreen(props) {
                                     >
                                         <option value="Part-time">Part-time</option>
                                         <option value="Full-time">Full-time</option>
+                                        <option value="Núcleo de Faculdade">Núcleo de Faculdade</option>
                                     </select>
                                 </div>
                                 <div style={{width:"100%"}}>
