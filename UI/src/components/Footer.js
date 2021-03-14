@@ -12,6 +12,8 @@ function Footer() {
             <h2>Sobre Nós</h2>
             <Link to='/contacts'>Contactos</Link>
           </div>
+        </div>
+        <div className="footer-link-wrapper">
           <div className='footer-link-items'>
             <h2>Redes Sociais</h2>
             <Link to='/'><i className='fab fa-instagram' /> Instagram</Link>

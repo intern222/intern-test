@@ -316,7 +316,7 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
-      width: 102%;
+      width: 101.2%;
       height: relative;
       position: absolute;
       top: 48px;

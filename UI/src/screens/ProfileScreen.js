@@ -71,7 +71,7 @@ export default function ProfileScreen() {
         <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>User Profile</h1>
+                    <h1>Perfil do Utilizador</h1>
                 </div>
                 {
                     loading? (
@@ -131,7 +131,7 @@ export default function ProfileScreen() {
                         </div>
                             {user.isInstitution && (
                                 <>
-                                    <h2 className="institutionTitle">Institution</h2>
+                                    <h2 className="institutionTitle">Instituição</h2>
                                     <div>
                                         <input
                                             className="un" 
@@ -171,7 +171,7 @@ export default function ProfileScreen() {
                         <div>
                             <label/>
                             <button className="signinButton" type="submit">
-                                Update
+                                Atualizar
                             </button>
                         </div>
                         <div>

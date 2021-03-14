@@ -67,7 +67,7 @@ export default function SearchScreen(props) {
     <div>
       <div className="row top">
         <div className="col_1">
-          <h1>Search</h1>
+          <h1>Pesquisar</h1>
           {loadingCategories ? (
           <LoadingBox></LoadingBox>
         ) : errorCategories ? (
@@ -80,7 +80,7 @@ export default function SearchScreen(props) {
                   <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
                 )}
               ></Route>
-              <div className="select">
+              <div className="select" style={{width:"170px"}}>
                 <select
                   value={category}
                   onChange={(c) => {
@@ -88,7 +88,7 @@ export default function SearchScreen(props) {
                   }}
                 >
                   <option value='all' className={'all' === category ? 'active' : ''}>
-                    Any Department
+                   Qualquer Categoria
                   </option>
                   {categories.map((c) => (
                     <option
@@ -99,7 +99,7 @@ export default function SearchScreen(props) {
                   ))}
                 </select>
               </div>
-                <div className="select">
+                <div className="select" style={{width:"170px"}}>
                   <select
                     value={type}
                     onChange={(t) => {
@@ -107,7 +107,7 @@ export default function SearchScreen(props) {
                     }}
                   >
                     <option value='all' className={'all' === type ? 'active' : ''}>
-                      Any Type
+                      Qualquer Tipo
                     </option>
                     {types.map((t) => (
                       <option
@@ -119,7 +119,7 @@ export default function SearchScreen(props) {
                   </select>
                 </div>
 
-                <div className="select">
+                <div className="select" style={{width:"170px"}}>
                   <select
                     value={location}
                     onChange={(l) => {
@@ -127,7 +127,7 @@ export default function SearchScreen(props) {
                     }}
                   >
                     <option value='all' className={'all' === location ? 'active' : ''}>
-                      Any Location
+                     Qualquer Localização
                     </option>
                     {locations.map((l) => (
                       <option
@@ -139,15 +139,16 @@ export default function SearchScreen(props) {
                   </select>
                 </div>
 
-                <div className="select">
+                <div className="select" style={{width:"170px"}}>
                   <select
+                    
                     value={payment}
                     onChange={(p) => {
                       props.history.push(getFilterUrl({ payment: p.target.value }));
                     }}
                   >
                     <option value='all' className={'all' === payment ? 'active' : ''}>
-                      Any Salary
+                      Qualquer Pagamento
                     </option>
                     {payments.map((p) => (
                       <option
@@ -172,7 +173,7 @@ export default function SearchScreen(props) {
           ) : (
             <>
               {internships.length === 0 && (
-                <MessageBox>No Internship Found</MessageBox>
+                <MessageBox>Não foram encontrados estágios</MessageBox>
               )}
               <div className="row center">
               {loading ? (
@@ -180,7 +181,7 @@ export default function SearchScreen(props) {
               ) : error ? (
               <MessageBox variant="danger">{error}</MessageBox>
               ) : (
-              <h6 className="results">{internships.length} Results</h6>
+              <h6 className="results">{internships.length} Resultados</h6>
               )}
                 {internships.map((internship) => (
                   <Internship key={internship._id} internship={internship}></Internship>

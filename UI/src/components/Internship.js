@@ -29,9 +29,13 @@ export default function Internship(props) {
                             <h6>{internship.location}</h6>
                             <h6>{Moment(internship.createdAt).format('DD/MM/YYYY')}</h6>
                         </div>
-                        <h5>{internship.company}</h5>
+                        <h5>
+                            <Link style={{textDecoration:"none", color:"black"}} to={`/institution/${internship.institution._id}`}>
+                                {internship.institution.institution.name}   
+                            </Link>
+                        </h5>
                         {
-                            (internship.name).length > 15 
+                            (internship.name).length > 25 
                                 ? <h4>{internship.name}</h4>  
                                     : <h2>{internship.name}</h2>
                         }

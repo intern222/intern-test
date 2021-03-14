@@ -107,7 +107,7 @@ export default function InternshipListScreen(props){
                                     <th>EMPRESA</th>
                                     <th>LOCALIZAÇÃO</th>
                                     <th>TIPO</th>
-                                    <th>OPÇÕES</th>
+                                    <th>AÇÕES</th>
                                 </tr>
                             </thead>
                             <tbody>

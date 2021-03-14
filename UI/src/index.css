@@ -796,7 +796,7 @@ select {
 
 .results {
   font-size: 13px;
-  margin-left: 80%;
+  margin-left: 70%;
   margin-top: 1%;
 }
 
@@ -910,7 +910,7 @@ button.iscreen{
 }
 
 .description h3{
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 17px;
 }
 
@@ -933,7 +933,7 @@ button.iscreen{
 }
 
 .feactures h3{
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 17px;
 }
 

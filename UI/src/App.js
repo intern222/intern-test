@@ -20,7 +20,7 @@ import { useDispatch } from 'react-redux';
 import { listInternshipCategories } from './actions/internshipActions.js';
 import SearchScreenInternships from './screens/SearchScreenInternships.js';
 import SearchScreenUsers from './screens/SearchScreenUsers.js';
-import Contacts from './screens/Contacts.js';
+import Contacts from './screens/ContactScreen.js';
 
 function App(){
 

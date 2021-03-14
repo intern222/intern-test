@@ -40,7 +40,7 @@ function Navbar() {
                             className='nav-links' 
                             onClick={closeMobileMenu}
                         >
-                            Home
+                            Início <i class="fas fa-home"></i>
                         </Link>
                     </li>
                     {
@@ -55,7 +55,6 @@ function Navbar() {
                                     onClick={closeMobileMenu}
                                 >
                                     Favoritos {savedItems.length > 0 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i>}
-                                    
                                 </Link>
                             </li>
                         )
@@ -101,7 +100,7 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Internships 
+                                    Estágios <i class="fas fa-edit"></i>
                                 </Link>
                             </li>
                         )
@@ -116,7 +115,7 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Internships 
+                                    Estágios <i class="fas fa-edit"></i>
                                 </Link>
                             </li>
                         )
@@ -131,7 +130,7 @@ function Navbar() {
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                 >
-                                    Users 
+                                    Utilizadores <i class="fas fa-hand-middle-finger"></i>
                                 </Link>
                             </li>
                         )

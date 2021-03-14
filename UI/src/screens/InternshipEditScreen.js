@@ -115,7 +115,7 @@ export default function InternshipEditScreen(props) {
         <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Edit Internship</h1>
+                    <h1>Editar Estágio</h1>
                 </div>
                 {loadingUpdate && <LoadingBox></LoadingBox>}
                 {errorUpdate && <MessageBox variant="danger">{errorUpdate}</MessageBox>}
@@ -196,7 +196,7 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setSkills(e.target.value)}
                                     ></input>
                                 </div>
-                                <div style={{width:"100%"}}>
+                                {/*<div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="empresa">Empresa</h3>
                                     <input
                                         style={{ margin:"0", width:"95%"}}
@@ -207,7 +207,7 @@ export default function InternshipEditScreen(props) {
                                         value={company}
                                         onChange={(e) => setCompany(e.target.value)}
                                     ></input>
-                                </div>
+                            </div>*/}
                                 <div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="localização">Localização</h3>
                                     <input
@@ -264,9 +264,9 @@ export default function InternshipEditScreen(props) {
                                         value={payment}
                                         onChange={(e) => setPayment(e.target.value)}
                                     >
-                                        <option value="paid">Pago</option>
-                                        <option value="unpaid">Não pago</option>
-                                        <option value="notspecified">Não especifico</option>
+                                        <option value="Pago">Pago</option>
+                                        <option value="Não pago">Não pago</option>
+                                        <option value="Não especifico">Não especifico</option>
                                     </select>
                                 </div>
                                 <div style={{width:"100%"}}>
@@ -297,7 +297,7 @@ export default function InternshipEditScreen(props) {
                                 <div>
                                     <label>
                                         <button className="signinButton" type="submit">
-                                            Update
+                                            Atualizar
                                         </button>
                                     </label>
                                 </div>
