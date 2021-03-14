@@ -73,8 +73,15 @@ export default function InternshipScreen(props) {
                             <h3 className="work_functions">
                                 Candidatar até:
                                 </h3>
-                            <h4 className="date">
+                            <h4 className="candidates">
                                 {Moment(internship.date).format('DD / MM / YYYY')}
+                            </h4>
+
+                            <h3 className="work_functions">
+                                Duração:
+                                </h3>
+                            <h4 className="candidates">
+                                {internship.duration}
                             </h4>
 
                             <h3 className="work_functions">
