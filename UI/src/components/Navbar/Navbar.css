@@ -212,12 +212,12 @@
       width: 300px;
       height: relative;
       position: absolute;
-      top: 48px;
+      top: 47px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
       margin-left: -45px;
-      border-bottom-right-radius: 50px;
+      border-bottom-right-radius: 20px;
       align-items: center;
       justify-content: center;
     }
@@ -257,7 +257,7 @@
   
     .navbar-logo {
         position: absolute;
-        left: 15px;
+        left: 25px;
         text-align: justify;
         
     }
@@ -266,7 +266,7 @@
         display: block;
         position: absolute;
         top: -11px;
-        left: 130px;
+        left: 140px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
         cursor: pointer;
@@ -316,15 +316,15 @@
     .nav-menu {
       display: flex;
       flex-direction: column;
-      width: 101.2%;
+      width: 300px;
       height: relative;
       position: absolute;
-      top: 48px;
+      top: 47px;
       left: -100%;
       opacity: 1;
       transition: all 0.5s ease;
       margin-left: -45px;
-      border-bottom-right-radius: 0px;
+      border-bottom-right-radius: 20px;
       align-items: center;
       justify-content: center;
     }
@@ -362,14 +362,15 @@
     .navbar-logo {
         position: absolute;
         text-align: justify;
-        margin-left: 33%;
+        
+        
     }
   
     .menu-icon{
         display: block;
         position: absolute;
         top: -11px;
-        left: 55px;
+        left: 140px;
         transform: translate(0rem, 120%);
         font-size: 1.8rem;
         cursor: pointer;

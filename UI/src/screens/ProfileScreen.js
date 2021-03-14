@@ -154,7 +154,7 @@ export default function ProfileScreen() {
                                             onChange={(e) => setInstitutionLogo(e.target.value)}
                                         ></input>
                                     </div>
-                                    <div>
+                                    {/*<div>
                                         <input
                                             className="un" 
                                             rows="3"
@@ -165,7 +165,7 @@ export default function ProfileScreen() {
                                             value={institutionDescription}
                                             onChange={(e) => setInstitutionDescription(e.target.value)}
                                         ></input>
-                                    </div>
+                                    </div>*/}
                                 </>
                             )}
                         <div>

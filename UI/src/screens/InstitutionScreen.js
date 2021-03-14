@@ -44,7 +44,7 @@ export default function InstitutionScreen(props) {
 
                             <div className="name1">{user.institution.name}</div>
                             <a className="mail" href={`mailto:${user.email}`}>Contactar <i class="far fa-envelope"></i></a>
-                            <div className="descricao">{user.institution.description}</div>
+                            {/*<div className="descricao">{user.institution.description}</div>*/}
                         </div>
                     </div>
 

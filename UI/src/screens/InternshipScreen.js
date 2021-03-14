@@ -53,7 +53,7 @@ export default function InternshipScreen(props) {
                             {
                                 (internship.status === 'Open' && userInfo !== null)
                                     ?
-                                    <button onClick={addToCartHandler} className="iscreen">Salvar</button>
+                                    <button onClick={addToCartHandler} className="iscreen">Guardar</button>
                                     :
                                     <button onClick={() => window.alert("Sign In para guardar!")} className="iscreen">Guardar</button>
                             }
