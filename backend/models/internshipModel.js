@@ -9,6 +9,7 @@ const internshipSchema = new mongoose.Schema(
     category: { type: String, required: true },
     skills: { type: String, required: true },
     payment: { type: String, required: true },
+    duration: { type: String, required: true },
     company: { type: String, required: true },
     location: { type: String, required: true },
     candidates: { type: Number, required: true },

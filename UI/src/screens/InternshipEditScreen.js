@@ -14,6 +14,7 @@ export default function InternshipEditScreen(props) {
     const [category, setCategory] = useState('');
     const [skills, setSkills] = useState('');
     const [payment, setPayment] = useState('');
+    const [duration, setDuration] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
     const [candidates, setCandidates] = useState('');
@@ -47,6 +48,7 @@ export default function InternshipEditScreen(props) {
             setCategory(internship.category);
             setSkills(internship.skills);
             setPayment(internship.payment);
+            setDuration(internship.duration);
             setCompany(internship.company);
             setLocation(internship.location);
             setCandidates(internship.candidates);
@@ -74,6 +76,7 @@ export default function InternshipEditScreen(props) {
                 category,
                 skills,
                 payment,
+                duration,
                 company,
                 location,
                 candidates,
@@ -254,11 +257,26 @@ export default function InternshipEditScreen(props) {
                                     >
                                         <option value="Part-time">Part-time</option>
                                         <option value="Full-time">Full-time</option>
-                                        <option value="Núcleo de Faculdade">Núcleo de Faculdade</option>
                                     </select>
                                 </div>
                                 <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="pagamento">Pagamento</h3>
+                                    <h3 style={{margin:"5px"}} htmlFor="duração">Duração</h3>
+                                    <select
+                                        style={{ margin:"0", width:"95%"}}
+                                        className="un"
+                                        value={duration}
+                                        onChange={(e) => setDuration(e.target.value)}
+                                    >
+                                        <option value="1 mês">1 mês</option>
+                                        <option value="1 - 3 meses">1 a 3 meses</option>
+                                        <option value="3 - 6 meses">3 a 6 meses</option>
+                                        <option value="6 - 12 meses">6 a 12 meses</option>
+                                        <option value="indefinido">Indefinido</option>
+                                    </select>
+                                    
+                                </div>
+                                <div style={{width:"100%"}}>
+                                    <h3 style={{margin:"5px"}} htmlFor="pagamento">Salário</h3>
                                     <select
                                         style={{ margin:"0", width:"95%"}}
                                         className="un"

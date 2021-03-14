@@ -5,25 +5,25 @@ import './InfoSection_1.css';
 function InfoSection_1() {
   return (
     <div className="info_container_1">
-      <div className="info_text_1">
+      <div className="info_text_1" style={{color:"black"}}>
         <h2>Qual o Problema?</h2>
         <p></p>
         <h3>
           {/*Enquanto estudantes podemos verificar que é extremamente difícil encontrar um estágio extracurricular.
           Para além da procura ser muito superior à oferta podemos observar através de várias plataformas que cada uma tem os seus estágios.*/}
-          Ao contrário da realidade existente no panorama Europeu, Portugal é um país onde média de conclusão do curso
+          Ao contrário da realidade existente no panorama Europeu, Portugal é um país onde a média de conclusão do curso
           é mais valorizada em contexto social do que propriamente a experiência profissional com que se chega ao mundo do trabalho.
-          No entanto, todos sabemos que as empresas valorizam cada vez mais a experiência profissional à curricular.
-          Uma das melhores formas de adquirir essas competências é realizar estágios que enriqueçam o conhecimento e a prática em cada setor.
+          Uma das melhores formas de adquirir competências é realizar estágios que enriqueçam o conhecimento e a prática em cada setor.
           <p></p>
-          Em consequência disso, o leque de opções que existem para estudantes são muito limitadas, sendo que as existentes são exclusivas para
-          os alunos das faculdades que os disponiblizam.
+          Embora as empresas valorizem cada vez mais a experiência profissional à curricular a oferta de estágios, que existem para estudantes, é extremamente escassa.
         </h3>
         <p></p>
         <h2>Há Solução?</h2>
         <h3>
-        A proposta desta plataforma é tornar todo o processo mais simples e acessível, agregando, de forma organizada, o leque de opções em qualquer
-        área.
+          A proposta desta plataforma é tornar todo o processo mais simples e acessível, agregando, de forma organizada, todas as opções de estágios em qualquer
+          área.   
+          <p></p>
+          Com isto pretendemos criar ainda mais procura por posições para estudantes para que as empresas comecem a disponibilizar mais estágios.      
         </h3>
       </div>
       <div className="info_img_1">

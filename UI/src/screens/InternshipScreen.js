@@ -5,6 +5,8 @@ import { detailsInternship } from '../actions/internshipActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
+import Moment from 'moment';
+
 export default function InternshipScreen(props) {
     const dispatch = useDispatch();
     const internshipId = props.match.params.id;
@@ -61,13 +63,20 @@ export default function InternshipScreen(props) {
                     </div>
                     <div className="intern_containers">
                         <div className="description">
-                            <h3>Description</h3>
+                            <h3>Descrição</h3>
                             <h4>
                                 {internship.description}
                             </h4>
                         </div>
 
                         <div className="feactures">
+                            <h3 className="work_functions">
+                                Candidatar até:
+                                </h3>
+                            <h4 className="date">
+                                {Moment(internship.date).format('DD / MM / YYYY')}
+                            </h4>
+
                             <h3 className="work_functions">
                                 Skills
                                 </h3>
@@ -76,7 +85,7 @@ export default function InternshipScreen(props) {
                             </h4>
 
                             <h3 className="work_functions">
-                                Salary
+                                Salário
                                 </h3>
                             <h4 className="candidates">
                                 {internship.payment}

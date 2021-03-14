@@ -106,6 +106,7 @@ internshipRouter.post(
       category: 'Exemplo de Categoria',
       skills: 'Exemplo de skills',
       payment: 'Paid',
+      duration: 'Exemplo de duração',
       company: 'Exemplo de empresa',
       location: 'Exemplo de Localização',
       candidates: 0,
@@ -133,6 +134,7 @@ internshipRouter.put(
         internship.category = req.body.category;
         internship.skills = req.body.skills;
         internship.payment = req.body.payment;
+        internship.duration = req.body.duration;
         internship.company = req.body.company;
         internship.location = req.body.location;
         internship.candidates = req.body.candidates;

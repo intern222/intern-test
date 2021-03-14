@@ -969,6 +969,19 @@ button.iscreen{
  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+@media screen and (max-width:600px){
+  .col_4{
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 7.5%;
+    /*margin-right: 8%;*/
+    width: 85%;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   }
+}
+
 .boy{
   background-color: brown;
 }
@@ -1058,7 +1071,7 @@ button.iscreen{
     background-color: rgb(255, 255, 255);
     margin-top: 50px;
     margin-left: 7.5%;
-    
+    margin-bottom: 25px;
     width: 85%;
     height: 100%;
     border-radius: 10px;
@@ -1102,21 +1115,25 @@ button.iscreen{
   }
 
   .description h3{
+    margin-left: -15px;
     font-weight: bold;
     font-size: 15px;
   }
   
   .description h4{
+    margin-left: -15px;
     font-weight: lighter;
     font-size: 11px;
   }
 
   .feactures h3{
+    margin-left: -15px;
     font-weight: bold;
     font-size: 15px;
   }
   
   .feactures h4{
+    margin-left: -15px;
     font-weight: lighter;
     font-size: 11px;
   }
@@ -1532,6 +1549,7 @@ font-family: 'Ubuntu', sans-serif;
     width: 100%;
     margin-left: 0;
   }
+
 }
 
 @media screen and (max-width:600px){

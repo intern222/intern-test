@@ -12,6 +12,7 @@ export const addToSaved = (internshipId) => async (dispatch, getState) => {
             category : data.category,
             skills: data.skills,
             payment: data.payment,
+            duration: data.duration,
             url : data.url,
             image : data.image,
             company : data.company,

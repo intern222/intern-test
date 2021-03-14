@@ -148,7 +148,7 @@ export default function SearchScreen(props) {
                     }}
                   >
                     <option value='all' className={'all' === payment ? 'active' : ''}>
-                      Qualquer Pagamento
+                      Qualquer Salário
                     </option>
                     {payments.map((p) => (
                       <option

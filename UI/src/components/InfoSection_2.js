@@ -9,7 +9,7 @@ function InfoSection_2() {
             <img className="info" src='/images/fact.svg'></img>
           </div>
 
-          <div className="info_text_2">
+          <div className="info_text_2" style={{color:"white"}}>
             <h2>Factos</h2>
             <p></p>
             <h3>
