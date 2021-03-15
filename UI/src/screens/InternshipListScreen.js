@@ -36,6 +36,9 @@ export default function InternshipListScreen(props){
 
     const userSignin = useSelector( (state) => state.userSignin);
     const {userInfo} = userSignin;
+
+    const userDetails = useSelector((state) => state.userDetails);
+    const { user } = userDetails;
     
     const dispatch = useDispatch();
 
@@ -104,7 +107,7 @@ export default function InternshipListScreen(props){
                                 <tr className="table100-head">
                                     <th>NOME</th>
                                     <th>SETOR</th>
-                                    <th>EMPRESA</th>
+                                    {/*<th>EMPRESA</th>*/}
                                     <th>LOCALIZAÇÃO</th>
                                     <th>TIPO</th>
                                     <th>AÇÕES</th>
@@ -115,7 +118,7 @@ export default function InternshipListScreen(props){
                                     <tr key = {internship._id}>
                                         <td>{internship.name}</td>
                                         <td>{internship.category}</td>
-                                        <td>{internship.company}</td>
+                                        {/*<td>{user.institution.name}</td>*/}
                                         <td>{internship.location}</td>
                                         <td>{internship.type}</td>
                                         <td>

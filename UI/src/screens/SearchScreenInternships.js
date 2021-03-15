@@ -67,86 +67,78 @@ export default function SearchScreen(props) {
 
   return (
     <div>
-      <div className="row">
-        {loadingDelete && <LoadingBox></LoadingBox>}
-        {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
-        {loading ? (
-          <LoadingBox></LoadingBox>
-        ) : error ? (
-          <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
-              <div>{internships.length} Results</div>
-            )}
-      </div>
-      <div className="row top">
-        <div className="col-3">
+          {loadingDelete && <LoadingBox></LoadingBox>}
+          {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
-                <>
-                  <div className="table100" center>
-                    <table responsive>
-                      <thead>
+                <div>{internships.length} Results</div>
+              )}
+          {loading ? (
+            <LoadingBox></LoadingBox>
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            <>
+            <div className="table100" center="true">
+                <table responsive="true">
+                    <thead>
                         <tr className="table100-head">
-                          <th>ID</th>
-                          <th>NAME</th>
-                          <th>CATEGORY</th>
-                          <th>COMPANY</th>
-                          <th>LOCATION</th>
-                          <th>TYPE</th>
-                          <th>ACTIONS</th>
+                            <th>NOME</th>
+                            <th>SETOR</th>
+                            {/*<th>EMPRESA</th>*/}
+                            <th>LOCALIZAÇÃO</th>
+                            <th>TIPO</th>
+                            <th>AÇÕES</th>
                         </tr>
-                      </thead>
-                      <tbody>
+                    </thead>
+                    <tbody>
                         {internships.map((internship) => (
-                          <tr key={internship._id}>
-                            <td>{internship._id}</td>
-                            <td>{internship.name}</td>
-                            <td>{internship.category}</td>
-                            <td>{internship.company}</td>
-                            <td>{internship.location}</td>
-                            <td>{internship.type}</td>
-                            <td>
-                              <button
-                                type="button"
-                                className="small"
-                                onClick={() =>
-                                  props.history.push(`/internship/${internship._id}/edit`)}
-                              >
-                                Edit
-                                            </button>
-                              <button
-                                type="button"
-                                className="small"
-                                onClick={() => deleteHandler(internship)}
-                              >
-                                Delete
-                                            </button>
-                            </td>
-                          </tr>
+                            <tr key = {internship._id}>
+                                <td>{internship.name}</td>
+                                <td>{internship.category}</td>
+                                {/*<td>{user.institution.name}</td>*/}
+                                <td>{internship.location}</td>
+                                <td>{internship.type}</td>
+                                <td>
+                                    <button 
+                                        type="button" 
+                                        className="small" 
+                                        onClick={() => 
+                                            props.history.push(`/internship/${internship._id}/edit`)}
+                                    >
+                                        Editar
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        className="small" 
+                                        onClick = {() => deleteHandler(internship)}
+                                    >
+                                        Apagar
+                                    </button>
+                                </td>
+                            </tr>
                         ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="row center pagination">
-                    {
-                      [...Array(pages).keys()].map(x => (
-                        <Link
-                          className={x + 1 === page ? 'active' : ''}
-                          key={x + 1}
-                          to={getFilterUrl({ page: x + 1 })}
-                        >
-                          {x + 1}
-                        </Link>
-                      ))
-                    }
-                  </div>
-                </>
+                    </tbody>
+                </table>
+            </div>
+            <div className="row center pagination">
+                {
+                [...Array(pages).keys()].map(x => (
+                    <Link 
+                    className={x + 1 === page ? 'active' : ''}
+                    key={x+1} 
+                    to={`/internshiplist/pageNumber/${x+1}`}
+                    >
+                    {x+1}
+                    </Link>
+                ))
+                }
+            </div>
+        </>
               )}
         </div>
-      </div>
-    </div>
   );
 }
