@@ -136,7 +136,7 @@ export default function ProfileScreen() {
                                         <input
                                             className="un" 
                                             type="text"
-                                            placeholder="Institution Name"
+                                            placeholder="Nome da Instituição"
                                             align="center"
                                             required 
                                             value={institutionName}
@@ -147,7 +147,7 @@ export default function ProfileScreen() {
                                         <input
                                             className="un" 
                                             type="text"
-                                            placeholder="Institution Logo"
+                                            placeholder="URL do Logo da Instituição"
                                             align="center"
                                             required 
                                             value={institutionLogo}
