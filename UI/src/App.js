@@ -71,7 +71,7 @@ function App(){
                         exact
                     ></Route>
                     <Route 
-                        path="/search/category/:category/name/:name/type/:type/location/:location/payment/:payment/pageNumber/:pageNumber" 
+                        path="/search/category/:category/name/:name/type/:type/location/:location/payment/:payment/position/:position/pageNumber/:pageNumber" 
                         component={SearchScreen} 
                         exact
                     ></Route>

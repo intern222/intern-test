@@ -14,6 +14,7 @@ export default function InternshipEditScreen(props) {
     const [category, setCategory] = useState('');
     const [skills, setSkills] = useState('');
     const [payment, setPayment] = useState('');
+    const [position, setPosition] = useState('');
     const [duration, setDuration] = useState('');
     const [company, setCompany] = useState('');
     const [location, setLocation] = useState('');
@@ -38,7 +39,7 @@ export default function InternshipEditScreen(props) {
         if (successUpdate && userInfo.isAdmin && userInfo.isInstitution) {
             props.history.push('/internshiplist');
         }
-        else if (successUpdate && userInfo.isInstitution){
+        else if (successUpdate && userInfo.isInstitution) {
             props.history.push('/internshiplist/institution');
         }
         if (!internship || (internship._id !== internshipId) || successUpdate) {
@@ -51,6 +52,7 @@ export default function InternshipEditScreen(props) {
             setCategory(internship.category);
             setSkills(internship.skills);
             setPayment(internship.payment);
+            setPosition(internship.position);
             setDuration(internship.duration);
             setCompany(internship.company);
             setLocation(internship.location);
@@ -79,6 +81,7 @@ export default function InternshipEditScreen(props) {
                 category,
                 skills,
                 payment,
+                position,
                 duration,
                 company,
                 location,
@@ -130,44 +133,44 @@ export default function InternshipEditScreen(props) {
                 ) : error ? (
                     <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
-                            <>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="name">Nome do estágio</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        id="name"
-                                        type="text"
-                                        placeholder="Enter name"
-                                        className="un"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                    ></input>
-                                </div >
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="name">Website URL</h3>
-                                    <input
-                                    style={{ margin:"0", width:"95%"}}
-                                        id="url"
-                                        type="text"
-                                        placeholder="Enter internship url"
-                                        className="un"
-                                        value={url}
-                                        onChange={(e) => setURL(e.target.value)}
-                                    ></input>
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="image">Imagem URL</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="image"
-                                        type="text"
-                                        placeholder="Enter image"
-                                        value={image}
-                                        onChange={(e) => setImage(e.target.value)}
-                                    ></input>
-                                </div>
-                                {/*<div>
+                    <>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="name">Nome do Estágio</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                id="name"
+                                type="text"
+                                placeholder="Insira Nome"
+                                className="un"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            ></input>
+                        </div >
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="name">URL da Posição</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                id="url"
+                                type="text"
+                                placeholder="Insira URL da posição"
+                                className="un"
+                                value={url}
+                                onChange={(e) => setURL(e.target.value)}
+                            ></input>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="image">URL da Imagem</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="image"
+                                type="text"
+                                placeholder="Insira URL de Imagem"
+                                value={image}
+                                onChange={(e) => setImage(e.target.value)}
+                            ></input>
+                        </div>
+                        {/*<div>
                                     <label htmlFor="imageFile">Image File</label>
                                     <input
                                         type="file"
@@ -178,31 +181,31 @@ export default function InternshipEditScreen(props) {
                                     {loadingUpload && <LoadingBox></LoadingBox>}
                                     {errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
                                 </div>*/}
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="categoria">Categoria</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="category"
-                                        type="text"
-                                        placeholder="Enter category"
-                                        value={category}
-                                        onChange={(e) => setCategory(e.target.value)}
-                                    ></input>
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="skills">Skills</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="skills"
-                                        type="text"
-                                        placeholder="Enter skills"
-                                        value={skills}
-                                        onChange={(e) => setSkills(e.target.value)}
-                                    ></input>
-                                </div>
-                                {/*<div style={{width:"100%"}}>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="categoria">Setor</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="category"
+                                type="text"
+                                placeholder="Insira Setor"
+                                value={category}
+                                onChange={(e) => setCategory(e.target.value)}
+                            ></input>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="skills">Skills</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="skills"
+                                type="text"
+                                placeholder="Insira skills"
+                                value={skills}
+                                onChange={(e) => setSkills(e.target.value)}
+                            ></input>
+                        </div>
+                        {/*<div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="empresa">Empresa</h3>
                                     <input
                                         style={{ margin:"0", width:"95%"}}
@@ -214,19 +217,19 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setCompany(e.target.value)}
                                     ></input>
                             </div>*/}
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="localização">Localização</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="location"
-                                        type="text"
-                                        placeholder="Enter location"
-                                        value={location}
-                                        onChange={(e) => setLocation(e.target.value)}
-                                    ></input>
-                                </div>
-                                {/*<div style={{width:"100%"}}>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="localização">Localização</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="location"
+                                type="text"
+                                placeholder="Insira Localização"
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value)}
+                            ></input>
+                        </div>
+                        {/*<div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="candidatos">Candidatos</h3>
                                     <input
                                         style={{ margin:"0"}}
@@ -250,81 +253,93 @@ export default function InternshipEditScreen(props) {
                                         onChange={(e) => setStatus(e.target.value)}
                                     ></input>
                             </div>*/}
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="tipo">Tipo</h3>
-                                    <select
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        value={type}
-                                        onChange={(e) => setType(e.target.value)}
-                                    >
-                                        <option value="Part-time">Part-time</option>
-                                        <option value="Full-time">Full-time</option>
-                                    </select>
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="duração">Duração</h3>
-                                    <select
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        value={duration}
-                                        onChange={(e) => setDuration(e.target.value)}
-                                    >
-                                        <option value="1 mês">1 mês</option>
-                                        <option value="1 - 3 meses">1 a 3 meses</option>
-                                        <option value="3 - 6 meses">3 a 6 meses</option>
-                                        <option value="6 - 12 meses">6 a 12 meses</option>
-                                        <option value="Indefinido">Indefinido</option>
-                                    </select>
-                                    
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="pagamento">Salário</h3>
-                                    <select
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        value={payment}
-                                        onChange={(e) => setPayment(e.target.value)}
-                                    >
-                                        <option value="Pago">Pago</option>
-                                        <option value="Não pago">Não pago</option>
-                                        <option value="Não especifico">Não especifico</option>
-                                    </select>
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="data">Candidatar até:</h3>
-                                    <input
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="date"
-                                        type="date"
-                                        placeholder="Enter date"
-                                        value={date}
-                                        onChange={(e) => setDate(e.target.value)}
-                                    ></input>
-                                </div>
-                                <div style={{width:"100%"}}>
-                                    <h3 style={{margin:"5px"}} htmlFor="descrição">Descrição</h3>
-                                    <textarea
-                                        style={{ margin:"0", width:"95%"}}
-                                        className="un"
-                                        id="description"
-                                        rows="3"
-                                        type="textarea"
-                                        placeholder="Enter description"
-                                        value={description}
-                                        onChange={(e) => setDescription(e.target.value)}
-                                    ></textarea>
-                                </div>
-                                <div>
-                                    <label>
-                                        <button className="signinButton" type="submit">
-                                            Atualizar
-                                        </button>
-                                    </label>
-                                </div>
-                            </>
-                        )}
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="tipo">Posição</h3>
+                            <select
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                value={position}
+                                onChange={(e) => setPosition(e.target.value)}
+                            >
+                                <option value="Estágio">Estágio</option>
+                                <option value="Núcleo de Faculdade">Núcleo de Faculdade</option>
+                            </select>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="tipo">Tipo</h3>
+                            <select
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                value={type}
+                                onChange={(e) => setType(e.target.value)}
+                            >
+                                <option value="Part-time">Part-time</option>
+                                <option value="Full-time">Full-time</option>
+                            </select>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="duração">Duração</h3>
+                            <select
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                value={duration}
+                                onChange={(e) => setDuration(e.target.value)}
+                            >
+                                <option value="1 mês">1 mês</option>
+                                <option value="1 - 3 meses">1 a 3 meses</option>
+                                <option value="3 - 6 meses">3 a 6 meses</option>
+                                <option value="6 - 12 meses">6 a 12 meses</option>
+                                <option value="Indefinido">Indefinido</option>
+                            </select>
+
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="pagamento">Salário</h3>
+                            <select
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                value={payment}
+                                onChange={(e) => setPayment(e.target.value)}
+                            >
+                                <option value="Pago">Pago</option>
+                                <option value="Não pago">Não pago</option>
+                                <option value="Não especifico">Não especifico</option>
+                            </select>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="data">Candidatar até:</h3>
+                            <input
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="date"
+                                type="date"
+                                placeholder="Insira Data"
+                                value={date}
+                                onChange={(e) => setDate(e.target.value)}
+                            ></input>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="descrição">Descrição</h3>
+                            <textarea
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                id="description"
+                                rows="3"
+                                type="textarea"
+                                placeholder="Insira Descrição"
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                            ></textarea>
+                        </div>
+                        <div>
+                            <label>
+                                <button className="signinButton" type="submit">
+                                    Atualizar
+                                </button>
+                            </label>
+                        </div>
+                    </>
+                )}
             </form>
         </div>
     );

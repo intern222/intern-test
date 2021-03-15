@@ -15,6 +15,7 @@ export default function SearchScreen(props) {
     type = 'all',
     location = 'all',
     payment = 'all',
+    position = 'all',
     pageNumber = 1,
   } = useParams();
 
@@ -36,7 +37,8 @@ export default function SearchScreen(props) {
     categories,
     types,
     locations,
-    payments
+    payments,
+    positions
   } = internshipCategoryList;
 
   useEffect(() => {
@@ -48,9 +50,10 @@ export default function SearchScreen(props) {
         type: type !== 'all' ? type : '',
         location: location !== 'all' ? location : '',
         payment: payment !== 'all' ? payment : '',
+        position: position !== 'all' ? position : '',
       })
     );
-  }, [ dispatch, payment, location, type, category, name, pageNumber ]);
+  }, [ dispatch, position, payment, location, type, category, name, pageNumber ]);
 
   const getFilterUrl = (filter) => {
     const filterPage = filter.page || pageNumber;
@@ -58,8 +61,9 @@ export default function SearchScreen(props) {
     const filterType = filter.type || type;
     const filterLocation = filter.location || location;
     const filterPayment = filter.payment || payment;
+    const filterPosition = filter.position || position;
     const filterName = filter.name || name;
-    return `/search/category/${filterCategory}/name/${filterName}/type/${filterType}/location/${filterLocation}/payment/${filterPayment}/pageNumber/${filterPage}`;
+    return `/search/category/${filterCategory}/name/${filterName}/type/${filterType}/location/${filterLocation}/payment/${filterPayment}/position/${filterPosition}/pageNumber/${filterPage}`;
   };
 
 
@@ -75,11 +79,33 @@ export default function SearchScreen(props) {
         ) : (
           <ol>
             <div className="filter_information">
+
               <Route 
                 render={({ history }) => (
                   <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
                 )}
               ></Route>
+
+              <div className="select" style={{width:"170px"}}>
+                <select
+                  value={position}
+                  onChange={(p) => {
+                    props.history.push(getFilterUrl({ position: p.target.value }));
+                  }}
+                >
+                  <option value='all' className={'all' === position ? 'active' : ''}>
+                   Qualquer Posição
+                  </option>
+                  {positions.map((p) => (
+                    <option
+                      className={p === position ? 'active' : ''}
+                    >
+                      {p}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               <div className="select" style={{width:"170px"}}>
                 <select
                   value={category}
@@ -99,25 +125,7 @@ export default function SearchScreen(props) {
                   ))}
                 </select>
               </div>
-              <div className="select" style={{width:"170px"}}>
-                <select
-                  value={category}
-                  onChange={(c) => {
-                    props.history.push(getFilterUrl({ category: c.target.value }));
-                  }}
-                >
-                  <option value='all' className={'all' === category ? 'active' : ''}>
-                   Qualquer Setor
-                  </option>
-                  {categories.map((c) => (
-                    <option
-                      className={c === category ? 'active' : ''}
-                    >
-                      {c}
-                    </option>
-                  ))}
-                </select>
-              </div>
+
               <div className="select" style={{width:"170px"}}>
                 <select
                   value={type}

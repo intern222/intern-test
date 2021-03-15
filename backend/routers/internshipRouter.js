@@ -17,6 +17,7 @@ internshipRouter.get(
     const type = req.query.type || '';
     const location = req.query.location || '';
     const payment = req.query.payment || '';
+    const position = req.query.position || '';
     const institution = req.query.institution || '';
 
     const nameFilter = name ? { name: { $regex: name, $options: 'i' } } : {};
@@ -25,6 +26,7 @@ internshipRouter.get(
     const typeFilter = type ? { type}: {};
     const locationFilter = location ? { location}: {};
     const paymentFilter = payment ? { payment}: {};
+    const positionFilter = position ? { position}: {};
 
     const count = await Internship.count({
       ...institutionFilter, 
@@ -32,7 +34,8 @@ internshipRouter.get(
       ...categoryFilter,
       ...typeFilter,
       ...locationFilter,
-      ...paymentFilter,
+      ...paymentFilter,      
+      ...positionFilter,
     });
     const internships = await Internship.find({
       ...institutionFilter, 
@@ -41,6 +44,7 @@ internshipRouter.get(
       ...typeFilter,
       ...locationFilter,
       ...paymentFilter,
+      ...positionFilter,
     })
       .populate('institution', 'institution.name institution.logo')
       .skip(pageSize*(page - 1))
@@ -57,7 +61,8 @@ internshipRouter.get(
     const types = await Internship.find().distinct('type');
     const locations = await Internship.find().distinct('location');
     const payments = await Internship.find().distinct('payment');
-    res.send({categories, types, locations, payments});
+    const positions = await Internship.find().distinct('position');
+    res.send({categories, types, locations, payments, positions});
   })
 );
 
@@ -107,6 +112,7 @@ internshipRouter.post(
       skills: 'Exemplo de skills',
       payment: 'Paid',
       duration: 'Exemplo de duração',
+      position: 'Estágio',
       company: 'Exemplo de empresa',
       location: 'Exemplo de Localização',
       candidates: 0,
@@ -135,6 +141,7 @@ internshipRouter.put(
         internship.skills = req.body.skills;
         internship.payment = req.body.payment;
         internship.duration = req.body.duration;
+        internship.position = req.body.position;
         internship.company = req.body.company;
         internship.location = req.body.location;
         internship.candidates = req.body.candidates;

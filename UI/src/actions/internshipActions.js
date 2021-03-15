@@ -28,13 +28,14 @@ export const listInternships = ({
     type='',
     location='',
     payment='',
+    position='',
 }) => async (dispatch) => {
     dispatch({
         type: INTERNSHIP_LIST_REQUEST
     });
     try{
         const { data } = await Axios.get(
-            `/api/internships?pageNumber=${pageNumber}&institution=${institution}&name=${name}&category=${category}&type=${type}&location=${location}&payment=${payment}`
+            `/api/internships?pageNumber=${pageNumber}&institution=${institution}&name=${name}&category=${category}&type=${type}&location=${location}&payment=${payment}&position=${position}`
         );
         dispatch({ type: INTERNSHIP_LIST_SUCCESS, payload: data});
     } catch(error){

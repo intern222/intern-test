@@ -50,6 +50,7 @@ export const internshipCategoryListReducer = (state = { loading: true, internshi
                 types: action.payload.types,
                 locations: action.payload.locations,
                 payments: action.payload.payments,
+                positions: action.payload.positions
             };
         case INTERNSHIP_CATEGORY_LIST_FAIL:
             return {loading: false, error: action.payload};

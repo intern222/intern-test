@@ -103,7 +103,7 @@ export default function InternshipListScreen(props){
                             <thead>
                                 <tr className="table100-head">
                                     <th>NOME</th>
-                                    <th>ÁREA</th>
+                                    <th>SETOR</th>
                                     <th>EMPRESA</th>
                                     <th>LOCALIZAÇÃO</th>
                                     <th>TIPO</th>
