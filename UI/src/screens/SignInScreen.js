@@ -10,12 +10,12 @@ export default function SignInScreen(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const userSignin = useSelector((state) => state.userSignin);
-    const { userInfo, loading, error } = userSignin;
-
     const redirect = props.location.search
     ? props.location.search.split('=')[1]
-    : `/profile`;
+    : '/profile';
+
+    const userSignin = useSelector((state) => state.userSignin);
+    const { userInfo, loading, error } = userSignin;
 
     const dispatch = useDispatch();
     const submitHandler = (e) =>{
@@ -59,8 +59,7 @@ export default function SignInScreen(props) {
                 </div>
                 <div>
                     <label/>
-                    <button className="signinButton" type="submit">Sign In</button>                    
-                </div>
+                    <button className="signinButton" type="submit">Sign In</button>                    </div>
                 <div>
                     <label/>
                     <div>
