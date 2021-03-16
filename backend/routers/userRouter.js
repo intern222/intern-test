@@ -148,6 +148,11 @@ userRouter.put(
       user.email = req.body.email || user.email;
       user.isInstitution = Boolean(req.body.isInstitution);
       user.isAdmin = Boolean(req.body.isAdmin);
+      if(user.isInstitution){
+        user.institution.name = req.body.institutionName || user.institution.name;
+        user.institution.logo = req.body.institutionLogo || user.institution.logo;
+        user.institution.description = req.body.institutionDescription || user.institution.description;
+      }
       const updatedUser = await user.save();
       res.send({ message: 'User Updated', user: updatedUser });
     } else {
