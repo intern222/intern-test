@@ -67,6 +67,10 @@ export default function ProfileScreen() {
         }
     }
 
+    function refreshPage(){
+        window.location.reload();
+    }
+
     return(
         <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
@@ -74,7 +78,7 @@ export default function ProfileScreen() {
                     <h1>Perfil do Utilizador</h1>
                 </div>
                 {
-                    loading? (
+                    loading ? (
                         <LoadingBox></LoadingBox>
                     ) : error? (
                         <MessageBox variant="danger">{error}</MessageBox>
@@ -85,7 +89,7 @@ export default function ProfileScreen() {
                         <MessageBox variant="danger">{errorUpdate}</MessageBox>
                     )}
                     {successUpdate && (
-                        <MessageBox variant="success">Profile Updated Successfully</MessageBox>
+                        <MessageBox variant="success">Perfil Atualizado com sucesso</MessageBox>
                     )}
                         <div>
                             <input
@@ -170,7 +174,7 @@ export default function ProfileScreen() {
                             )}
                         <div>
                             <label/>
-                            <button className="signinButton" type="submit">
+                            <button className="signinButton" type="submit" onClick={() => refreshPage()}>
                                 Atualizar
                             </button>
                         </div>
