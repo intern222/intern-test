@@ -110,7 +110,7 @@ internshipRouter.post(
       image: 'Insira o link de uma imagem',
       category: 'Exemplo de Categoria',
       skills: 'Exemplo de skills',
-      payment: 'Paid',
+      payment: 'Pago',
       duration: 'Exemplo de duração',
       position: 'Estágio',
       company: 'Exemplo de empresa',
