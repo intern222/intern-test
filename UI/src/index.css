@@ -1177,6 +1177,7 @@ button.iscreen{
   margin-top: 100px;
 	overflow: hidden;
 	width: 300px;
+  height: 120px;
 }
 
 .course-info {
@@ -1333,6 +1334,7 @@ button.iscreen{
     width: 230px;
     height: 150px;
     margin-top: 0px;
+    height: 160px;
   }
   
   .course-info {
@@ -1373,7 +1375,7 @@ button.iscreen{
   
   .course h2 {
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 13.5px;
     margin-top: 20px;
     margin-right: 0px;
   }
