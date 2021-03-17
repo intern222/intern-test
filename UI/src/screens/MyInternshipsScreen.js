@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToSaved, removeFromSaved } from '../actions/savedActions';
 import MessageBox from '../components/MessageBox';
+import Moment from 'moment';
 
 export default function SavedInternshipsScreen(props) {
     const internshipId = props.match.params.id;
@@ -60,7 +61,7 @@ export default function SavedInternshipsScreen(props) {
                                                             </div>
                                                         <div className="progress-container">
                                                             <h6>{item.location}</h6>
-                                                            <h6>{item.date}</h6>
+                                                            <h6>{Moment(item.createdAt).format('DD/MM/YYYY')}</h6>
                                                         </div>
                                                         {
                                                             (item.name).length > 30 

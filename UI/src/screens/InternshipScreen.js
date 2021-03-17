@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { detailsInternship } from '../actions/internshipActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-
 import Moment from 'moment';
 
 export default function InternshipScreen(props) {
