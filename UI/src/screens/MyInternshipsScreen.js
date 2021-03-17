@@ -62,7 +62,6 @@ export default function SavedInternshipsScreen(props) {
                                                             <h6>{item.location}</h6>
                                                             <h6>{item.date}</h6>
                                                         </div>
-                                                        <h5>{item.company}</h5>
                                                         {
                                                             (item.name).length > 30 
                                                                 ? <h4>{item.name}</h4>  
