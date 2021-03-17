@@ -962,28 +962,12 @@ button.iscreen{
  background-color: rgb(255, 255, 255);
  margin-top: 20px;
  margin-left: 7.5%;
+ padding-bottom: 45px;
  /*margin-right: 8%;*/
  width: 85%;
- height: 210px;
+ height: 100%;
  border-radius: 10px;
  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-@media screen and (max-width:600px){
-  .col_4{
-    background-color: rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-left: 7.5%;
-    /*margin-right: 8%;*/
-    width: 85%;
-    height: 220px;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-   }
-}
-
-.boy{
-  background-color: brown;
 }
 
 .name{
@@ -997,6 +981,7 @@ button.iscreen{
   margin-left: 300px;
   font-size: 17px;
   padding-top: 0px;
+
 }
 
 .col_4 h3 {
@@ -1031,16 +1016,15 @@ button.iscreen{
   .name{
     margin-left: 150px;
     padding-top: 30px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     padding-right: 120px;
   }
   
   .location{
     margin-left: 150px;
-    font-size: 13px;
-    padding-top: 0px;
-    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 10px;
   }
   
   .col_4 h3 {
@@ -1148,6 +1132,45 @@ button.iscreen{
     height: 100%;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+  .col_4{
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 7.5%;
+    /*margin-right: 8%;*/
+    width: 85%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   }
+
+   .name{
+    padding-top: 120px;
+    margin-left: 0px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
+
+  .location{
+    margin-top: 10px;
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 11px;
+    padding-top: 0px;
+    font-weight: bolder;
+  }
+
+  .col_4 h3{
+    margin-left: 0px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
   }
 }
 
