@@ -1,5 +1,8 @@
 .navbar {
-    background-color: rgb(54,69,79);
+    background: #2C3E50;
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50); 
+    background: linear-gradient(to right, #4CA1AF, #2C3E50); 
+    
     height: 60px;
     display: flex;
     justify-content: center;
@@ -13,8 +16,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 35px;
-    font-family: 'Nunito';
-    font-weight: lighter;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
 }
   
   
@@ -40,8 +43,9 @@
     text-decoration: none;
     padding: 10px;
     opacity: 1;
-    font-family: 'Nunito';
-    font-weight: lighter;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
     outline: none;
 }
 
@@ -49,7 +53,7 @@
     content: '';
     display: block;
     width: 0;
-    height: 1.6px;
+    height: 0.9px;
     background: rgb(255, 255, 255);
     transition: width .3s; 
 }
@@ -69,10 +73,12 @@
     padding: 7px;
     border-radius: 0.5rem;
     width: 100%;
-    background: #949494;
+    background: #ffffff;
     text-decoration: none;
-    color: white;
-    font-size: 17px;
+    color: #2C3E50;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .nav-links-mobile:hover {
@@ -81,14 +87,36 @@
     background:white;
     color: black;
     transition: 250ms;
-    font-weight: bold;
-    font-size: 17px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CA1AF;
+    color: rgb(255, 255, 255);
 } 
   
 .menu-icon {
     display: none;
 }
+
+.fa-home{
+    font-size: 13px;
+    opacity: 0.90;
+}
+
+.fa-star{
+    font-size: 13px;
+    opacity: 0.90;
+}
+
+.fa-user-circle{
+    font-size: 13px;
+    opacity: 0.90;
+}
   
+.fa-edit{
+    font-size: 13px;
+    opacity: 0.90;
+}
 /*@media screen and (max-width: 1200px) {
     body {
         overflow-x: hidden;
@@ -278,25 +306,23 @@
       font-size: 2rem;
       
     }
-  
     .nav-links-mobile {
         display: block;
         text-align: center;
-        justify-content: center;
         padding: 7px;
-        margin: 50px;
-        border-radius: 50px;
+        border-radius: 0.5rem;
         width: 100%;
-        background: rgb(255, 255, 255);
+        background: #ffffff;
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
         font-size: 17px;
+        font-weight: lighter;
     }
     
     .nav-links-mobile:hover {
         padding: 7px;
         transition: all 0.3s ease-out;
-        background: rgb(156, 156, 156);
+        background:white;
         color: black;
         transition: 250ms;
         font-weight: bold;
@@ -384,24 +410,23 @@
     .nav-links-mobile {
         display: block;
         text-align: center;
-        justify-content: center;
         padding: 7px;
-        margin: 50px;
-        border-radius: 50px;
+        border-radius: 0.5rem;
         width: 100%;
-        background: rgb(255, 255, 255);
+        background: #ffffff;
         text-decoration: none;
-        color: black;
+        color: rgb(0, 0, 0);
         font-size: 17px;
+        font-weight: lighter;
     }
     
-    /*.nav-links-mobile:hover {
+    .nav-links-mobile:hover {
         padding: 7px;
         transition: all 0.3s ease-out;
-        background: rgb(156, 156, 156);
+        background:white;
         color: black;
         transition: 250ms;
         font-weight: bold;
         font-size: 17px;
-    }*/
+    } 
   }

@@ -141,6 +141,7 @@ export default function InternshipEditScreen(props) {
                                 id="name"
                                 type="text"
                                 placeholder="Insira Nome"
+                                maxlength="65"
                                 className="un"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}

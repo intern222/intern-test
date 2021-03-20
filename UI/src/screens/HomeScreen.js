@@ -15,9 +15,9 @@ export default function HomeScreen() {
             <div className="info_section">
                 <InfoSection_1 />
             </div>
-            <div className="info_section_2">
+            {/*<div className="info_section_2">
                 <InfoSection_2 />
-            </div>
+            </div>*/}
             <div className="profile_section">
                 <ProfileCard />
             </div>

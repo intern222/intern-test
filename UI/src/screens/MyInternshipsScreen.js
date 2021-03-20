@@ -64,7 +64,7 @@ export default function SavedInternshipsScreen(props) {
                                                             <h6>{Moment(item.createdAt).format('DD/MM/YYYY')}</h6>
                                                         </div>
                                                         {
-                                                            (item.name).length > 30 
+                                                            (item.name).length > 20 
                                                                 ? <h4>{item.name}</h4>  
                                                                     : <h2>{item.name}</h2>
                                                         }

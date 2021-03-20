@@ -136,6 +136,7 @@ export default function UserEditScreen(props) {
                     type="text"
                     placeholder="Nome da Instituição"
                     align="center"
+                    maxlength="25"
                     required
                     value={institutionName}
                     onChange={(e) => setInstitutionName(e.target.value)}

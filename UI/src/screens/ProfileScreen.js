@@ -49,22 +49,18 @@ export default function ProfileScreen() {
     };
 
     const submitHandler = (e) =>{
+        window.location.reload();
         e.preventDefault();
-        if(password !== confirmPassword){
-            alert('Password and Confirm Password Are Not Matched');
-        } else {
-            dispatch(
-                updateUserProfile({ 
-                    userId: user._id, 
-                    name, 
-                    email, 
-                    password, 
-                    institutionName, 
-                    institutionLogo,
-                    institutionDescription,
-                })
-            );
-        }
+        dispatch(
+            updateUserProfile({ 
+                userId: user._id, 
+                name, 
+                email, 
+                institutionName, 
+                institutionLogo,
+                institutionDescription,
+            })
+        );
     }
 
     return(
@@ -109,7 +105,7 @@ export default function ProfileScreen() {
                                 onChange={(e) => setEmail(e.target.value)}
                             ></input> 
                         </div>
-                        <div>
+                        {/*<div>
                             <input
                                 className="pass" 
                                 type="password" 
@@ -118,8 +114,8 @@ export default function ProfileScreen() {
                                 required 
                                 onChange={(e) => setPassword(e.target.value)}
                             ></input> 
-                        </div>
-                        <div>
+                        </div>*/}
+                        {/*<div>
                             <input
                                 className="pass" 
                                 type="password" 
@@ -128,7 +124,7 @@ export default function ProfileScreen() {
                                 required 
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                             ></input> 
-                        </div>
+                        </div>*/}
                             {user.isInstitution && (
                                 <>
                                     <h2 className="institutionTitle">Instituição</h2>

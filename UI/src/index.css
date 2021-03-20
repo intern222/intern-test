@@ -103,9 +103,7 @@ button{
   border-radius: 0.5rem;
   border: 0.1rem ;
   font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: #f8f8f8;
   cursor: pointer;
 }
@@ -309,7 +307,7 @@ img.large{
   border-radius: 5px;
   border-right: none;
   margin: 50px;
-  padding-top: 9px;
+  padding-top: 7px;
   width: 52px;
   height: 34px;
   background-color: rgb(255, 255, 255);
@@ -1355,7 +1353,7 @@ button.iscreen{
     margin: 60px;
     overflow: hidden;
     width: 230px;
-    height: 150px;
+    height: 100%;
     margin-top: 0px;
     height: 160px;
   }
@@ -1383,7 +1381,7 @@ button.iscreen{
 
   .course h4 {
     letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 0px;
     margin-top: 25px;
   }
@@ -1398,8 +1396,8 @@ button.iscreen{
   
   .course h2 {
     letter-spacing: 1px;
-    font-size: 13.5px;
-    margin-top: 20px;
+    font-size: 13px;
+    margin-top: 10px;
     margin-right: 0px;
   }
   
@@ -1602,12 +1600,27 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 0px;
   margin-top: -160px;
   margin-bottom: 110px;
-  background: -webkit-linear-gradient(to top, #ffffff,#9cb2c7, #004974);
-  background: linear-gradient(to bottom, #ffffff,#9cb2c7, #004974); 
-  padding-top: 100px;
+  object-fit: contain;
+  background: url("bb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  padding-top: 75px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
+
+.profile_section{
+  display: flex;
+  width: 100%;
+  margin-left: 0px;
+  margin-top: -110px;
+  margin-bottom: 110px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: white;
+}
+
 
 .info_section_2{
   display: flex;
@@ -1622,20 +1635,6 @@ font-family: 'Ubuntu', sans-serif;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 }
-
-.profile_section{
-  display: flex;
-  width: 100%;
-  margin-left: 0px;
-  margin-top: -110px;
-  margin-bottom: 110px;
-  background: -webkit-linear-gradient(to top, #ffffff,#9cb2c7, #004974);
-  background: linear-gradient(to bottom, #ffffff,#9cb2c7, #004974);
-  padding-top: 100px;
-  padding-bottom: 100px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-}
-
 
 .footer_section{
   margin-top: -110px;

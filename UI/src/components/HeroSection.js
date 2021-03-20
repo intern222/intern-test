@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroSection.css';
 import '../App.css';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import SearchBox from './SearchBoxHero.js';
 
 function HeroSection () {

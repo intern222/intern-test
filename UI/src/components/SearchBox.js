@@ -20,7 +20,7 @@ export default function SearchBox(props){
                         onChange={(e) => setName(e.target.value)}
                     ></input>
                 </div>*/}
-                <button className="primary" type="submit">
+                <button className="primary" type="submit" >
                     <i className="fa fa-search" color="black"></i>
                 </button>
             </div>
