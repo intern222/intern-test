@@ -407,6 +407,7 @@ img.large{
   border:none;
   border-bottom:3px solid #333;
   height:40px;
+  width: 130px;
   margin-right:auto;
   font-size:12px;
   display:inline-block;
@@ -553,17 +554,6 @@ input:focus{
 input:focus{
   outline:none;
   background: rgba(0,0,0,0.2);
-  }
-
-
-  @media screen and (max-width: 600px) {
-    .row1234{
-      margin-bottom: 25px; 
-      margin-top: 25px; 
-      margin-left: -20px;
-      width: 100%;
-      display: flex;
-    }
   }
   
 /*_Numeros em baixo das páginas"Pagination__*/
@@ -765,22 +755,6 @@ select {
   color: grey;
 }
 
-@media screen and (max-width: 600px) {
-  /* Custom Select */
-  .select {
-    position: relative;
-    display: grid;
-    width: 160px;
-    height: 40px;
-    line-height: 3;
-    background: #ffffff;
-    overflow: hidden;
-    border-radius: .25em;
-    margin-left: 0px;
-    margin-top: 25px;
-  }
-}
-
 
 /*Página de Procura"SearchScreen"*/
 .row{
@@ -820,13 +794,35 @@ select {
   padding-top: 0px;
 }
 
+.tono{
+  display: grid;
+  justify-content: center;
+  
+}
+
 .filter_information{
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: block;
   padding-left: 0px;
   padding-bottom: 40px;
   margin-right: 45px;
+  margin-top: -20px;
+}
+
+.diogo_tono{
+  padding-left: 55px;
+  margin-left: 50px;
+  margin-top: -25px;
+  width: 150px;
+}
+
+.selects{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .col_1 {
@@ -850,12 +846,18 @@ select {
   min-width: 10rem; 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
 
-  .filter_information{
-    display: grid;
-    border-radius: 10px;
+  .selects{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap:10px;
+    margin-top: 30px;
   }
+}
+
+@media screen and (max-width: 600px) {
 
   .col_1{
     background-color: rgb(255, 255, 255);
@@ -872,6 +874,11 @@ select {
   }
 }
 
+@media screen and (max-width: 420px) {
+  .selects{
+    display: grid;
+  }
+}
 /*_Página de cada estágio_"InternshipScreen"____________________*/
 .intern_link{
   text-decoration: none;

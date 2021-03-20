@@ -71,7 +71,16 @@ export default function SearchScreen(props) {
     <div>
       <div className="row top">
         <div className="col_1">
+          <div className="tono">
           <h1>Pesquisar</h1>
+          <div className="diogo_tono">
+              <Route 
+                render={({ history }) => (
+                  <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
+                )}
+              ></Route>
+          </div>
+          </div>
           {loadingCategories ? (
           <LoadingBox></LoadingBox>
         ) : errorCategories ? (
@@ -79,13 +88,7 @@ export default function SearchScreen(props) {
         ) : (
           <ol>
             <div className="filter_information">
-
-              <Route 
-                render={({ history }) => (
-                  <SearchBoxSearchScreen history={history}></SearchBoxSearchScreen>
-                )}
-              ></Route>
-
+              <div className="selects">
               <div className="select" style={{width:"180px"}}>
                 <select
                   value={position}
@@ -186,7 +189,7 @@ export default function SearchScreen(props) {
                   ))}
                 </select>
               </div>
-
+              </div>
             </div>
           </ol>
         )}
@@ -236,4 +239,3 @@ export default function SearchScreen(props) {
     </div>
   );
 }
-
