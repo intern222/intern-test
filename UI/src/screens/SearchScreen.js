@@ -86,7 +86,7 @@ export default function SearchScreen(props) {
                 )}
               ></Route>
 
-              <div className="select" style={{width:"170px"}}>
+              <div className="select" style={{width:"180px"}}>
                 <select
                   value={position}
                   onChange={(p) => {
@@ -106,7 +106,7 @@ export default function SearchScreen(props) {
                 </select>
               </div>
 
-              <div className="select" style={{width:"170px"}}>
+              <div className="select" style={{width:"180px"}}>
                 <select
                   value={category}
                   onChange={(c) => {
@@ -126,7 +126,7 @@ export default function SearchScreen(props) {
                 </select>
               </div>
 
-              <div className="select" style={{width:"170px"}}>
+              <div className="select" style={{width:"180px"}}>
                 <select
                   value={type}
                   onChange={(t) => {
@@ -146,7 +146,7 @@ export default function SearchScreen(props) {
                 </select>
               </div>
 
-              <div className="select" style={{width:"170px"}}>
+              <div className="select" style={{width:"180px"}}>
                 <select
                   value={location}
                   onChange={(l) => {
@@ -166,7 +166,7 @@ export default function SearchScreen(props) {
                 </select>
               </div>
 
-              <div className="select" style={{width:"170px"}}>
+              <div className="select" style={{width:"180px"}}>
                 <select
                   
                   value={payment}
@@ -175,7 +175,7 @@ export default function SearchScreen(props) {
                   }}
                 >
                   <option value='all' className={'all' === payment ? 'active' : ''}>
-                    Qualquer Salário
+                    Qualquer Compensação
                   </option>
                   {payments.map((p) => (
                     <option

@@ -222,7 +222,7 @@ export default function InternshipEditScreen(props) {
                                 <option value="Imobiliário e Construção">Imobiliário e Construção</option>
                                 <option value="Indústria e Engenharia">Indústria e Engenharia</option>
                                 <option value="Indústria automotiva">Indústria automotiva</option>
-                                <option value="Informática e Tecnologias">Informática e Tecnologia</option>
+                                <option value="Informática e Tecnologia">Informática e Tecnologia</option>
                                 <option value="Jurídico">Jurídico</option>
                                 <option value="Marketing e Comunicação">Marketing e Comunicação</option>
                                 <option value="Recursos Humanos">Recursos Humanos</option>
