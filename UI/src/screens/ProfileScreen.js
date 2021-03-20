@@ -84,9 +84,9 @@ export default function ProfileScreen() {
                         <MessageBox variant="success">Profile Updated Successfully</MessageBox>
                     )}
                         <div>
-                            <div style={{paddingLeft:"60px"}}>
-                                <h3 style={{ margin: "5px" }} htmlFor="categoria">Nome</h3>
-                                <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: tamanho máximo de 25 caracteres</h5>
+                            <div className="labelProfile" >
+                                <div style={{ margin: "5px", fontSize:"19px", fontWeight:"bold" }}>Nome</div>
+                                <div style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0", fontSize:"13px" }}>Nota: tamanho máximo de 25 caracteres</div>
                             </div>
                             <input
                                 className="un" 
@@ -100,8 +100,8 @@ export default function ProfileScreen() {
                             ></input> 
                         </div>
                         <div>
-                            <div style={{paddingLeft:"60px"}}>
-                                <h3 style={{ margin: "5px" }} htmlFor="categoria">Email</h3>
+                            <div className="labelProfile">
+                                <h3 style={{ margin: "5px" }}>Email</h3>
                             </div>
                             <input
                                 className="un" 
@@ -137,7 +137,7 @@ export default function ProfileScreen() {
                                 <>
                                     <h2 className="institutionTitle">Instituição</h2>
                                     <div>
-                                        <div style={{paddingLeft:"60px"}}>
+                                        <div className="labelProfile">
                                             <h3 style={{ margin: "5px" }} htmlFor="categoria">Nome</h3>
                                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: tamanho máximo de 25 caracteres</h5>
                                         </div>
@@ -153,7 +153,7 @@ export default function ProfileScreen() {
                                         ></input>
                                     </div>
                                     <div>
-                                        <div style={{paddingLeft:"60px"}}>
+                                        <div className="labelProfile">
                                             <h3 style={{ margin: "5px" }} htmlFor="categoria">URL do Logo</h3>
                                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se tiver problemas envie-nos um email</h5>
                                         </div>

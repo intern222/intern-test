@@ -1255,6 +1255,9 @@ button.iscreen{
   margin-right: 50px;
   font-size: 9px;
 }
+.labelProfile{
+  margin-left: 60px;
+}
 
 .course h2:hover{
   color: rgb(78, 78, 78);
@@ -1401,7 +1404,6 @@ button.iscreen{
     margin-right: 0px;
   }
   
-  
   .progress-container {
     position: absolute;
     top: 28px;
@@ -1471,7 +1473,20 @@ button.iscreen{
   .avatar-holder:hover {
     transform: scale(1.1);
   }
+
+  .labelProfile{
+    margin-left: 60px;
+  }
 }
+
+@media screen and (max-width:400px){
+  .labelProfile{
+    margin-left: 35px;
+  }
+
+}
+
+
 
 /*SIGN IN PART*/
 .sign {
