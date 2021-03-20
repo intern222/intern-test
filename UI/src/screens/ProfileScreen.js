@@ -86,7 +86,7 @@ export default function ProfileScreen() {
                         <div>
                             <div className="labelProfile" >
                                 <div style={{ margin: "5px", fontSize:"19px", fontWeight:"bold" }}>Nome</div>
-                                <div style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0", fontSize:"13px" }}>Nota: tamanho máximo de 25 caracteres</div>
+                                <div style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0", fontSize:"13.5px" }}>Nota: tamanho máximo de 25 caracteres</div>
                             </div>
                             <input
                                 className="un" 

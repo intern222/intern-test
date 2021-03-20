@@ -44,16 +44,22 @@ export default function RegisterScreen(props) {
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>}
                 <div>
+                    <div className="labelProfile" >
+                        <div style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0", fontSize:"13.5px" }}>Nota: tamanho máximo de 25 caracteres</div>
+                    </div>
                     <input 
                         className="un" 
                         type="text" 
-                        placeholder="Name" 
+                        placeholder="Nome" 
                         align="center"
+                        maxlength="25"
                         required 
                         onChange={ (e) => setName(e.target.value)}
                     ></input>
                 </div>
                 <div>
+                    <div className="labelProfile" >
+                    </div>
                     <input 
                         className="un" 
                         type="email" 
@@ -77,7 +83,7 @@ export default function RegisterScreen(props) {
                     <input 
                         className="pass" 
                         type="password" 
-                        placeholder="Confirm Password"
+                        placeholder="Confirme a Password"
                         align="center" 
                         required 
                         onChange={ (e) => setConfirmPassword(e.target.value)}
@@ -85,12 +91,12 @@ export default function RegisterScreen(props) {
                 </div>
                 <div>
                     <label/>
-                    <button className="signinButton" type="submit">Register</button>
+                    <button className="signinButton" type="submit">Resgiste-se</button>
                 </div>
                 <div>
                     <label/>
                     <div>
-                        Already have an account? <Link className="linkCreateAccount" to={`/signin?redirect=${redirect}`}>Sign In</Link>
+                        Já tens conta? <Link className="linkCreateAccount" to={`/signin?redirect=${redirect}`}>Sign In</Link>
                     </div>  
                 </div>
             </form>
