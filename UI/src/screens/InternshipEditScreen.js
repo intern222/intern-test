@@ -72,6 +72,9 @@ export default function InternshipEditScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        if(date === "Exemplo de data"){
+            date = 'Não aplicável';
+        }
         dispatch(
             updatedInternship({
                 _id: internshipId,
@@ -136,6 +139,7 @@ export default function InternshipEditScreen(props) {
                     <>
                         <div style={{ width: "100%" }}>
                             <h3 style={{ margin: "5px" }} htmlFor="name">Nome do Estágio</h3>
+                            <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic" ,margin:"0px" }}>Nota: tamanho máximo de 65 caracteres</h5>
                             <input
                                 style={{ margin: "0", width: "95%" }}
                                 id="name"
@@ -143,6 +147,7 @@ export default function InternshipEditScreen(props) {
                                 placeholder="Insira Nome"
                                 maxlength="65"
                                 className="un"
+                                required
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             ></input>
@@ -155,18 +160,21 @@ export default function InternshipEditScreen(props) {
                                 type="text"
                                 placeholder="Insira URL da posição"
                                 className="un"
+                                required
                                 value={url}
                                 onChange={(e) => setURL(e.target.value)}
                             ></input>
                         </div>
                         <div style={{ width: "100%" }}>
                             <h3 style={{ margin: "5px" }} htmlFor="image">URL da Imagem</h3>
+                            <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se tiver problemas envie-nos um email</h5>
                             <input
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
                                 id="image"
                                 type="text"
                                 placeholder="Insira URL de Imagem"
+                                required
                                 value={image}
                                 onChange={(e) => setImage(e.target.value)}
                             ></input>
@@ -183,18 +191,6 @@ export default function InternshipEditScreen(props) {
                                     {errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
                                 </div>*/}
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="categoria">Setor</h3>
-                            <input
-                                style={{ margin: "0", width: "95%" }}
-                                className="un"
-                                id="category"
-                                type="text"
-                                placeholder="Insira Setor"
-                                value={category}
-                                onChange={(e) => setCategory(e.target.value)}
-                            ></input>
-                        </div>
-                        <div style={{ width: "100%" }}>
                             <h3 style={{ margin: "5px" }} htmlFor="skills">Skills</h3>
                             <input
                                 style={{ margin: "0", width: "95%" }}
@@ -202,9 +198,42 @@ export default function InternshipEditScreen(props) {
                                 id="skills"
                                 type="text"
                                 placeholder="Insira skills"
+                                required
                                 value={skills}
                                 onChange={(e) => setSkills(e.target.value)}
                             ></input>
+                        </div>
+                        <div style={{ width: "100%" }}>
+                            <h3 style={{ margin: "5px" }} htmlFor="categoria">Setor</h3>
+                            <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se o seu setor não existir envie-nos um email</h5>
+
+                            <select
+                                style={{ margin: "0", width: "95%" }}
+                                className="un"
+                                required
+                                value={category}
+                                onChange={(e) => setCategory(e.target.value)}
+                            >
+                                <option value="Artes">Artes</option>
+                                <option value="Consultoria">Consultoria</option>
+                                <option value="Desporto">Desporto</option>
+                                <option value="Educação">Educação</option>
+                                <option value="Gestão">Gestão</option>
+                                <option value="Imobiliário e Construção">Imobiliário e Construção</option>
+                                <option value="Indústria e Engenharia">Indústria e Engenharia</option>
+                                <option value="Indústria automotiva">Indústria automotiva</option>
+                                <option value="Informática e Tecnologias">Informática e Tecnologia</option>
+                                <option value="Jurídico">Jurídico</option>
+                                <option value="Marketing e Comunicação">Marketing e Comunicação</option>
+                                <option value="Recursos Humanos">Recursos Humanos</option>
+                                <option value="Retalho e Comércio">Retalho e Comércio</option>
+                                <option value="Saúde">Saúde</option>
+                                <option value="Serviços Financeiros">Serviços Financeiros</option>
+                                <option value="Tecnologia da informação">Tecnologia da informação</option>
+                                <option value="Transportes e Logística">Transportes e Logística</option>
+                                <option value="Turismo e Hotelaria">Turismo e Hotelaria</option>
+                                <option value="Telecomunicações">Telecomunicações</option>
+                            </select>
                         </div>
                         {/*<div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="empresa">Empresa</h3>
@@ -220,15 +249,18 @@ export default function InternshipEditScreen(props) {
                             </div>*/}
                         <div style={{ width: "100%" }}>
                             <h3 style={{ margin: "5px" }} htmlFor="localização">Localização</h3>
-                            <input
+                            <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se a sua localização não existir envie-nos um email</h5>
+                            <select
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
-                                id="location"
-                                type="text"
-                                placeholder="Insira Localização"
+                                required
                                 value={location}
                                 onChange={(e) => setLocation(e.target.value)}
-                            ></input>
+                            >
+                                <option value="Lisboa">Lisboa</option>
+                                <option value="Porto">Porto</option>
+                                <option value="Remoto">Remoto</option>
+                            </select>
                         </div>
                         {/*<div style={{width:"100%"}}>
                                     <h3 style={{margin:"5px"}} htmlFor="candidatos">Candidatos</h3>
@@ -259,6 +291,7 @@ export default function InternshipEditScreen(props) {
                             <select
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
+                                required
                                 value={position}
                                 onChange={(e) => setPosition(e.target.value)}
                             >
@@ -271,6 +304,7 @@ export default function InternshipEditScreen(props) {
                             <select
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
+                                required
                                 value={type}
                                 onChange={(e) => setType(e.target.value)}
                             >
@@ -283,6 +317,7 @@ export default function InternshipEditScreen(props) {
                             <select
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
+                                required
                                 value={duration}
                                 onChange={(e) => setDuration(e.target.value)}
                             >
@@ -292,29 +327,30 @@ export default function InternshipEditScreen(props) {
                                 <option value="6 - 12 meses">6 a 12 meses</option>
                                 <option value="Indefinido">Indefinido</option>
                             </select>
-
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="pagamento">Salário</h3>
+                            <h3 style={{ margin: "5px" }} htmlFor="pagamento">Compensação</h3>
                             <select
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
+                                required
                                 value={payment}
                                 onChange={(e) => setPayment(e.target.value)}
                             >
-                                <option value="Pago">Pago</option>
-                                <option value="Não pago">Não pago</option>
-                                <option value="Não especifico">Não especifico</option>
+                                <option value="Remunerado">Remunerado</option>
+                                <option value="Não Remunerado">Não Remunerado</option>
+                                <option value="Não especifico">Não Especifico</option>
                             </select>
                         </div>
                         <div style={{ width: "100%" }}>
                             <h3 style={{ margin: "5px" }} htmlFor="data">Candidatar até:</h3>
+                            <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }} htmlFor="data">Nota: formato "dd / mm / aaaa" ou "Não aplicável"</h5>
                             <input
                                 style={{ margin: "0", width: "95%" }}
                                 className="un"
-                                id="date"
-                                type="date"
+                                maxlength="15"
                                 placeholder="Insira Data"
+                                required
                                 value={date}
                                 onChange={(e) => setDate(e.target.value)}
                             ></input>
@@ -328,6 +364,7 @@ export default function InternshipEditScreen(props) {
                                 rows="3"
                                 type="textarea"
                                 placeholder="Insira Descrição"
+                                required
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                             ></textarea>

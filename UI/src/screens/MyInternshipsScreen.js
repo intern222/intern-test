@@ -64,9 +64,9 @@ export default function SavedInternshipsScreen(props) {
                                                             <h6>{Moment(item.createdAt).format('DD/MM/YYYY')}</h6>
                                                         </div>
                                                         {
-                                                            (item.name).length > 20 
+                                                            (item.name).length > 65 
                                                                 ? <h4>{item.name}</h4>  
-                                                                    : <h2>{item.name}</h2>
+                                                                    : <h2 style={{marginTop:"30px"}}>{item.name}</h2>
                                                         }
                                                         <Link 
                                                             onClick={() => removeFromSavedHandler(item.internship)}><i className="far fa-trash-alt"></i>

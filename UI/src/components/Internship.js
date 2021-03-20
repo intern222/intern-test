@@ -35,7 +35,7 @@ export default function Internship(props) {
                             </Link>
                         </h5>
                         {
-                            (internship.name).length > 70
+                            (internship.name).length > 65
                                 ? <h4>{internship.name}</h4>  
                                     : <h2>{internship.name}</h2>
                         }

@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 800px) {
     .hero-container > h1 {
-        color: white;
+        color: #2C3E50;
         font-size: 40px;
         margin-top: -300px;
     }
@@ -70,7 +70,7 @@
 @media screen and (max-width: 750px) {
 
     .hero-container > h1 {
-        color: white;
+        color: #2C3E50;
         font-size: 28px;
         margin-top: -300px;
     }

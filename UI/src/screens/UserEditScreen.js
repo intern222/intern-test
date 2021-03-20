@@ -89,6 +89,7 @@ export default function UserEditScreen(props) {
                 id="name"
                 type="text"
                 placeholder="Enter name"
+                required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></input>
@@ -101,6 +102,7 @@ export default function UserEditScreen(props) {
                 id="email"
                 type="email"
                 placeholder="Enter email"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>

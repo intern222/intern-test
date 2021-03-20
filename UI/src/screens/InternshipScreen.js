@@ -100,7 +100,7 @@ export default function InternshipScreen(props) {
                             </h4>
 
                             <h3 className="work_functions">
-                                Salário
+                                Compensação
                                 </h3>
                             <h4 className="candidates">
                                 {internship.payment}
