@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, Route } from 'react-router-dom';
 import './Navbar.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import SearchBox from '../SearchBox.js';
+import { signout } from '../../actions/userActions.js';
 
 function Navbar() {
 
@@ -14,8 +15,16 @@ function Navbar() {
 
     const [click, setClick] = useState(false);
 
+    const dispatch = useDispatch();
+
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
+    const signoutHandler = () => {
+        dispatch(signout());
+    };
+
+
 
     return (
         <>
@@ -57,37 +66,6 @@ function Navbar() {
                                     Favoritos {savedItems.length > 0 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i>}
                                 </Link>
                             </li>
-                        )
-                    }
-                    {
-                        userInfo ? (
-                            <li
-                                className='nav-item'
-                                
-                            >
-                                <Link
-                                    to="/profile"
-                                    className='nav-links'
-                                    onClick={closeMobileMenu}
-                                >
-                                    {userInfo.name} <i class="fas fa-user-circle"></i>
-                                </Link>
-                            </li>
-                        ) :
-                        (
-                            <li
-                                className='nav-item'
-                            >
-                            <Link
-                              to='/signin'
-                              className='nav-links-mobile'
-                              onClick={closeMobileMenu}
-                              
-                            >
-                              Sign in
-                            </Link>
-                          </li>
-                            
                         )
                     }
                     {
@@ -135,7 +113,51 @@ function Navbar() {
                             </li>
                         )
                     }
-                    
+                    {
+                        userInfo ? (
+                            (userInfo.isInstitution || userInfo.isAdmin) ? (
+                                <li
+                                    className='nav-item'
+                                    
+                                >
+                                    <Link
+                                        to="/prf"
+                                        className='nav-links'
+                                        onClick={closeMobileMenu}
+                                    >
+                                        {userInfo.name} <i class="fas fa-user-circle"></i>
+                                    </Link>
+                                </li>
+                            ) : 
+                            (
+                                <li
+                                className='nav-item'
+                                >
+                                    <Link
+                                    to="/" 
+                                    className='nav-links-mobile'
+                                    onClick={signoutHandler}
+                                    >
+                                        Sign Out
+                                    </Link>
+                                </li>
+                            )
+                        ) :
+                        (
+                            <li
+                                className='nav-item'
+                            >
+                                <Link
+                                to='/signin'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}
+                                >
+                                    Sign in
+                                </Link>
+                            </li>
+                            
+                        )
+                    }
                 </ul>
             </nav>
         </>

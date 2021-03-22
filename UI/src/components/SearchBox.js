@@ -21,7 +21,7 @@ export default function SearchBox(props){
                     ></input>
                 </div>*/}
                 <button className="primary" type="submit" >
-                    <i className="fa fa-search" color="black"></i>
+                    <i className="fa fa-search"  style={{color:"#085078"}}></i>
                 </button>
             </div>
         </form>

@@ -19,8 +19,8 @@ export default function SearchBox(props){
                         onChange={(e) => setName(e.target.value)}
                     ></input>
                 </div>*/}
-                <button style={{width:"210px", height:"40px", backgroundColor:"rgb(54, 69, 79)", color:"white", opacity:"0.90"}} type="submit">
-                    Pesquise posições aqui
+                <button style={{marginTop:"100px", paddingBottom:"30px", width:"210px", height:"40px", backgroundColor:"white", color:"#085078", border: "2px solid #085078", opacity:"0.90"}} type="submit">
+                    Pesquisa posições aqui
                 </button>
         </form>
     );

@@ -423,10 +423,16 @@ img.large{
 /*Search Box 3 User*/
 button.small10 {
   font-size: 15px;
-  background-color:rgb(54,69,79);
-  color: white;
+  background-color:rgb(247.5, 247.5, 247.5);
+  color: #085078;
+  border: 2px solid #085078;
   margin-bottom: 0px;
   margin-left: 70%;
+  border-radius: 10px;
+}
+
+button.small10:hover{
+  background-color: rgb(240, 240, 240);
 }
 
 .col_12 h1{
@@ -601,11 +607,13 @@ input:focus{
 
 button.small {
   font-size: 15px;
-  background-color:rgb(54,69,79);
-  color: white;
+  background-color:rgb(247.5, 247.5, 247.5);
+  color: #085078;
   margin-bottom: 0px;
   margin-left: 0%;
   margin-right: 5%;
+  border: 2px solid #085078;
+  border-radius: 10px;
 }
 
 table {
@@ -629,19 +637,19 @@ table td, table th {
 }
 table thead tr {
   height: 60px;
-  background: rgb(54,69,79);
+  background: #4f9fac; 
 }
 table tbody tr {
-  height: 50px;
+  height: 60px;
 }
 table tbody tr:last-child {
   border: 0px;
 }
 table td, table th {
-  text-align: left;
+  text-align: center;
 }
 table td.l, table th.l {
-  text-align: right;
+  text-align: center;
 }
 table td.c, table th.c {
   text-align: center;
@@ -666,7 +674,7 @@ tbody tr:nth-child(even) {
 tbody tr {
   font-family: 'Nunito', sans-serif;
   font-size: 15px;
-  color: #808080;
+  color: #000000;
   line-height: 1.2;
   font-weight: unset;
 }
@@ -690,14 +698,17 @@ tbody tr:hover {
   table tbody tr {
     height: auto;
     padding: 37px 0;
+    justify-content: center;
   }
   table tbody tr td {
-    padding-left: 20% !important;
+    padding-left: 10% !important;
+    padding-right: 10%;
+    justify-content: center;
     margin-bottom: 24px;
   }
   table tbody tr td:last-child {
     margin-bottom: 0;
-    left: 30px;
+    left: 15px;
   }
 }
 /********************************Search Screen Select Filter**************************************/
@@ -887,8 +898,9 @@ select {
 }
 
 button.iscreen{
-  background-color: rgb(54,69,79);
-  color: white;
+  background-color: rgb(247.5, 247.5, 247.5);
+  color: #085078;
+  border: 2px solid #085078;
   width: 120px;
   border-radius: 10px;
   outline: none;
@@ -1047,7 +1059,7 @@ button.iscreen{
   }
 
   button.iscreen{
-    color: white;
+    color: #085078;
     width: 120px;
     border-radius: 10px;
     outline: none;
@@ -1300,7 +1312,7 @@ button.iscreen{
 }
 
 .fa-bookmark {
-  color: rgb(255, 255, 255);
+  color: rgb(87, 87, 87);
   font-size: 16px;
   border-radius: 50px;
   padding: 12px 25px;
@@ -1308,7 +1320,7 @@ button.iscreen{
   right: -35px;
   bottom: 10px;
   outline: none;
-  background-color: rgb(54,69,79);
+  background-color: rgb(228, 228, 228);
   background-position: center;
   padding: 7px 8.5px 7px 9px;
   text-transform: none;
@@ -1555,8 +1567,9 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 .signinButton{
-  background-color:#696969;
-  color: white;
+  background-color: rgb(247.5, 247.5, 247.5);
+  color: #085078;
+  border: 1px solid #085078;
   width: 77%;
   margin-left: 11%;
   outline: none;
@@ -1624,11 +1637,7 @@ font-family: 'Ubuntu', sans-serif;
   margin-left: 0px;
   margin-top: -160px;
   margin-bottom: 110px;
-  object-fit: contain;
-  background: url("bb.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover ;
+  background-color: rgb(247.5, 247.5, 247.5);
   padding-top: 75px;
   padding-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;

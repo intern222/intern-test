@@ -81,7 +81,7 @@ function App(){
                     ></Route>
                     <Route path="/register" component={RegisterScreen}></Route>
                     <PrivateRoute 
-                        path="/profile" 
+                        path="/prf" 
                         component={ProfileScreen}
                     ></PrivateRoute>
                     <AdminRoute 

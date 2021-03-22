@@ -135,10 +135,10 @@ export default function InternshipEditScreen(props) {
                 ) : (
                     <>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="name">Nome do Estágio</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="name">Nome do Estágio</h3>
                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic" ,margin:"0px" }}>Nota: tamanho máximo de 65 caracteres</h5>
                             <input
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 id="name"
                                 type="text"
                                 placeholder="Insira Nome"
@@ -150,9 +150,9 @@ export default function InternshipEditScreen(props) {
                             ></input>
                         </div >
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="name">URL da Posição</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="name">URL da Posição</h3>
                             <input
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 id="url"
                                 type="text"
                                 placeholder="Insira URL da posição"
@@ -163,10 +163,10 @@ export default function InternshipEditScreen(props) {
                             ></input>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="image">URL da Imagem</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="image">URL da Imagem</h3>
                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se tiver problemas envie-nos um email</h5>
                             <input
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 id="image"
                                 type="text"
@@ -188,9 +188,9 @@ export default function InternshipEditScreen(props) {
                                     {errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
                                 </div>*/}
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="skills">Skills</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="skills">Skills</h3>
                             <input
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 id="skills"
                                 type="text"
@@ -201,11 +201,11 @@ export default function InternshipEditScreen(props) {
                             ></input>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="categoria">Setor</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="categoria">Setor</h3>
                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se o seu setor não existir envie-nos um email</h5>
 
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={category}
@@ -245,10 +245,10 @@ export default function InternshipEditScreen(props) {
                                     ></input>
                             </div>*/}
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="localização">Localização</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="localização">Localização</h3>
                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }}>Nota: se a sua localização não existir envie-nos um email</h5>
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={location}
@@ -284,9 +284,9 @@ export default function InternshipEditScreen(props) {
                                     ></input>
                             </div>*/}
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="tipo">Posição</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="tipo">Posição</h3>
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={position}
@@ -297,9 +297,9 @@ export default function InternshipEditScreen(props) {
                             </select>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="tipo">Tipo</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="tipo">Tipo</h3>
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={type}
@@ -310,9 +310,9 @@ export default function InternshipEditScreen(props) {
                             </select>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="duração">Duração</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="duração">Duração</h3>
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={duration}
@@ -326,9 +326,9 @@ export default function InternshipEditScreen(props) {
                             </select>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="pagamento">Compensação</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="pagamento">Compensação</h3>
                             <select
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 required
                                 value={payment}
@@ -340,10 +340,10 @@ export default function InternshipEditScreen(props) {
                             </select>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="data">Candidatar até:</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="data">Candidatar até:</h3>
                             <h5 style={{ paddingLeft: "6px", fontWeight:"lighter", fontStyle:"italic", margin:"0" }} htmlFor="data">Nota: formato "dd / mm / aaaa" ou "Não aplicável"</h5>
                             <input
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 maxlength="15"
                                 placeholder="Insira Data"
@@ -353,9 +353,9 @@ export default function InternshipEditScreen(props) {
                             ></input>
                         </div>
                         <div style={{ width: "100%" }}>
-                            <h3 style={{ margin: "5px" }} htmlFor="descrição">Descrição</h3>
+                            <h3 style={{ margin: "5px" , fontWeight: "600",fontFamily:"'Nunito Sans', sans-serif"}} htmlFor="descrição">Descrição</h3>
                             <textarea
-                                style={{ margin: "0", width: "95%" }}
+                                style={{ margin: "0", width: "95%" , fontWeight:"lighter"}}
                                 className="un"
                                 id="description"
                                 rows="3"

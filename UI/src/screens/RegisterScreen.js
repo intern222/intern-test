@@ -23,7 +23,7 @@ export default function RegisterScreen(props) {
     const submitHandler = (e) =>{
         e.preventDefault();
         if(password !== confirmPassword){
-            alert('Password and confirm password are not match');
+            alert('Password e confirma password não estão iguais');
         } else{
             dispatch(register(name, email, password));
         }
@@ -39,7 +39,7 @@ export default function RegisterScreen(props) {
         <div className="signinContainer">
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Create Account</h1>    
+                    <h1>Cria Conta</h1>    
                 </div>
                 {loading && <LoadingBox></LoadingBox>}
                 {error && <MessageBox variant="danger">{error}</MessageBox>}

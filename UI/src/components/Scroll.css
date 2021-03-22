@@ -1,0 +1,35 @@
+.scrollToTop{
+    background-color:rgb(247.5, 247.5, 247.5);
+    color: #085078;
+    border: 2px solid #085078;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollToTop:hover{
+    background-color: #085078;
+    color: rgb(247.5, 247.5, 247.5);
+}
+
+.fa-chevron-up{
+    justify-content: center;
+    align-items: center;
+    margin-top: 11.9px;
+    margin-left: 12.5px;
+
+}
+
+@media screen and (max-width: 500px) {
+    .scrollToTop{
+        bottom: 10px;
+        right: 9px;
+    }
+}

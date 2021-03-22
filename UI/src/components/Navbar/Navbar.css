@@ -1,7 +1,7 @@
 .navbar {
     background: #2C3E50;
-    background: -webkit-linear-gradient(to bottom, #80BFC9, #2C3E50); 
-    background: linear-gradient(to top, #80BFC9, #2C3E50); 
+    background: -webkit-linear-gradient(to bottom, #80BFC9, #085078); 
+    background: linear-gradient(to top, #80BFC9, #085078); 
     
     height: 60px;
     display: flex;
@@ -83,16 +83,16 @@
 
 .nav-links-mobile:hover {
     padding: 7px;
-    transition: all 0.3s ease-out;
+
     background:white;
-    color: black;
-    transition: 250ms;
+    color: #2C3E50;
+
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
     font-weight: 600;
-    background-color: #4CA1AF;
-    color: rgb(255, 255, 255);
-} 
+    transform: scale(1.01);
+    box-shadow: 1px 1px 3px #c5c5c5;
+}
   
 .menu-icon {
     display: none;
@@ -256,9 +256,9 @@
       transition: all 0.5s ease;
       z-index: 1;
 
-      background: #2C3E50;
-      background: -webkit-linear-gradient(to top, #80BFC9, #2C3E50); 
-      background: linear-gradient(to bottom, #80BFC9, #2C3E50); 
+      background: #085078;
+      background: -webkit-linear-gradient(to top, #80BFC9, #085078); 
+      background: linear-gradient(to bottom, #80BFC9, #085078); 
       
     }
   
@@ -317,20 +317,24 @@
         width: 100%;
         background: #ffffff;
         text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 17px;
-        font-weight: lighter;
+        color: #2C3E50;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Nunito Sans', sans-serif;
     }
     
     .nav-links-mobile:hover {
         padding: 7px;
-        transition: all 0.3s ease-out;
+    
         background:white;
-        color: black;
-        transition: 250ms;
-        font-weight: bold;
-        font-size: 17px;
-    } 
+        color: #2C3E50;
+    
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        transform: scale(1.01);
+        box-shadow: 1px 1px 3px #c5c5c5;
+    }
   }
 
   @media screen and (max-width: 550px) {
@@ -359,15 +363,14 @@
     }
   
     .nav-menu.active {
-      background: rgb(54,69,79);
       left: 0;
       opacity: 1;
       transition: all 0.01s ease;
       z-index: 1;
 
-      background: #2C3E50;
-      background: -webkit-linear-gradient(to top, #80BFC9, #2C3E50); 
-      background: linear-gradient(to bottom, #80BFC9, #2C3E50); 
+      background: #085078;
+      background: -webkit-linear-gradient(to top, #80BFC9, #085078); 
+      background: linear-gradient(to bottom, #80BFC9, #085078); 
     }
   
     .nav-links {
@@ -422,18 +425,22 @@
         width: 100%;
         background: #ffffff;
         text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-size: 17px;
-        font-weight: lighter;
+        color: #2C3E50;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Nunito Sans', sans-serif;
     }
     
     .nav-links-mobile:hover {
         padding: 7px;
-        transition: all 0.3s ease-out;
+    
         background:white;
-        color: black;
-        transition: 250ms;
-        font-weight: bold;
-        font-size: 17px;
-    } 
+        color: #2C3E50;
+    
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        transform: scale(1.01);
+        box-shadow: 1px 1px 3px #c5c5c5;
+    }
   }
