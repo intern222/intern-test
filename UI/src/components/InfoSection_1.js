@@ -9,7 +9,7 @@ function InfoSection_1() {
         <div className="textarea">
           <div className="avatar_holder_1">
             <img className="icon1" 
-              src='/images/goal17.svg'
+              src='/images/goal17.png'
             />
           </div>
           <div className="hi">
@@ -21,7 +21,7 @@ function InfoSection_1() {
         <div className="textarea_1">
           <div className="avatar_holder_1">
             <img className="icon" 
-              src='/images/stopwatch.svg'
+              src='/images/stopwatch.png'
             />
           </div>
           <div className="hi_1">
@@ -33,7 +33,7 @@ function InfoSection_1() {
         <div className="textarea_2">
           <div className="avatar_holder_1">
             <img className="icon" 
-              src='/images/checked.svg'
+              src='/images/checked.png'
             />
           </div>
           <div className="hi_2">

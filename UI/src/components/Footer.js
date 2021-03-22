@@ -18,7 +18,7 @@ function Footer() {
             <h2>Redes Sociais</h2>
             <Link to='/'><i className='fab fa-instagram' /> Instagram</Link>
             <Link to='/'><i className='fab fa-facebook-f' /> Facebook </Link>
-            <Link to='/'><i className='fab fa-linkedin' /> Linkedin </Link>
+            <Link to='/'><i className='fab fa-linkedin' onClick={() => window.location.href = `https://www.linkedin.com/company/internwebapp/about/`}/> Linkedin </Link>
           </div>
         </div>
       </div>

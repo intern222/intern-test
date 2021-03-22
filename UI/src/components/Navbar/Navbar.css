@@ -1,7 +1,7 @@
 .navbar {
     background: #2C3E50;
-    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50); 
-    background: linear-gradient(to right, #4CA1AF, #2C3E50); 
+    background: -webkit-linear-gradient(to bottom, #80BFC9, #2C3E50); 
+    background: linear-gradient(to top, #80BFC9, #2C3E50); 
     
     height: 60px;
     display: flex;
@@ -251,11 +251,14 @@
     }
   
     .nav-menu.active {
-      background: rgb(54,69,79);
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+
+      background: #2C3E50;
+      background: -webkit-linear-gradient(to top, #80BFC9, #2C3E50); 
+      background: linear-gradient(to bottom, #80BFC9, #2C3E50); 
       
     }
   

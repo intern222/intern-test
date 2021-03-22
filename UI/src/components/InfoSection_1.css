@@ -6,11 +6,12 @@
 .info_text_1{
   height: 100%;
   width: 85%;
-  margin-left: 7.5%;
-  margin-top: 0px;
+  margin-left: 7%;
+  margin-top: 20px;
   padding: 1%;
   border-radius: 10px;
-
+  background-color: white;
+  opacity: .9;
 }
 
 .textarea{
@@ -117,6 +118,10 @@ img.icon1{
   .hi{
     margin-top: -104px;
   }
+
+  .hi_2{
+    margin-top: -100px;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -141,7 +146,6 @@ img.icon1{
     margin-left: 150px;
     font-size: 20px;
   }
-
 }
 
 @media screen and (max-width: 650px) {
@@ -164,12 +168,10 @@ img.icon1{
     opacity: 1;
   }
 
-  img.icon1{
-    width: 75%;
-    height: 75%;
-    opacity: 1;
-    margin-left: 8px;
-    margin-top: 6px;
+  .info_text_1{
+    padding-left: 10px;
+    padding-top: 40px;
+    margin-left: 5.5%;
   }
 
   .hi{
