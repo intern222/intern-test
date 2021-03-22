@@ -82,7 +82,7 @@ export default function InternshipScreen(props) {
                                 Candidatar até:
                                 </h3>
                             <h4 className="candidates">
-                                {Moment(internship.date).format('DD / MM / YYYY')}
+                                {internship.date}
                             </h4>
 
                             <h3 className="work_functions">

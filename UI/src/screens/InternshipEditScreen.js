@@ -72,9 +72,6 @@ export default function InternshipEditScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        if(date === "Exemplo de data"){
-            date = 'Não aplicável';
-        }
         dispatch(
             updatedInternship({
                 _id: internshipId,
