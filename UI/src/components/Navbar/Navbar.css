@@ -364,6 +364,10 @@
       opacity: 1;
       transition: all 0.01s ease;
       z-index: 1;
+
+      background: #2C3E50;
+      background: -webkit-linear-gradient(to top, #80BFC9, #2C3E50); 
+      background: linear-gradient(to bottom, #80BFC9, #2C3E50); 
     }
   
     .nav-links {
