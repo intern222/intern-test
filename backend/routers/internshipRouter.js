@@ -47,6 +47,7 @@ internshipRouter.get(
       ...positionFilter,
     })
       .populate('institution', 'institution.name institution.logo')
+      .sort({ createdAt : -1 })
       .skip(pageSize*(page - 1))
       .limit(pageSize)
       ;
