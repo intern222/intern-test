@@ -116,7 +116,7 @@ export default function InternshipListScreen(props){
                             <tbody>
                                 {internships.map((internship) => (
                                     <tr key = {internship._id}>
-                                        <td>{internship.name}</td>
+                                        <td><Link className="card-link" to={`/internship/${internship._id}`}>{internship.name}</Link></td>
                                         <td>{internship.category}</td>
                                         {/*<td>{user.institution.name}</td>*/}
                                         <td>{internship.location}</td>
