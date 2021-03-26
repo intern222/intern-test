@@ -938,6 +938,7 @@ button.iscreen{
   
   font-weight: lighter;
   font-size: 15px;
+  white-space: pre-wrap;
 }
 
 .feactures {
